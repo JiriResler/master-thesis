@@ -37,7 +37,7 @@ The following list of functional and non-functional requirements is inspired by 
     \emph{Rationale:} A personalized menu highlights or hides items of the menu in a way that the guest can quickly choose what they want to eat. 
     \item [Req. 1.5:] The application should be able to sort meals in a menu by whether a viewing guest can eat them according to their profile.
 
-    \emph{Rationale:} This will allow the application to visibly divide a menu.
+    \emph{Rationale:} This will allow the application to highlight the meals of a menu which the guest can eat according to their profile.
     \item [Req. 1.6:] The application should be able to filter out meals of a menu which a viewing guest cannot eat according to their profile.
     \item [Req. 1.7:] A guest shall be able to load a menu by specifying the IRI of the menu.
     \item [Req. 1.8:] A guest should be able to load a menu by scanning a QR code printed on the menu.
@@ -61,20 +61,41 @@ The following list of functional and non-functional requirements is inspired by 
     \item [Req. 2.2:] A restaurant employee shall be able to create a stable menu.
 
     \emph{Rationale:} Most restaurants have a stable menu which is valid every day and does not change often.
-    \item [Req. 2.3:] A restaurant employee should be able to re-use a previously created menu when creating menu for a day.
-    \item [Req. 2.4:] A restaurant employee should be able to print a menu.
+    \item [Req. 2.3:] A restaurant employee should be able to create a list of beverages.
+
+    \emph{Rationale:} Some restaurants have a separate menu for meals and for drinks.
+    \item [Req. 2.4:] A restaurant employee should be able to re-use a previously created menu when creating menu for a day.
+    \item [Req. 2.5:] A restaurant employee should be able to print a menu.
 
     \emph{Rationale:} A printed menu can be put on tables.
-    \item [Req. 2.5:] A printed menu should contain a QR code which will link a guest to the application.
+    \item [Req. 2.6:] A printed menu should contain a QR code which will link a guest to the application.
 
     \emph{Rationale:} The QR code will provide the application with the IRI of the menu.
-    \item [Req. 2.6:] The application shall enable a restaurant employee to edit a previously created menu.
-    \item [Req. 2.7:] The application shall enable a restaurant employee to delete a previously created menu.
-    \item [Req. 2.8:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
+    \item [Req. 2.7:] The application shall enable a restaurant employee to edit a previously created menu.
+    \item [Req. 2.8:] The application shall enable a restaurant employee to delete a previously created menu.
+    \item [Req. 2.9:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
 
     \emph{Rationale:} A daily menu can be the same for a certain day of the week.
-    \item [Req. 2.9:] A meal in a menu should contain an ID, label, price, weight in grams, ingredients and allergens.
-    \item [Req. 2.10:] A restaurant employee should be able to specify which Solid pod to use for storing the restaurant's data.
+    \item [Req. 2.10:] A restaurant employee should be able to specify categories and subcategories of a menu.
+
+    \emph{Rationale:} A menu typically consists of categories like soups, appetizers, desserts etc. These categories can have subcategories, for instance a category "Drinks" can have subcategories "Wine" and "Non-alcoholic".
+    \item [Req. 2.11:] Each item of a menu should belong to either none or exactly one category.
+    \item [Req. 2.12:] A meal in a menu should contain an ID, label, price, weight, ingredients and allergens.
+    \item [Req. 2.13:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
+    \item [Req. 2.14:] An item on a list of beverages should contain the name of a drink, amount and price.
+    \item [Req. 2.15:] A menu should optionally contain a restaurant's name, address and phone number.
+    \item [Req. 2.16:] A restaurant employee should be able to use a previously created menu as a template for creating a new menu.
+    \item [Req. x:] A restaurant employee should be able to specify what currency to use for prices of items of a menu.
+    \item [Req. x:] A restaurant employee should be able to specify what weight and volume units to use for items of a menu.
+    
+    \emph{Rationale:} Req. x states that a food should have weight specified.
+    \item [Req. x:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
+
+    \emph{Rationale:} Allergens can be listed within an item's description.
+    \item [Req. x:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
+
+    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from req. x. 
+    \item [Req. 2.17:] A restaurant employee should be able to specify which Solid pod to use for storing the restaurant's data.
 
     \emph{Rationale:} A restaurant can have multiple Solid pods associated with its WebID, and the restaurant's management might want to choose which pod should the application use.
 \end{description}
@@ -84,8 +105,9 @@ The following list of functional and non-functional requirements is inspired by 
     \item [Req. 3.1:] Each item of a menu must have specified allergens contained in it.
     
     \emph{Rationale:} At least in the EU, there are laws\footnote{\url{https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex\%3A32011R1169}  \label{fnlabel}} which mandate restaurants to list allergens contained in food they serve.
+    \item [Req. x:] A menu which uses allergen numbers from requirement x must contain a legend explaining which allergen each number represents.
+
     \item [Req. 3.2:] The application should have responsive user interface and work on mobile devices as well as on desktops.
 \end{description}
 
 \vspace*{\fill}
-\pagebreak
