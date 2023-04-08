@@ -51,6 +51,9 @@ The following list of functional and non-functional requirements is inspired by 
     \item [Req. 1.12:] A guest should be able to specify which Solid pod to use for storing their data.
 
     \emph{Rationale:} A guest can have multiple Solid pods associated with their WebID and might want to choose which one should the application use.
+    \item [Req. 2.11:] A non-authenticated guest should be able to do reqs. x, y, z. 
+
+    \emph{Rationale:} None of these requirements require the guest to be logged in. The application should be also useful for people without a profile.
 \end{description}
 
 \subsection{Restaurant requirements}
@@ -105,9 +108,16 @@ The following list of functional and non-functional requirements is inspired by 
     \item [Req. 3.1:] Each item of a menu must have specified allergens contained in it.
     
     \emph{Rationale:} At least in the EU, there are laws\footnote{\url{https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex\%3A32011R1169}  \label{fnlabel}} which mandate restaurants to list allergens contained in food they serve.
-    \item [Req. x:] A menu which uses allergen numbers from requirement x must contain a legend explaining which allergen each number represents.
-
+    \item [Req. x:] A menu which uses allergen numbers from requirement x must contain a legend explaining what allergen each number represents.
     \item [Req. 3.2:] The application should have responsive user interface and work on mobile devices as well as on desktops.
+    \item [Req. 3.2:] The application should be compatible with the latest versions of all of the commonly used browsers.
+    \item [Req. 3.3:] The application shall have a user tutorial explaining its functionality.
+    \item [Req. 3.4:] The application should contain a help screen for new users with information about how to log in.
+
+    \emph{Rationale:} The new user may not be familiarized with the Solid technology.
+    \item [Req. 3.5:] The application should have an English, Czech and Slovak user interface.
+
+    \emph{Rationale:} We would like for the application to be used internationally within the European Union.
 \end{description}
 
 \vspace*{\fill}
