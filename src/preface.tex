@@ -2,18 +2,25 @@
 \addcontentsline{toc}{chapter}{Introduction}
 
 Health is the most important thing we have in our lives.
-If we want to be healthy, we need to, among other things, think about what we eat.
-People today are trying various diets in order to stay in shape and feel good.
-There are also many people who suffer from food allergies who need to pick carefully what they eat, as some food is harmful to them. 
+If we want to be healthy we need to, among other things, think about what we eat.
+It is common today for people to try various diets in order to stay in shape and feel good.
+There are also many people who suffer from food allergies who need to be especially aware of what they eat, as some food is harmful to them.
 
-In the European Union, there exist laws which make it mandatory for restaurants to inform guests about allergens in served meals. Typically, this resolves in a menu containing a list of allergens within the description of each meal. Another option for a restaurant is to create a numbered list of allergens and use numbers instead of labels, which makes the menu more concise but also not very pleasant to decode.
+In the European Union, there exist laws which make it mandatory for restaurants to inform their guests about the allergens contained in the meals and drinks they serve.
+To meet these regulations, most restaurants opt to add a table of allergens to their menus.
+This table, which is predefined by the EU, contains several number---allergen pairs, and each common allergen has a number assigned to it as its identifier.
+The numbers from this table are then used throughout a menu, indicating that a served food contains a specific allergen.
+This solution is not ideal as someone with an allergy has to repeatedly look at the allergen table to decode which allergen a number in the menu represents.
+Although people who have an allergy for a longer time have already memorized the content of the table, people who have just recently been diagnosed with an allergy have a hard time choosing a meal from a menu.
+Another option for restaurants is to simply enumerate allergens by their names for each food.
+This makes it easier for guests to read a particular item of a menu, but on the other hand pollutes the menu with allergen names which is not visually appealing.
 
-If a person who is on a diet or has an allergy decides to visit a restaurant which they have never been to, they spend a lot of time browsing the restaurant's menu, as it can often be hard to choose a meal which is healthy for them to eat.
+In this thesis we will document the process of the creation of a web application whose purpose will be to help people who are on a diet or suffer from a food allergy to be able to quickly choose what they want to eat at a restaurant.
+The application will achieve this by allowing a guest to create their personal profile and within it to specify what allergies they have or what diets they are on. 
+When a guest will browse a restaurant's menu using the application, it will adapt the menu according to the logged in guest's profile.
+Moreover, in their profile the guest will be able to specify their overall food preferences, as to make the application also useful for people who are not on a diet nor have a food allergy.
+Another goal of the application will be to enable restaurant owners to create their menus online and help them with specifying allergens contained in the food they serve.
+It will be able to automatically add allergens to a menu item based on the content of its ingredients.
 
-In this thesis, we will document the process of the creation of a web application whose purpose will be to help these people to be able to quickly choose what they want to eat at a restaurant. 
-The application will achieve this by letting its users create their personal profile and within it to specify what allergies they have or what diets they are on. Moreover, the user will be able to specify their overall food preferences, as to make the application also useful for people who are not on a diet nor have food allergies.
-Another goal of the application will be to enable restaurant providers to create their menus online. 
-When a visitor will browse a restaurant's menu using the application, it will make it possible to only display those meals which the visitor is able or willing to eat according to their profile.
-
-Also, we need to be aware that whether someone is on a diet or has an allergy are personal information which the user may be sensitive about.
-We will therefore design and implement the application in a safe and modern way which will ensure that only the user can view and manipulate their personal profile data. This will be accomplished by using a technology called Solid, which provides users with Solid pods --- their personal data storage units.
+Last but not least, we need to be aware of the fact that whether someone is on a diet or has a food allergy are personal information which a guest may be sensitive about.
+We will therefore design and implement the application in a safe and modern way which will ensure that only the guests can view and manipulate their personal profile data. This will be accomplished by using a technology called Solid, which provides people with Solid pods --- their personal data storage units.
