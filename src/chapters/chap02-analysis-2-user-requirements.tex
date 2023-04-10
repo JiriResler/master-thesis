@@ -1,4 +1,5 @@
-\section{User requirements vocabulary}
+\section{User requirements}
+\subsection{User requirements vocabulary}
 It is good practice to use language consistently throughout all requirements, and that is why we are going to resolve what the keywords in requirements mean.
 If a requirement states that the application \textbf{shall} do something, then it means that the requirement is mandatory for the application and has to be addressed in the design phase which follows after this chapter. 
 The word \textbf{should} is for desired requirements which are not critical for the application's functionality.
@@ -6,13 +7,12 @@ Last but not least, usage of the word \textbf{must} indicates a domain constrain
 Also, we will substitute the user role restaurant for \emph{restaurant employee} where it will be more convenient.
 In the next two sections, we are going to specify all user requirements. 
 
-\section{Functional requirements}
+\subsection{Functional requirements}
 We will look at requirements from the application's user point of view.
 That is why we will organize the requirements based on which user role defines them.
-If a requirement is defined by both user roles, it will be listed outside the role specific sections.
-The following list of functional and non-functional requirements is inspired by an interview done with a restaurant\footnote{\url{https://pizzabudca.sk/}  \label{fnlabel}} employee.
+If a requirement is defined by both user roles, it will be listed outside the role---specific sections.
 
-\subsection{Guest requirements}
+\subsubsection{Guest requirements}
 A guest is expected to be logged in if not stated otherwise in a requirement.
 
 \begin{description}
@@ -43,7 +43,7 @@ A guest is expected to be logged in if not stated otherwise in a requirement.
     \emph{Rationale:} None of these requirements require the guest to be logged in. The application should be also useful for people without a profile.
 \end{description}
 
-\subsection{Restaurant requirements}
+\subsubsection{Restaurant requirements}
 \begin{description}
     \item [Req. 2.1:] A restaurant employee shall be able to create a menu for a specific day.
 
@@ -90,7 +90,7 @@ A guest is expected to be logged in if not stated otherwise in a requirement.
     \emph{Rationale:} A restaurant can have multiple Solid pods associated with its WebID, and the restaurant's management might want to choose which pod should the application use.
 \end{description}
 
-\section{Non-functional requirements}
+\subsection{Non-functional requirements}
 \begin{description}
     \item [Req. 3.1:] Each item of a menu must have specified allergens contained in it.
     

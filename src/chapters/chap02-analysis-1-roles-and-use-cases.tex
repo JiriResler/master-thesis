@@ -1,27 +1,35 @@
 \chapter{Problem analysis}
-Our first step will be to identify user roles, specify use cases and describe those use cases via use case scenarios.
+Our first step will be to define what will the application do and also who will be able to use it.
+For this reason we will identify user roles, specify use cases and describe those via use case scenarios.
 The output of this chapter is a list of user requirements which will be important in the next chapter.
+
+\section{Target industry}
+The application will focus on restaurants in the European Union and will therefore follow its legislation in the terms of allergen specification.
+We would like for the application to be used internationally, so it needs to have its user interface translated into different languages.
+For this purpose we will choose the English, Slovak and Czech languages with the possibility of adding more translations in the future.
+
+\section{Source of inspiration}
+The following list of functional and non-functional requirements is inspired by an interview done with a restaurant\footnote{\url{https://pizzabudca.sk/}  \label{fnlabel}} employee.
 
 \section{User roles}
 There are two types of users who will come in contact with the application.
 The first type is a \textbf{restaurant}, more specifically its employee who is responsible for creating menus.
 This user needs to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
-The application will let restaurant employees to create menus online, and will help them with specifying allergens contained in the menu items.
+The application will allow restaurant employees to create menus online and will help them with specifying allergens contained in menu items.
 
-The second type of users are the restaurant \textbf{guests}.
+The second type of user is a restaurant \textbf{guest}.
 They, too, need to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
 The application will enable a restaurant guest to create a personal profile where they will specify their food preferences, including the allergies they have and the diets they are on.
 When a guest will view a restaurant's menu using the application, the displayed menu will be adapted to meet the guest's profile preferences.
-The application will thus make it easier for the guest to choose what they would like to order in a restaurant.
+The application will thus make it easier for the guest to choose what they would like to order in a particular restaurant.
 
 \section{Use cases}
-The application will focus on restaurants in the European Union and will therefore follow its legislation.
-We are going to depict goals of users which the application will make achievable.
+Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
-A use case styled with a bold border indicates that it groups together more use cases and will be further expanded later.
+A use case styled with a bold border groups together more use cases and will be further expanded later.
 All use cases will be structurally described by independent use case scenarios.
-Use cases will have description when the goal of a user will not be completely clear from the use case's name.
-Scenarios will be created with the mindset of a user, in other words, how they think the application should work.
+A structured use case will contain a description if the goal of a user is not entirely clear from the use case's name.
+Use case scenarios were created with the mindset of its actors, in other words, how the users imagine the application will work.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{master-thesis/img/application_use_cases}
