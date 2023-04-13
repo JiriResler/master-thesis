@@ -4,7 +4,7 @@ For this reason we will identify user roles, specify use cases and describe thos
 The output of this chapter is a list of user requirements which will be important in the next chapter.
 This analysis is inspired by interviewing a restaurant\footnote{\url{https://www.pizzabudca.sk}  \label{fnlabel}} employee and also two former restaurant\footnote{\url{https://www.sokolzabreh.cz/hospudka}  \label{fnlabel}} owners.
 
-\section{Target groups}
+\section{Target group}
 The application will focus on restaurants and their guests in the European Union.
 The reason behind this is that the EU enforces restaurants to inform their guests about allergens contained in the food they serve, and has already established rules for how to do it.
 We would like for the application to be usable internationally, so it needs to have its user interface translated into different languages.
@@ -25,13 +25,12 @@ The application will thus make it easier for the guest to choose what they would
 \section{Use cases}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
-A use case styled with a bold border groups together more use cases and will be further expanded later.
+A use case styled with a bold border groups together more use cases and will be expanded further.
 All use cases will be structurally described by independent use case scenarios.
 A structured use case will contain a description if the goal of a user is not entirely clear from the use case's name.
-Use case scenarios were created with the mindset of its actors, in other words, how the users imagine the application will work.
 
 \begin{figure}[h]
-  \includegraphics[width=\linewidth]{master-thesis/img/application_use_cases}
+  \includegraphics[width=\linewidth]{master-thesis/img/use_cases}
   \caption{The application's use case diagram.}
 \end{figure}
 
@@ -41,6 +40,126 @@ Use case scenarios were created with the mindset of its actors, in other words, 
 \def\arraystretch{1.5}
 
 \subsection{Guest use cases}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases_guest_profile_management}
+  \caption{Guest profile management use cases}
+\end{figure}
+
+\noindent \textbf{1. Use case: Specify what allergies I have}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor    & Guest \\
+    \hline
+    Scenario &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest opens their profile.
+        \item The guest selects a tab named "My allergies".
+        \item The application displays a list of previously specified allergies by the guest. \textbf{A1}
+        \item The guest clicks a button labeled "Add allergy".
+        \item The application displays a search bar.
+        \item The guest starts typing the name of the allergy into the search bar.
+        \item The application suggests allergies which contain the given input in their name.
+        \item The guest selects the desired allergy and clicks an "Add" button. \textbf{A2}
+        \item The application adds the chosen allergy to the set of the guest's allergies. \textbf{A3}
+        \item The guest repeats steps 4 to 9 until they have specified all their allergies.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The list is empty because the guest has not specified any allergies yet. The application displays a text containing this information.
+        \item [A2:] The application does not recognize the allergy which the guest is wishing to add. The guest creates an issue in the application's public repository with a request to add the desired allergy.
+        \item [A3:] The allergy the guest has chosen is already contained in the set of the guest's allergies. The application informs the guest about this fact and the set is not altered.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\noindent \textbf{6. Use case: Specify what diets I am on}
+
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest opens their profile.
+        \item The guest selects a tab named "My diets".
+        \item The application displays a list of previously specified diets by the guest. \textbf{A1}
+        \item The guest clicks a button labeled "Add diet".
+        \item The application provides a predefined list of diets.
+        \item The guest selects a diet from the list and clicks an "Add" button. \textbf{A2}
+        \item The application adds the chosen diet to the set of the guest's diets. \textbf{A3}
+        \item The guest repeats steps 1 to 7 until they have specified all their diets.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The list is empty because the guest has not specified any diets yet. The application displays a text containing this information.
+        \item [A2:] The diet the guest is trying to specify is not defined in the list. The guest writes an email to a special address with a request to add the desired diet to the list.
+        \item [A3:] The diet the guest has chosen is already contained in the set of the guest's allergies. The application informs the guest about this fact and the set is not altered.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\noindent \textbf{7. Use case: Specify what food and beverages I like and dislike}
+
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest opens their profile.
+        \item The guest selects a tab named "My food preferences".
+        \item The application displays two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
+        \item The guest clicks a button labeled as "Add food I like". \textbf{A2}
+        \item The application provides a search bar with a text saying "Search foods...".
+        \item The guest starts typing the name of the food.
+        \item The application recommends foods from a predefined list which contain the given input text in their name.
+        \item The guest selects the desired food and clicks an "Add" button. \textbf{A3}
+        \item The application adds the chosen food to the guest's set of foods which they like. \textbf{A4}
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] Either one or both of the lists can be empty if the guest has not specified any of their preferred or disliked foods yet. Instead of displaying a list, the application displays a text saying "No foods specified".
+        \item [A2:] The guest clicks a button labeled "Add food I dislike". The use case continues with a difference that in the step number 9, the application adds the food to the guest's set of foods which they \emph{dislike}.
+        \item [A3:] The guest is not able to find the food they are trying to select because the application does not recognize it. The guest writes an email to a special address with a request to add the desired food to the application.
+        \item [A4:] The set already contains the food. The guest is informed about this fact and the set is not altered.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+
+
 
 \textbf{x. Use case: Find a meal I can eat at a restaurant}
 
@@ -168,122 +287,6 @@ Use case scenarios were created with the mindset of its actors, in other words, 
         zobrazit restauracie
         zobrazit jedla
       
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/application_use_cases_guest_manage_profile}
-  \caption{Guest profile management use cases}
-\end{figure}
-
-\noindent \textbf{5. Use case: Specify what allergies I have}
-
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile.
-        \item The guest selects a tab named "My allergies".
-        \item The application displays a list of previously specified allergies by the guest. \textbf{A1}
-        \item The guest clicks a button labeled "Add allergy".
-        \item The application provides a predefined list of allergies.
-        \item The guest selects an allergy from the list and clicks an "Add" button. \textbf{A2}
-        \item The application adds the chosen allergy to the set of the guest's allergies. \textbf{A3}
-        \item The guest repeats steps 1 to 7 until they have specified all their allergies.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The list is empty because the guest has not specified any allergies yet. The application displays a text containing this information.
-        \item [A2:] The allergy the guest is trying to specify is not defined in the list. The guest writes an email to a special address with a request to add the desired allergy to the list.
-        \item [A3:] The allergy the guest has chosen is already contained in the set of the guest's allergies. The application informs the guest about this fact and the set is not altered.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{6. Use case: Specify what diets I am on}
-
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile.
-        \item The guest selects a tab named "My diets".
-        \item The application displays a list of previously specified diets by the guest. \textbf{A1}
-        \item The guest clicks a button labeled "Add diet".
-        \item The application provides a predefined list of diets.
-        \item The guest selects a diet from the list and clicks an "Add" button. \textbf{A2}
-        \item The application adds the chosen diet to the set of the guest's diets. \textbf{A3}
-        \item The guest repeats steps 1 to 7 until they have specified all their diets.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The list is empty because the guest has not specified any diets yet. The application displays a text containing this information.
-        \item [A2:] The diet the guest is trying to specify is not defined in the list. The guest writes an email to a special address with a request to add the desired diet to the list.
-        \item [A3:] The diet the guest has chosen is already contained in the set of the guest's allergies. The application informs the guest about this fact and the set is not altered.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{7. Use case: Specify what food and beverages I like and dislike}
-
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile.
-        \item The guest selects a tab named "My food preferences".
-        \item The application displays two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
-        \item The guest clicks a button labeled as "Add food I like". \textbf{A2}
-        \item The application provides a search bar with a text saying "Search foods...".
-        \item The guest starts typing the name of the food.
-        \item The application recommends foods from a predefined list which contain the given input text in their name.
-        \item The guest selects the desired food and clicks an "Add" button. \textbf{A3}
-        \item The application adds the chosen food to the guest's set of foods which they like. \textbf{A4}
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] Either one or both of the lists can be empty if the guest has not specified any of their preferred or disliked foods yet. Instead of displaying a list, the application displays a text saying "No foods specified".
-        \item [A2:] The guest clicks a button labeled "Add food I dislike". The use case continues with a difference that in the step number 9, the application adds the food to the guest's set of foods which they \emph{dislike}.
-        \item [A3:] The guest is not able to find the food they are trying to select because the application does not recognize it. The guest writes an email to a special address with a request to add the desired food to the application.
-        \item [A4:] The set already contains the food. The guest is informed about this fact and the set is not altered.
       \end{description}
     \end{minipage}
     \\
@@ -496,7 +499,7 @@ Use case scenarios were created with the mindset of its actors, in other words, 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/application_use_cases_restaurant_manage_menus}
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases_restaurant_menu_management}
   \caption{Restaurant menu creation use cases}
 \end{figure}
 
