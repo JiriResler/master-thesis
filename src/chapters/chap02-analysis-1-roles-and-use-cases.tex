@@ -22,6 +22,8 @@ The application will enable a restaurant guest to create a personal profile wher
 When a guest will view a restaurant's menu using the application, the displayed menu will be adapted to meet the guest's profile preferences.
 The application will thus make it easier for the guest to choose what they would like to order in a particular restaurant.
 
+\newpage
+
 \section{Use cases}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
@@ -34,7 +36,7 @@ A structured use case will contain a description if the goal of a user is not en
   \caption{The application's use case diagram.}
 \end{figure}
 
-\vspace*{\fill}
+\newpage
 
 % Add top padding for scenario tables
 \def\arraystretch{1.5}
@@ -85,7 +87,6 @@ A structured use case will contain a description if the goal of a user is not en
 \end{center}
 
 \noindent \textbf{2. Use case: Specify what diets I am on}
-
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -122,25 +123,24 @@ A structured use case will contain a description if the goal of a user is not en
   \newline
 \end{center}
 
-\noindent \textbf{7. Use case: Specify what food and beverages I like and dislike}
-
+\noindent \textbf{3. Use case: Specify what food and beverages I like and dislike}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
-    Actor        & Guest \\
+    Actor    & Guest \\
     \hline
-    Scenario     &
+    Scenario &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest opens their profile.
         \item The guest selects a tab named "My food preferences".
         \item The application displays two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
         \item The guest clicks a button labeled as "Add food I like". \textbf{A2}
-        \item The application provides a search bar with a text saying "Search foods...".
-        \item The guest starts typing the name of the food.
-        \item The application recommends foods from a predefined list which contain the given input text in their name.
+        \item The application provides a search bar with a text saying "Search for a food...".
+        \item The guest starts typing the name of the food which they want to add.
+        \item The application suggests foods which contain the given input text in their name.
         \item The guest selects the desired food and clicks an "Add" button. \textbf{A3}
-        \item The application adds the chosen food to the guest's set of foods which they like. \textbf{A4}
+        \item The application adds the selected food to the guest's set of foods which they like. \textbf{A4}
       \end{enumerate}
     \end{minipage}
     \\
@@ -148,9 +148,9 @@ A structured use case will contain a description if the goal of a user is not en
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] Either one or both of the lists can be empty if the guest has not specified any of their preferred or disliked foods yet. Instead of displaying a list, the application displays a text saying "No foods specified".
-        \item [A2:] The guest clicks a button labeled "Add food I dislike". The use case continues with a difference that in the step number 9, the application adds the food to the guest's set of foods which they \emph{dislike}.
-        \item [A3:] The guest is not able to find the food they are trying to select because the application does not recognize it. The guest writes an email to a special address with a request to add the desired food to the application.
+        \item [A1:] Either one or both of the lists are empty because the guest has not specified any of their preferred or disliked foods yet. Instead of displaying a list, the application displays a text saying "No food specified".
+        \item [A2:] The guest clicks a button labeled as "Add food I dislike". The scenario continues with a difference that in the step number 9, the application adds the food to the guest's set of foods which they \emph{dislike}.
+        \item [A3:] The application does not recognize the food which the guest is searching for. The guest creates an issue in the application's public repository with a request to add the desired food to the application.
         \item [A4:] The set already contains the food. The guest is informed about this fact and the set is not altered.
       \end{description}
     \end{minipage}
