@@ -39,67 +39,69 @@ A guest is expected to be logged in to the application if not stated otherwise i
 \begin{description}
     \item [Req. 2.1:] A restaurant employee shall be able to create a menu for a specific day.
 
-    \emph{Rationale:} Restaurant often have daily menus.
+    \emph{Rationale:} Restaurants often have daily menus.
     \item [Req. 2.2:] A restaurant employee shall be able to create a stable menu.
 
     \emph{Rationale:} Most restaurants have a stable menu which is valid every day and does not change often.
     \item [Req. 2.3:] A restaurant employee should be able to create a list of beverages.
 
     \emph{Rationale:} Some restaurants have a separate menu for meals and for drinks.
-    \item [Req. 2.4:] A restaurant employee should be able to re-use a previously created menu when creating menu for a day.
-    \item [Req. 2.5:] A restaurant employee should be able to print a menu.
+    \item [Req. 2.4:] A restaurant employee should be able to print a menu.
 
     \emph{Rationale:} A printed menu can be put on tables.
-    \item [Req. 2.6:] A printed menu should contain a QR code which will link a guest to the application.
+    \item [Req. 2.5:] A printed menu should contain a QR code which will link a guest to the application.
 
     \emph{Rationale:} The QR code will provide the application with the IRI of the menu.
-    \item [Req. 2.7:] The application shall enable a restaurant employee to edit a previously created menu.
-    \item [Req. 2.8:] The application shall enable a restaurant employee to delete a previously created menu.
-    \item [Req. 2.9:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
+    \item [Req. 2.6:] The application shall enable a restaurant employee to edit a previously created menu.
+    \item [Req. 2.7:] The application shall enable a restaurant employee to delete a previously created menu.
+    \item [Req. 2.8:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
 
     \emph{Rationale:} A daily menu can be the same for a certain day of the week.
-    \item [Req. 2.10:] A restaurant employee should be able to specify categories and subcategories of a menu.
+    \item [Req. 2.9:] A restaurant employee should be able to specify categories and subcategories of a menu.
 
     \emph{Rationale:} A menu typically consists of categories like soups, appetizers, desserts etc. These categories can have subcategories, for instance a category "Drinks" can have subcategories "Wine" and "Non-alcoholic".
-    \item [Req. 2.11:] Each item of a menu should belong to either none or exactly one category.
-    \item [Req. 2.12:] A meal in a menu should contain an ID, label, price, weight, ingredients and allergens.
-    \item [Req. 2.13:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
-    \item [Req. 2.14:] An item on a list of beverages should contain the name of a drink, amount and price.
-    \item [Req. 2.15:] A menu should optionally contain a restaurant's name, address and phone number.
-    \item [Req. 2.16:] A restaurant employee should be able to use a previously created menu as a template for creating a new menu.
-    \item [Req. x:] A restaurant employee should be able to specify what currency to use for prices of items of a menu.
-    \item [Req. x:] A restaurant employee should be able to specify what weight and volume units to use for items of a menu.
-    
-    \emph{Rationale:} Req. x states that a food should have weight specified.
-    \item [Req. x:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
+    \item [Req. 2.10:] Each item of a menu should belong to either none or exactly one category.
+    \item [Req. 2.11:] A meal in a menu should contain an ID, label, price, weight or volume, ingredients and allergens.
+    \item [Req. 2.12:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
+
+    \emph{Rationale:} The weight in the requirement 2.12 is the weight of a whole meal, i.e. all ingredients' weights combined.
+    \item [Req. 2.13:] A menu should optionally contain a restaurant's name, address and phone number.
+
+    \emph{Rationale:} Optionally means that the creator of a menu can decide whether to put these information on the menu or not.
+    \item [Req. 2.14:] A restaurant employee should be able to use a previously created menu as the starting point for creating a new menu.
+
+    \emph{Rationale:} A restaurant employee might want to create a new menu which differs only in some items of an existing menu.
+    \item [Req. 2.15:] A restaurant employee should be able to specify what currency to use in a menu.
+    \item [Req. 2.16:] A restaurant employee should be able to specify what weight and volume units to use for liquid items in a menu.
+    \item [Req. 2.17:] A restaurant employee should be able to specify what font to use in a menu.
+    \item [Req. 2.18:] The application should offer a few empty menus as templates for a restaurant employee to choose from when creating a menu.
+
+    \emph{Rationale:} These templates can differ in what categories they have, what font they use or what currency and weight units they use.
+    \item [Req. 2.19:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
 
     \emph{Rationale:} Allergens can be listed within an item's description.
-    \item [Req. x:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
+    \item [Req. 2.20:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
 
-    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from req. x. 
-    \item [Req. 2.17:] A restaurant employee should be able to specify which Solid pod to use for storing the restaurant's data.
-
-    \emph{Rationale:} A restaurant can have multiple Solid pods associated with its WebID, and the restaurant's management might want to choose which pod should the application use.
+    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement x. 
 \end{description}
 
 \subsection{Non-functional requirements}
 \begin{description}
-    \item [Req. 3.1:] Each item of a menu must have specified allergens contained in it.
+    \item [Req. 3.1:] Each item of a menu must have its allergens specified.
     
-    \emph{Rationale:} At least in the EU, there are laws\footnote{\url{https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex\%3A32011R1169}  \label{fnlabel}} which mandate restaurants to list allergens contained in food they serve.
-    \item [Req. x:] A menu which uses allergen numbers from requirement x must contain a legend explaining what allergen each number represents.
-    \item [Req. 3.2:] The application should have responsive user interface and work on mobile devices as well as on desktops.
-    \item [Req. 3.2:] The application should be compatible with the latest versions of all of the commonly used browsers.
-    \item [Req. 3.3:] The application shall have a user tutorial explaining its functionality.
-    \item [Req. 3.4:] The application should contain a help screen for new users with information about how to log in.
+    \emph{Rationale:} In the EU, there are laws\footnote{\url{https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex\%3A32011R1169}  \label{fnlabel}} which mandate restaurants to list allergens contained in the foods they serve.
+    \item [Req. 3.2:] A menu which uses allergen numbers from requirement 2.20 must contain a legend explaining which allergen each number represents.
 
-    \emph{Rationale:} The new user may not be familiarized with the Solid technology.
-    \item [Req. 3.5:] The application should have an English, Czech and Slovak user interface.
+    \emph{Rationale:} This requirement extends the requirement 3.1.
+    \item [Req. 3.3:] The application should have responsive user interface and work on mobile devices as well as on desktops.
+    \item [Req. 3.4:] The application should be compatible with the latest versions of all of the commonly used browsers, namely .
+    \item [Req. 3.5:] The application shall have a user tutorial explaining its functionality for each screen defined in the design chapter.
+    \item [Req. 3.6:] The application should have an English, Czech and Slovak translations.
 
     \emph{Rationale:} We would like for the application to be used internationally within the European Union.
-    \item [Req. 1.12:] Both guests and restaurants should be able to specify which Solid pod to use for storing their data.
+    \item [Req. 3.7:] Both guests and restaurants should be able to specify which Solid pod should the application use for storing and reading their data.
 
-    \emph{Rationale:} A guest can have multiple Solid pods associated with their WebID and might want to choose which one should the application use.
+    \emph{Rationale:} A guest or a restaurant can have multiple Solid pods associated with their WebID.
 \end{description}
 
 \vspace*{\fill}
