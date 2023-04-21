@@ -32,7 +32,7 @@ All use cases will be structurally described by independent use case scenarios.
 A structured use case will contain a description if the goal of a user is not entirely clear from the use case's name.
 
 \begin{figure}[h]
-  \includegraphics[width=\linewidth]{master-thesis/img/use_cases}
+  \includegraphics[width=\linewidth]{master-thesis/img/use_cases/use_cases}
   \caption{The application's use case diagram.}
 \end{figure}
 
@@ -45,7 +45,7 @@ A structured use case will contain a description if the goal of a user is not en
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases_guest_profile_management}
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_guest_profile_management}
   \caption{Guest profile management use cases}
 \end{figure}
 
@@ -57,7 +57,7 @@ A structured use case will contain a description if the goal of a user is not en
     \hline
     Actor       & Guest \\
     \hline
-    Description & A guest has a set of allergies which is stored on their Solid pod. This scenario describes how the guest can add allergies to this set and also how the application displays the set. \\
+    Description & A guest has a set of allergies which is stored on their Solid pod. The scenario describes how the guest can add allergies to this set and also how the application displays the set. \\
     \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
@@ -66,14 +66,14 @@ A structured use case will contain a description if the goal of a user is not en
         \item The guest presses a menu button in the top-left corner of the screen.
         \item The application displays a dropdown list containing links for navigation.
         \item The guest follows a link which says "My allergies".
-        \item The application displays a screen with a list containing the guest's allergies. \textbf{A1}
-        \item The guest clicks a button labeled as "Add allergy".
+        \item The application displays a screen with a list of previously specified allergies by the guest. \textbf{A1}
+        \item The guest presses a button labeled as "Add allergy".
         \item The application displays a search bar with a placeholder which says "Allergy name".
         \item The guest starts typing the name of an allergy into the search bar.
         \item The application suggests allergies which contain the given input in their name.
-        \item The guest selects the desired allergy and clicks an "Add" button. \textbf{A2}
+        \item The guest selects the desired allergy and presses an "Add" button. \textbf{A2}
         \item The application adds the specified allergy to the set of the guest's allergies and also to the list on the screen. \textbf{A3}
-        \item The guest repeats steps 4 to 9 until they have specified all of their allergies.
+        \item The guest repeats steps 6 to 11 until they have specified all of the food allergies they suffer from.
       \end{enumerate}
     \end{minipage}
     \\
@@ -98,21 +98,25 @@ A structured use case will contain a description if the goal of a user is not en
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
-    Actor    & Guest \\
+    Actor       & Guest \\
     \hline
-    Scenario &
+    Description & A guest has a set of diets which is stored on their Solid pod. The scenario describes how the guest can add diets to this set and also how the application displays the set. \\
+    \hline
+    Scenario    &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest opens their profile.
-        \item The guest selects a tab named "My diets".
-        \item The application displays a list of previously specified diets by the guest. \textbf{A1}
-        \item The guest clicks a button labeled "Add diet".
-        \item The application displays a search bar.
+        \item The guest presses a menu button in the top-left corner of the screen.
+        \item The application displays a dropdown list containing links for navigation.
+        \item The guest follows a link which says "My diets".
+        \item The application displays a screen with a list of previously specified diets by the guest. \textbf{A1}
+        \item The guest presses a button labeled as "Add diet".
+        \item The application displays a search bar with a placeholder which says "Diet name".
         \item The guest starts typing the name of a diet into the search bar.
         \item The application suggests diets which contain the given input in their name.
-        \item The guest selects the desired diet and clicks an "Add" button. \textbf{A2}
-        \item The application adds the chosen diet to the set of the guest's diets. \textbf{A3}
-        \item The guest repeats steps 4 to 9 until they have specified all their diets.
+        \item The guest selects the desired diet and presses an "Add" button. \textbf{A2}
+        \item The application adds the specified diet to the set of the guest's diets and also to the list on the screen. \textbf{A3}
+        \item The guest repeats steps 6 to 11 until they have specified all of the diets they are on.
       \end{enumerate}
     \end{minipage}
     \\
@@ -121,8 +125,8 @@ A structured use case will contain a description if the goal of a user is not en
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
         \item [A1:] The list is empty because the guest has not specified any diets yet. The application displays a text containing this information.
-        \item [A2:] The application does not recognize the diet which the guest is searching for. The guest creates an issue in the application's public repository with a request to add the desired diet to the application.
-        \item [A3:] The diet the guest has chosen is already contained in the set of the guest's diets. The application informs the guest about this fact and the set is not altered.
+        \item [A2:] The application does not recognize the diet which the guest is trying to add. The guest creates a public issue in the application's repository with a request to add the desired diet to the application.
+        \item [A3:] The diet the guest has specified is already contained in the set and in the list. The application informs the guest about this fact and the set and the list are not altered.
       \end{description}
     \end{minipage}
     \\
@@ -179,7 +183,7 @@ A structured use case will contain a description if the goal of a user is not en
     \hline
     Actor    & Guest \\
     \hline
-    Description & A guest has a set of their favorite restaurants which is stored on their Solid pod. This scenario describes how the guest can add or remove a restaurant from this set and how the application displays the set. \\
+    Description & A guest has a set of their favorite restaurants which is stored on their Solid pod. The scenario describes how the guest can add or remove a restaurant from this set and how the application displays the set. \\
     \hline
     Scenario &
     \begin{minipage}[t]{\linewidth}
