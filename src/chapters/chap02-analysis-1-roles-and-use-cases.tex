@@ -143,18 +143,23 @@ A structured use case will contain a description if the goal of a user is not en
     \hline
     Actor    & Guest \\
     \hline
+    Description & A guest has two sets of foods stored on their Solid pod which resemble what foods they like and dislike. The scenario describes how the guest can add food items to these sets and also how the application displays them. \\
+    \hline
     Scenario &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest opens their profile.
-        \item The guest selects a tab named "My food preferences".
-        \item The application displays two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
-        \item The guest clicks a button labeled as "Add food I like". \textbf{A2}
-        \item The application provides a search bar with a text saying "Search for a food...".
+        \item The guest presses a menu button in the top-left corner of the screen.
+        \item The application displays a dropdown list containing links for navigation.
+        \item The guest follows a link which says "My food preferences".
+        \item The application displays a screen with two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
+        \item The guest presses a button labeled as "Add food" at the end of the list of foods which they like. \textbf{A2}
+        \item The application provides a search bar with a placeholder text saying "Food name".
         \item The guest starts typing the name of the food which they want to add.
         \item The application suggests foods which contain the given input text in their name.
-        \item The guest selects the desired food and clicks an "Add" button. \textbf{A3}
-        \item The application adds the selected food to the guest's set of foods which they like. \textbf{A4}
+        \item The guest selects the desired food and presses an "Add" button. \textbf{A3}
+        \item The application adds the specified food to the guest's set of foods which they like and also to the corresponding list on the screen. \textbf{A4}
+        \item The guest repeats steps x to y until they have specified all of their food preferences.
       \end{enumerate}
     \end{minipage}
     \\
@@ -162,10 +167,10 @@ A structured use case will contain a description if the goal of a user is not en
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] Either one or both of the lists are empty because the guest has not specified any of their preferred or disliked foods yet. Instead of displaying a list, the application displays a text saying "No food specified".
-        \item [A2:] The guest clicks a button labeled as "Add food I dislike". The scenario continues with a difference that in the step number 9, the application adds the food to the guest's set of foods which they \emph{dislike}.
-        \item [A3:] The application does not recognize the food which the guest is searching for. The guest creates an issue in the application's public repository with a request to add the desired food to the application.
-        \item [A4:] The set already contains the food. The guest is informed about this fact and the set is not altered.
+        \item [A1:] Either one or both of the lists are empty because the guest has not specified any of their preferrences yet. Instead of displaying a list, the application displays a text saying "No food specified".
+        \item [A2:] The guest presses a button labeled as "Add food" at the end of the list of foods which they dislike. The scenario continues with a difference that in the step number x the application adds the food to the guest's set of foods which they \emph{dislike}.
+        \item [A3:] The application does not recognize the food which the guest is trying to add. The guest creates a public issue in the application's repository with a request to add the desired food to the application.
+        \item [A4:] The set and the list already contain the food. The guest is informed about this fact and the set and its corresponding list on the screen are not altered.
       \end{description}
     \end{minipage}
     \\
