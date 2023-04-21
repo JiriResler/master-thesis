@@ -166,6 +166,45 @@ A structured use case will contain a description if the goal of a user is not en
   \newline
 \end{center}
 
+\noindent \textbf{4. Use case: Manage a list of my favorite restaurants}
+
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor    & Guest \\
+    Description & A guest has a set of their favorite restaurants which is stored on their Solid pod. This scenario describes how the guest can add or remove a restaurant from this set and how the application displays the set.
+    \hline
+    Scenario &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest opens their profile. \textbf{A1}
+        \item The guest presses a menu button in the top-left corner of the screen.
+        \item The application displays a dropdown list containing links for navigation.
+        \item The guest follows a link which says "Manage my favorite restaurants".
+        \item The application displays a screen with a list containing the guest's favorite restaurants. \textbf{A2} 
+        \item The guest presses an "Add restaurant" button. \textbf{A3}
+        \item The application provides a text input field with a placeholder saying "Restaurant IRI". 
+        \item The guest specifies the IRI of a restaurant which they wish to add to the list and presses an "Add" button. 
+        \item The application adds the restaurant to the set of the guest's favorite restaurants and to the list on the screen. \textbf{A4}
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The guest is viewing a restaurant's detail and presses a button with a hearth icon next to the restaurant's name. The application adds the restaurant to the set of the guest's favorite restaurants. \textbf{A1.b}
+        \item [A1.b:] The restaurant is already contained in the set and pressing the button removes the restaurant from it.
+        \item [A2:] The list is empty because the guest has not added any restaurants yet. The application displays a text containing this information.
+        \item [A3:] The guest presses a "Remove" button next to a restaurant's name. The application removes the corresponding restaurant from the guest's set of favorite restaurants and from the list on the screen.
+        \item [A4:] The set and the list already contain the restaurant by the specified IRI. The guest is informed about this fact and the set and the list are not altered.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
 
 
 
@@ -193,38 +232,6 @@ A structured use case will contain a description if the goal of a user is not en
 %     \begin{minipage}[t]{\linewidth}
 %       \begin{description}[nosep,after=\strut]
 %         \item [A1:] The guest selects that they wish to sort the menu according to their profile preferences.
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
-
-% \noindent \textbf{2. Use case: Manage a list of my favorite restaurants}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Guest \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The guest selects a tab named "Manage my favorite restaurants".
-%         \item The application displays a screen with infor
-%         \item The guest specifies the IRI of the restaurant which they wish to add to the list of their favorite restaurants. \textbf{A1}
-%         \item The application displays the restaurant's detail. 
-%         \item The guest clicks a heart icon next to the restaurant's name.
-%         \item The application adds the restaurant to the list of the guest's favorite restaurants.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The guest opens their profile and adds the restaurant to the list of their favorite restaurants manually.
 %       \end{description}
 %     \end{minipage}
 %     \\
