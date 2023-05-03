@@ -69,23 +69,18 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Actor       & Guest \\
     \hline
-    Description & A guest has a set of diets which is stored on their Solid pod. The scenario describes how the guest can add diets to this set and also how the application displays the set. \\
-    \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile.
-        \item The guest presses a menu button in the top-left corner of the screen.
-        \item The application displays a dropdown list containing links for navigation.
-        \item The guest follows a link which says "My diets".
+        \item The guest navigates to their profile and selects a tab labeled as "My diets".
         \item The application displays a screen with a list of previously specified diets by the guest. \textbf{A1}
         \item The guest presses a button labeled as "Add diet".
-        \item The application displays a search bar with a placeholder which says "Diet name".
+        \item The application displays a search bar.
         \item The guest starts typing the name of a diet into the search bar.
         \item The application suggests diets which contain the given input in their name.
         \item The guest selects the desired diet and presses an "Add" button. \textbf{A2}
-        \item The application adds the specified diet to the set of the guest's diets and also to the list on the screen. \textbf{A3}
-        \item The guest repeats steps 6 to 11 until they have specified all of the diets they are on.
+        \item The application adds the specified diet to the guest's profile. \textbf{A3}
+        \item The guest repeats steps 3 to 8 until they have specified all of the diets they are on.
       \end{enumerate}
     \end{minipage}
     \\
@@ -95,7 +90,7 @@ A scenario will contain its description only if the goal of a user is not clear 
       \begin{description}[nosep,after=\strut]
         \item [A1:] The list is empty because the guest has not specified any diets yet. The application displays a text containing this information.
         \item [A2:] The application does not recognize the diet which the guest is trying to add. The guest creates a public issue in the application's repository with a request to add the desired diet to the application.
-        \item [A3:] The diet the guest has specified is already contained in the set and in the list. The application informs the guest about this fact and the set and the list are not altered.
+        \item [A3:] The diet the guest has specified is already contained in the guest's profile. The application informs the guest about this fact and the guest's profile is not altered.
       \end{description}
     \end{minipage}
     \\
