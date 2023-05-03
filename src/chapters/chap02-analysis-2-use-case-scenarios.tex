@@ -1,30 +1,4 @@
-\chapter{Problem analysis}
-Our first step will be to define what will the application do and also who will be able to use it.
-For this reason we will identify user roles, specify use cases and describe those via use case scenarios.
-The output of this chapter is a list of user requirements which will be important in the next chapter.
-This analysis is inspired by interviewing a restaurant\footnote{\url{https://www.pizzabudca.sk}  \label{fnlabel}} employee and also two former restaurant\footnote{\url{https://www.sokolzabreh.cz/hospudka}  \label{fnlabel}} owners.
-
-\section{Target group}
-The application will focus on restaurants and their guests in the European Union.
-The reason behind this is that the EU enforces restaurants to inform their guests about allergens contained in the food they serve, and has already established rules for how to do it.
-We would like for the application to be usable internationally, so it needs to have its user interface translated into different languages.
-For this purpose we will choose the English, Slovak and Czech languages with the possibility of adding more translations in the future.
-
-\section{User roles}
-There are two types of users who will come in contact with the application.
-The first type is a \textbf{restaurant}, more specifically its employee who is responsible for creating menus.
-This user needs to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
-The application will allow restaurant employees to create menus online and will help them with specifying allergens contained in menu items.
-
-The second type of user is a restaurant \textbf{guest}.
-They, too, need to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
-The application will enable a restaurant guest to create a personal profile where they will specify their food preferences, including the allergies they have and the diets they are on.
-When a guest will view a restaurant's menu using the application, the displayed menu will be adapted to meet the guest's profile preferences.
-The application will thus make it easier for the guest to choose what they would like to order in a particular restaurant.
-
-\newpage
-
-\section{Use cases}
+\section{Use case scenarios}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
 A use case styled with a bold border groups together more use cases and will be expanded further.
@@ -41,7 +15,7 @@ A structured use case will contain a description if the goal of a user is not en
 % Add top padding for scenario tables
 \def\arraystretch{1.5}
 
-\subsection{Guest use case scenarios}
+\subsection{Guest use cases}
 
 \begin{figure}[h]
   \centering
@@ -230,7 +204,7 @@ A structured use case will contain a description if the goal of a user is not en
   \caption{Guest menu viewing use cases}
 \end{figure}
 
-\subsection{Restaurant use case scenarios}
+\subsection{Restaurant use cases}
 
 \begin{figure}[h]
   \centering

@@ -1,3 +1,29 @@
+\chapter{Problem analysis}
+Our first step will be to define what will the application do and also who will be able to use it.
+For this reason we are going to identify user roles and their requirements. 
+After that we will specify use cases and describe those via use case scenarios.
+The analysis is inspired by interviewing a restaurant\footnote{\url{https://www.pizzabudca.sk}  \label{fnlabel}} employee and also two former restaurant\footnote{\url{https://www.sokolzabreh.cz/hospudka}  \label{fnlabel}} owners.
+
+\section{Target group}
+The application will focus on restaurants and their guests in the European Union.
+The reason behind this is that the EU enforces restaurants to inform their guests about allergens contained in the food they serve, and has already established rules for how to do it.
+We would like for the application to be usable internationally, so it needs to have its user interface translated into different languages.
+For this purpose we will choose the English, Slovak and Czech languages with the possibility of adding more translations in the future.
+
+\section{User roles}
+There are two types of users who will come in contact with the application.
+The first type is a \textbf{restaurant}, more specifically its employee who is responsible for creating menus.
+This user needs to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
+The application will allow restaurant employees to create menus online and will help them with specifying allergens contained in menu items.
+
+The second type of user is a restaurant \textbf{guest}.
+They, too, need to have a basic understanding of how to use a web browser either on a computer or on a smartphone.
+The application will enable a restaurant guest to create a personal profile where they will specify their food preferences, including the allergies they have and the diets they are on.
+When a guest will view a restaurant's menu using the application, the displayed menu will be adapted to meet the guest's profile preferences.
+The application will thus make it easier for the guest to choose what they would like to order in a particular restaurant.
+
+\newpage
+
 \section{User requirements}
 It is good practice to use language consistently throughout requirements and that is why we are going to resolve what keywords will we use and what will they mean.
 If a requirement states that the application \textbf{shall} do something then it means that the requirement is mandatory for the application and has to be addressed in the design phase which follows after this chapter. 
@@ -84,6 +110,8 @@ A guest is expected to be logged in to the application if not stated otherwise i
 
     \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement x. 
 \end{description}
+
+\newpage
 
 \subsection{Non-functional requirements}
 \begin{description}
