@@ -1,9 +1,9 @@
 \section{Use case scenarios}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
-A use case styled with a bold border groups together more use cases and will be expanded further.
+A use case styled with a bold border groups together more use cases and will be further expanded.
 All use cases will be structurally described by independent use case scenarios.
-A structured use case will contain a description if the goal of a user is not entirely clear from the use case's name.
+A scenario will contain its description only if the goal of a user is not clear from a use case's name.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{master-thesis/img/use_cases/use_cases}
@@ -31,23 +31,18 @@ A structured use case will contain a description if the goal of a user is not en
     \hline
     Actor       & Guest \\
     \hline
-    Description & A guest has a set of allergies which is stored on their Solid pod. The scenario describes how the guest can add allergies to this set and also how the application displays the set. \\
-    \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile.
-        \item The guest presses a menu button in the top-left corner of the screen.
-        \item The application displays a dropdown list containing links for navigation.
-        \item The guest follows a link which says "My allergies".
+        \item The guest navigates to their profile and selects a tab labeled as "My allergies".
         \item The application displays a screen with a list of previously specified allergies by the guest. \textbf{A1}
         \item The guest presses a button labeled as "Add allergy".
-        \item The application displays a search bar with a placeholder which says "Allergy name".
+        \item The application displays a search bar.
         \item The guest starts typing the name of an allergy into the search bar.
         \item The application suggests allergies which contain the given input in their name.
         \item The guest selects the desired allergy and presses an "Add" button. \textbf{A2}
-        \item The application adds the specified allergy to the set of the guest's allergies and also to the list on the screen. \textbf{A3}
-        \item The guest repeats steps 6 to 11 until they have specified all of the food allergies they suffer from.
+        \item The application adds the specified allergy the guest's profile. \textbf{A3}
+        \item The guest repeats steps 3 to 8 until they have specified all of the food allergies they suffer from.
       \end{enumerate}
     \end{minipage}
     \\
@@ -57,7 +52,7 @@ A structured use case will contain a description if the goal of a user is not en
       \begin{description}[nosep,after=\strut]
         \item [A1:] The list is empty because the guest has not specified any allergies yet. The application displays a text containing this information.
         \item [A2:] The application does not recognize the allergy which the guest is trying to add. The guest creates a public issue in the application's repository with a request to add the desired allergy to the application.
-        \item [A3:] The allergy the guest has specified is already contained in the set and in the list. The application informs the guest about this fact and the set and the list are not altered.
+        \item [A3:] The allergy the guest has specified is already contained in the guest's profile. The application informs the guest about this fact and the guest's profile is not altered.
       \end{description}
     \end{minipage}
     \\
