@@ -185,6 +185,39 @@ A scenario will contain its description only if the goal of a user is not clear 
   \caption{Guest menu viewing use cases}
 \end{figure}
 
+\textbf{5. Use case: Find a meal I can eat at a restaurant}
+
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest comes to a restaurant and is deciding what to order. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest scans a QR code on a printed menu which takes them to the application.
+        \item The application loads and displays an online version of the printed menu.
+        \item The guest selects that they wish to filter out meals of the menu which do not correspond to their profile~preferences.~\textbf{A1}
+        \item The application reorganizes the items of the displayed menu.
+        \item The guest chooses a meal from the personalized menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The guest selects that they wish to sort the menu according to their profile preferences.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \subsection{Restaurant use cases}
 
 \begin{figure}[h]
@@ -204,38 +237,6 @@ A scenario will contain its description only if the goal of a user is not clear 
   \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_create_daily_menu}
   \caption{Restaurant daily menu creation use cases}
 \end{figure}
-
-% \textbf{x. Use case: Find a meal I can eat at a restaurant}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Guest \\
-%     \hline
-%     Description  & A guest comes to a restaurant and is deciding what to order. \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The guest scans a QR code on a printed menu which takes him to the application.
-%         \item The application loads and displays the online version of the menu.
-%         \item The guest selects that they wish to filter out meals of the menu which do not correspond to their profile preferences. \textbf{A1}
-%         \item The guest chooses a meal from the personalized menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The guest selects that they wish to sort the menu according to their profile preferences.
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
 
 % \noindent \textbf{3. Use case: Look up online what a restaurant offers today}
 
