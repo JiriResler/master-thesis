@@ -1,3 +1,4 @@
+\todo[inline]{Add use case coverage of requirements}
 \section{Use case scenarios}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
@@ -179,6 +180,8 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
+\todo[inline]{Make the figure bigger - increase height, make bubbles bigger}
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_guest_menu_viewer}
@@ -219,60 +222,37 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\subsection{Restaurant use cases}
+\noindent \textbf{6. Use case: Look up online what a restaurant offers today}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_publish_menu}
-  \caption{Restaurant offer use cases}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_create_menu}
-  \caption{Restaurant menu creation use cases}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_create_daily_menu}
-  \caption{Restaurant daily menu creation use cases}
-\end{figure}
-
-% \noindent \textbf{3. Use case: Look up online what a restaurant offers today}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Guest \\
-%     \hline
-%     Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The guest clicks a button labeled "Find restaurant by IRI". \textbf{A1}
-%         \item The application provides a text input field.
-%         \item The guest specifies the IRI of the restaurant in the provided input field and clicks a "Find" button.
-%         \item The application displays the detail of the restaurant. \textbf{A2}
-%         \item The guest clicks a button labeled "Detail" next to the menu which they wish to view.
-%         \item The application displays the chosen menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The guest opens a tab named "My favorite restaurants". The application displays the list of the guest's favorite restaurants. The guest clicks a "Detail" button next to the desired restaurant. The guest continues with step 5.
-%         \item [A2:] The application could not find the restaurant by the specified IRI and informs the guest about it by displaying an error page.
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest provides the IRI of the restaurant.
+        \item The application displays a detail of the restaurant. \textbf{A1}
+        \item The guest selects a menu.
+        \item The application displays the menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut] 
+        \item [A1:] The specified IRI is not valid. The application informs the guest about this fact and the scenario starts over from step 1.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
 
 % \noindent \textbf{4. Use case: Find currently served meals by my favorite restaurants which correspond to my profile}
 
@@ -281,12 +261,12 @@ A scenario will contain its description only if the goal of a user is not clear 
 %     \hline
 %     Actor        & Guest \\
 %     \hline
-%     Description  & A guest is at home or at work and wants to see what do their favorite restaurants currently have to offer. \\
+%     Description  & A guest wants to see what do their favorite restaurants currently have to offer. \\
 %     \hline
 %     Scenario     &
 %     \begin{minipage}[t]{\linewidth}
 %       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-
+%         \item The application provides an overview of the guest's favorite restaurants.
 %         \item The application shows currently valid menus of the guest's favorite restaurants by default. A1 A2 - currently no meals are served A3 meals are served but none correspond to profile
 %       \end{enumerate}
 %     \end{minipage}
@@ -309,21 +289,24 @@ A scenario will contain its description only if the goal of a user is not clear 
 %   \newline
 % \end{center}
 
-% \noindent \textbf{x. Use case: Specify where should the application store my data}
+% \todo[inline]{What does it precisely mean to have control over one's data? Where is data stored, who has access to it}
+% \textbf{x. Use case: Have control over my data}
 
 % \begin{center}
 %   \begin{tabular}{| l | p{10.75cm} | }
 %     \hline
-%     Actor        & Restaurant \\
+%     Actor        & Guest \\
 %     \hline
-%     Description  &  \\
+%     Description  & A guest wishes to specify where should the application store their data. \\
 %     \hline
 %     Scenario     &
 %     \begin{minipage}[t]{\linewidth}
 %       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item ...
-%         \item ... \textbf{A1}
-%         \item ...
+%         \item  \textbf{A1}
+%         \item 
+%         \item 
+%         \item 
+%         \item 
 %       \end{enumerate}
 %     \end{minipage}
 %     \\
@@ -331,7 +314,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 %     Alternatives &
 %     \begin{minipage}[t]{\linewidth}
 %       \begin{description}[nosep,after=\strut]
-%         \item [A1:] ...
+%         \item [A1:] 
 %       \end{description}
 %     \end{minipage}
 %     \\
@@ -339,6 +322,28 @@ A scenario will contain its description only if the goal of a user is not clear 
 %   \end{tabular}
 %   \newline
 % \end{center}
+
+\subsection{Restaurant use cases}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_publish_menu}
+  \caption{Restaurant offer use cases}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_create_menu}
+  \caption{Restaurant menu creation use cases}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_restaurant_create_daily_menu}
+  \caption{Restaurant daily menu creation use cases}
+\end{figure}
+
+% \newpage
 
 % \subsection{Restaurant use cases}
 
