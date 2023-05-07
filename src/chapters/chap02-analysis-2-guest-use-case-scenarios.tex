@@ -18,6 +18,37 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \subsection{Guest use cases}
 
+\textbf{1. Use case: Find a meal I can eat at a restaurant}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest comes to a restaurant and is deciding what to order. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest scans a QR code on a printed menu which takes them to the application.
+        \item The application loads and displays an online version of the printed menu.
+        \item The guest selects that they wish to filter out meals of the menu which do not correspond to their profile. \textbf{A1}
+        \item The application restructures the displayed menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The guest selects that they wish to sort the menu by what menu items the guest can eat according to their~profile.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_guest_profile_management}
@@ -26,7 +57,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\noindent \textbf{1. Use case: Specify what allergies I have}
+\noindent \textbf{2. Use case: Specify what allergies I have}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -62,9 +93,80 @@ A scenario will contain its description only if the goal of a user is not clear 
   \newline
 \end{center}
 
+\noindent \textbf{3. Use case: Look up online what a restaurant offers today}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest provides the IRI of the restaurant.
+        \item The application displays a detail of the restaurant. \textbf{A1}
+        \item The guest selects a menu.
+        \item The application displays the menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut] 
+        \item [A1:] The specified IRI is not valid. The application informs the guest about this fact and the scenario starts over from step 1.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \newpage
 
-\noindent \textbf{2. Use case: Specify what diets I am on}
+\todo[inline]{Make the figure bigger - increase height, make bubbles bigger}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_guest_menu_viewer}
+  \caption{Guest menu viewing use cases}
+\end{figure}
+
+\noindent \textbf{4. Use case: Find currently served meals by my favorite restaurants which correspond to my profile}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest wants to know what do their favorite restaurants currently have to offer. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The application provides an overview of what the guest's favorite restaurants currently serve. \textbf{A1} \textbf{A2} \textbf{A3}
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The overview is empty because the guest has not added any of their favorite restaurants yet. The application displays instructions on how to mark a restaurant as favorite.
+        \item [A2:] Some of the guest's favorite restaurants are missing in the overview because they are currently closed.
+        \item [A3:] Some of the guest's favorite restaurants are missing in the overview because they are not serving anything which would correspond to the guest's profile.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\newpage
+
+\noindent \textbf{5. Use case: Specify what diets I am on}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -100,9 +202,32 @@ A scenario will contain its description only if the goal of a user is not clear 
   \newline
 \end{center}
 
+\noindent \textbf{6. Use case: Have control over my data}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Guest \\
+    \hline
+    Description  & A guest wants to specify where should the application store their data. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The guest navigates to a page for managing data storage options.
+        \item The application provides a list of places where it can store the guest's data.
+        \item The guest selects one of the options.
+        \item The application starts using the selected place for storing the guest's data.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \newpage
 
-\noindent \textbf{3. Use case: Specify what food and beverages I like and dislike}
+\noindent \textbf{7. Use case: Specify what food and beverages I like and dislike}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -141,7 +266,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\noindent \textbf{4. Use case: Manage a list of my favorite restaurants}
+\noindent \textbf{8. Use case: Manage a list of my favorite restaurants}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -178,128 +303,3 @@ A scenario will contain its description only if the goal of a user is not clear 
 \end{center}
 
 \newpage
-
-\todo[inline]{Make the figure bigger - increase height, make bubbles bigger}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use_cases/use_cases_guest_menu_viewer}
-  \caption{Guest menu viewing use cases}
-\end{figure}
-
-\textbf{5. Use case: Find a meal I can eat at a restaurant}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Description  & A guest comes to a restaurant and is deciding what to order. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest scans a QR code on a printed menu which takes them to the application.
-        \item The application loads and displays an online version of the printed menu.
-        \item The guest selects that they wish to filter out meals of the menu which do not correspond to their profile. \textbf{A1}
-        \item The application restructures the displayed menu.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The guest selects that they wish to sort the menu by what menu items the guest can eat according to their~profile.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\newpage
-
-\noindent \textbf{6. Use case: Look up online what a restaurant offers today}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest provides the IRI of the restaurant.
-        \item The application displays a detail of the restaurant. \textbf{A1}
-        \item The guest selects a menu.
-        \item The application displays the menu.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut] 
-        \item [A1:] The specified IRI is not valid. The application informs the guest about this fact and the scenario starts over from step 1.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{7. Use case: Find currently served meals by my favorite restaurants which correspond to my profile}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Description  & A guest wants to know what do their favorite restaurants currently have to offer. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application provides an overview of what the guest's favorite restaurants currently serve. \textbf{A1} \textbf{A2} \textbf{A3}
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The overview is empty because the guest has not added any of their favorite restaurants yet. The application displays instructions on how to mark a restaurant as favorite.
-        \item [A2:] Some of the guest's favorite restaurants are missing in the overview because they are currently closed.
-        \item [A3:] Some of the guest's favorite restaurants are missing in the overview because they are not serving anything which would correspond to the guest's profile.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\textbf{8. Use case: Have control over my data}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Guest \\
-    \hline
-    Description  & A guest wants to specify where should the application store their data. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest navigates to a page for managing data storage options.
-        \item The application provides a list of places where it can store the guest's data.
-        \item The guest selects one of the options.
-        \item The application starts using the selected place for storing the guest's data.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
