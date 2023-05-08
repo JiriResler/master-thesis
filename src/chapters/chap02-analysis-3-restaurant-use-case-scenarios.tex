@@ -17,8 +17,8 @@
         \item The restaurant employee specifies when should the menu be valid. (Extension point)
         \item The restaurant employee specifies what currency shall be used in the menu.
         \item The restaurant employee specifies what weight and volume units shall be used in the menu.
-        \todo[inline]{Extension point}
-        \item The restaurant employee specifies how the menu shall display allergen information. (Extension point) 
+        \todo[inline]{Extension point - Warn my guests about allergens in the foods I serve}
+        \item The restaurant employee specifies how shall the menu display allergen information. (Extension point) 
         \item The restaurant employee specifies what categories shall the menu have. \textbf{A3}
         \item The restaurant employee specifies items of the menu.
         \item The restaurant employee presses a button for saving the menu.
@@ -44,32 +44,20 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
-
-The application inserts allergens when the employee creates a menu item
-Employee adjusts them
-
+\todo[inline]{add use case number in description}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
+    Description        & A restaurant employee wants to add information about allergens contained in a menu's items. This use case extends the use case x: Create a new menu \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item A restaurant employee creates a new menu as in use case x.
-        \item The application automatically inserts allergens based on contents of a menu item.
-        \item The application displays allergens in a menu. A1 uses them for personalizing the menu
-
-        \item The restaurant employee logs in to the application.
-        \item The restaurant employee clicks a "Create a menu" button.
-        \item The application asks the restaurant employee what kind of menu they would like to create.
-        \item The restaurant employee selects one of the options.
-        \item The restaurant employee clicks a plus sign on the new menu to add an item to it.
-        \item The restaurant employee adds information about the food item.
-        \item The application gives the restaurant employee a list of all allergens. \textbf{A1}
-        \item The restaurant employee selects allergens which are contained in the meal.
-        \item The restaurant employee clicks a "Save menu" button.
-        \item The application saves the menu.
+        \item The restaurant employee specifies that numbers shall be used to indicate allergens contained in menu items. \textbf{A1}
+        \item The application inserts a predefined allergen table at the end of the menu.
+        \item The application later automatically inserts allergens to menu items based on their ingredients.
       \end{enumerate}
     \end{minipage}
     \\
@@ -77,7 +65,7 @@ Employee adjusts them
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee starts typing the name of an ingredient. The application provides predefined ingredients and automatically adds allergens contained in the selected ingredient as the food item's allergens. The restaurant employee then continues with step 9.
+        \item [A1:] The restaurant employee specifies that allergen labels shall be used in the menu. The scenario continues with step 3.
       \end{description}
     \end{minipage}
     \\
