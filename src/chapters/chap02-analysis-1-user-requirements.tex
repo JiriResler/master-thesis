@@ -10,6 +10,8 @@ The reason behind this is that the EU enforces restaurants to inform their guest
 We would like for the application to be usable internationally, so it needs to have its user interface translated into different languages.
 For this purpose we will choose the English, Slovak and Czech languages with the possibility of adding more translations in the future.
 
+\todo[inline]{Change user role restaurant to restaurant employee}
+
 \section{User roles}
 There are two types of users who will come in contact with the application.
 The first type is a \textbf{restaurant}, more specifically its employee who is responsible for creating menus.
@@ -86,26 +88,27 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 2.9:] A restaurant employee should be able to specify categories and subcategories of a menu.
 
     \emph{Rationale:} A menu typically consists of categories like soups, appetizers, desserts etc. These categories can have subcategories, for instance a category "Drinks" can have subcategories "Wine" and "Non-alcoholic".
-    \item [Req. 2.10:] Each item of a menu should belong to either none or exactly one category or subcategory.
-    \item [Req. 2.11:] A meal in a menu should contain an ID, label, price, weight or volume, ingredients and allergens.
-    \item [Req. 2.12:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
+    \item [Req. 2.10:] If a menu consists of categories then each menu item should be in exactly one category.
+    \item [Req. 2.11:] A category in a menu should not be empty.   
+    \item [Req. 2.12:] A meal in a menu should contain an ID, label, price, weight or volume, ingredients and allergens.
+    \item [Req. 2.13:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
 
     \emph{Rationale:} The weight in the requirement 2.11 is the weight of a whole meal, i.e. all ingredients' weights combined.
-    \item [Req. 2.13:] A menu should optionally contain a restaurant's name, address and telephone number.
-    \item [Req. 2.14:] A restaurant employee should be able to use a previously created menu as the starting point for creating a new menu.
+    \item [Req. 2.14:] A menu should optionally contain a restaurant's name, address, telephone number and opening hours.
+    \item [Req. 2.15:] A restaurant employee should be able to use a previously created menu as the starting point for creating a new menu.
 
     \emph{Rationale:} A restaurant employee might want to create a new menu which differs only in some items of an existing menu.
-    \item [Req. 2.15:] A restaurant employee should be able to specify what currency to use in a menu.
-    \item [Req. 2.16:] A restaurant employee should be able to specify what weight units to use in a menu.
-    \item [Req. 2.17:] A restaurant employee should be able to specify what volume units to use for liquid items in a menu.
-    \item [Req. 2.18:] A restaurant employee should be able to specify what font to use in a menu.
-    \item [Req. 2.19:] The application should offer at least three empty menus as templates for a restaurant employee to choose from when creating a menu.
+    \item [Req. 2.16:] A restaurant employee should be able to specify what currency to use in a menu.
+    \item [Req. 2.17:] A restaurant employee should be able to specify what weight units to use in a menu.
+    \item [Req. 2.18:] A restaurant employee should be able to specify what volume units to use for liquid items in a menu.
+    \item [Req. 2.19:] A restaurant employee should be able to specify what font to use in a menu.
+    \item [Req. 2.20:] The application should offer at least three empty menus as templates for a restaurant employee to choose from when creating a menu.
 
     \emph{Rationale:} These templates can differ in what categories they have, what font they use or what currency and weight units they use.
-    \item [Req. 2.20:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
+    \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
 
     \emph{Rationale:} Allergens can be listed within an item's description.
-    \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
+    \item [Req. 2.22:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
 
     \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement 2.20.
 \end{description}
