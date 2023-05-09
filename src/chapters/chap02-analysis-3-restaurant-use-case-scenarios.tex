@@ -85,11 +85,37 @@
     \hline
     Description  & A restaurant's management wants its restaurant to have a stable menu which will be valid every day of the week. \\
     \hline
+    Extends       &  x: Create a new menu \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The restaurant employee selects that the menu shall be valid every day of the week.
         \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\noindent \textbf{x. Use case: Create a stable menu in a foreign language}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Description  & A restaurant's management wants its restaurant to have a stable menu written in a foreign language. \\
+    \hline
+    Extends       &  x: Create a new menu \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The restaurant employee selects that the menu shall be valid every day of the week.
+        \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
+        \item The restaurant employee later adds categories and menu items in the desired language.
       \end{enumerate}
     \end{minipage}
     \\
@@ -457,67 +483,6 @@
 %     % \end{minipage}
 %     % \\
 %     % \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
-
-% \noindent \textbf{22. Use case: Create a stable menu in a foreign language}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Restaurant \\
-%     \hline
-%     Description  & A restaurant's management wishes to have \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The restaurant employee logs in to the application.
-%         \item The restaurant employee clicks a button labeled "Create new menu". 
-%         \item The application asks the restaurant employee what kind of menu they would like to create.
-%         \item The restaurant employee selects that they wish to create a stable menu.
-
-%         \item The restaurant employee selects what currency to use in the menu.
-%         \item The restaurant employee selects what weight measurement units to use in the menu.
-
-%         \item The restaurant employee clicks a button labeled "Add category".
-%         \item The application displays a screen for adding a new category.
-%         \item The restaurant employee specifies the name of a new category of the menu in the foreign language.
-%         \item The restaurant employee clicks an "Add" button.
-%         \item The application adds the category to the menu.
-%         \item The restaurant employee repeats steps x to y until they have created all categories of the new menu.
-        
-%         \item The restaurant employee clicks an "Add item" button.
-%         \item The application asks the restaurant employee whether they would like to add a meal or a drink to the menu.
-%         \item The restaurant employee selects that they wish to add a meal to the menu. A1 drink
-%         \item The application displays a screen for adding a new meal to the menu.
-%         \item The restaurant employee specifies the meal's name in the foreign language.
-%         \item The restaurant employee specifies the meal's price and weight.
-%         \item The restaurant employee clicks a button labeled "Add ingredient".
-%         \item The application provides a list of possible ingredients.
-%         \item The restaurant employee selects an ingredient from the list and clicks "Add".
-%         \item The restaurant employee repeats steps x to y until all ingredients of the meal are added.
-%         \item The restaurant employee clicks a button labeled "Add allergen". A2 - the application fills allergens contained in the ingredient automatically based on the provided ingredient
-%         \item The application provides a list of possible allergens.
-%         \item The restaurant employee selects an allergen from the list and clicks "Add".
-%         \item The restaurant employee repeats steps x to y until all allergens of the meal are specified.
-%         \item The restaurant employee repeats steps x to y until they have specified all items of the menu.
-
-%         \item The restaurant employee clicks a "Save menu" button.
-%         \item The application saves the menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] ...
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
 %   \end{tabular}
 %   \newline
 % \end{center}
