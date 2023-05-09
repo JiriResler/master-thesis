@@ -10,18 +10,18 @@
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The restaurant employee presses a button for creating a new menu.
-        \item The application displays a screen with an empty menu. \textbf{A1}
-        \item The restaurant employee specifies meta-information about the menu. \textbf{A2}
-        \item The restaurant employee specifies the restaurant's contact information. \textbf{A3} \textbf{A4} 
+        \item The application displays a screen with an empty menu. \textbf{A1} \textbf{A2} 
+        \item The restaurant employee specifies meta-information about the menu. \textbf{A3}
+        \item The restaurant employee specifies the restaurant's contact information. \textbf{A4} \textbf{A5} 
         \todo[inline]{Extension point - all menu options}
         \item The restaurant employee specifies when shall the menu be valid. (Extension point)
         \todo[inline]{Extension point - Warn my guests about allergens in the foods I serve}
         \item The restaurant employee specifies how shall the menu display allergen information. (Extension point) 
-        \item The restaurant employee adds categories to the~menu.~\textbf{A5}
+        \item The restaurant employee adds categories to the~menu.~\textbf{A6}
         \item The restaurant employee adds individual food items to the menu.
         \item The restaurant employee presses a button for saving the menu.
         \todo[inline]{Extension point - publish, print}
-        \item The application saves the menu. \textbf{A6} (Extension point)
+        \item The application saves the menu. \textbf{A7} (Extension point)
       \end{enumerate}
     \end{minipage}
     \\
@@ -30,11 +30,12 @@
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
         \item [A1:] The restaurant employee selects that they wish to use a template. The application displays a menu with some predefined content.
-        \item [A2:] Meta-information is loaded from the restaurant's profile and inserted to the menu by the application.
-        \item [A3:] The restaurant employee does not wish to include the restaurant's contact information in the menu and skips this process. 
-        \item [A4:] The application inserts the restaurant's contact information automatically based on the restaurant's profile.
-        \item [A5:] The restaurant employee skips the creation of categories.
-        \item [A6:] The restaurant employee forgets to specify one of the menu's meta-information options. The application warns the restaurant employee about this fact. The restaurant employee finalizes the creation of the menu and the scenario continues with step 9.
+        \item [A2:] The restaurant employee selects that they wish to create the menu based on an existing menu. The application displays a menu with the contents of the base menu.
+        \item [A3:] Meta-information is loaded from the restaurant's profile and inserted to the menu by the application.
+        \item [A4:] The restaurant employee does not wish to include the restaurant's contact information in the menu and skips this process. 
+        \item [A5:] The application inserts the restaurant's contact information automatically based on the restaurant's profile.
+        \item [A6:] The restaurant employee skips the creation of categories.
+        \item [A7:] The restaurant employee forgets to specify one of the menu's meta-information options. The application warns the restaurant employee about this fact. The restaurant employee finalizes the creation of the menu and the scenario continues with step 9.
       \end{description}
     \end{minipage}
     \\
