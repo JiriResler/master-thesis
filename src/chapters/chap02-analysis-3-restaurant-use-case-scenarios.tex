@@ -14,7 +14,7 @@
         \item The restaurant employee specifies meta-information about the menu. \textbf{A2}
         \item The restaurant employee specifies the restaurant's contact information. \textbf{A3} \textbf{A4} 
         \todo[inline]{Extension point - all menu options}
-        \item The restaurant employee specifies when should the menu be valid. (Extension point)
+        \item The restaurant employee specifies when shall the menu be valid. (Extension point)
         \todo[inline]{Extension point - Warn my guests about allergens in the foods I serve}
         \item The restaurant employee specifies how shall the menu display allergen information. (Extension point) 
         \item The restaurant employee adds categories to the~menu.~\textbf{A5}
@@ -179,22 +179,16 @@
     \hline
     Actor        & Restaurant \\
     \hline
+    Extends       &  x: Create a new menu \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        
+        \item The restaurant employee specifies the day for which the menu shall be valid.
       \end{enumerate}
     \end{minipage}
     \\
     \hline
-    % Alternatives &
-    % \begin{minipage}[t]{\linewidth}
-    %   \begin{description}[nosep,after=\strut]
-    %     \item [A1:] ...
-    %   \end{description}
-    % \end{minipage}
-    % \\
-    % \hline
   \end{tabular}
   \newline
 \end{center}
