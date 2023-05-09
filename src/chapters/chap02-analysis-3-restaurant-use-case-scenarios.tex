@@ -11,19 +11,17 @@
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The restaurant employee presses a button for creating a new menu.
         \item The application displays a screen with an empty menu.
-        \item The restaurant employee specifies the name of the menu.
-        \item The restaurant employee specifies the restaurant's name, address, telephone number and opening hours. \textbf{A1} \textbf{A2} 
+        \item The restaurant employee specifies meta-information about the menu. \textbf{A1}
+        \item The restaurant employee specifies the restaurant's contact information. \textbf{A2} \textbf{A3} 
         \todo[inline]{Extension point}
         \item The restaurant employee specifies when should the menu be valid. (Extension point)
-        \item The restaurant employee specifies what currency shall be used in the menu.
-        \item The restaurant employee specifies what weight and volume units shall be used in the menu.
         \todo[inline]{Extension point - Warn my guests about allergens in the foods I serve}
         \item The restaurant employee specifies how shall the menu display allergen information. (Extension point) 
-        \item The restaurant employee specifies what categories shall the menu have. \textbf{A3}
-        \item The restaurant employee specifies items of the menu.
+        \item The restaurant employee adds categories to the~menu.~\textbf{A4}
+        \item The restaurant employee adds individual food items to the menu.
         \item The restaurant employee presses a button for saving the menu.
         \todo[inline]{Extension point - publish, print}
-        \item The application saves the menu. \textbf{A4} (Extension point)
+        \item The application saves the menu. \textbf{A5} (Extension point)
       \end{enumerate}
     \end{minipage}
     \\
@@ -31,10 +29,11 @@
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee does not wish to include the restaurant's information in the menu and skips this process. 
-        \item [A2:] The application inserts the restaurant's information automatically.
-        \item [A3:] The restaurant employee skips the creation of categories.
-        \item [A4:] The restaurant employee forgets to configure one of the menu's meta-information options. The application warns the restaurant employee about this fact. The restaurant employee finalizes the creation of the menu and the scenario continues with step 11.
+        \item [A1:] Meta-information is loaded from the restaurant's profile and inserted to the menu by the application.
+        \item [A2:] The restaurant employee does not wish to include the restaurant's contact information in the menu and skips this process. 
+        \item [A3:] The application inserts the restaurant's contact information automatically based on the restaurant's profile.
+        \item [A4:] The restaurant employee skips the creation of categories.
+        \item [A5:] The restaurant employee forgets to specify one of the menu's meta-information options. The application warns the restaurant employee about this fact. The restaurant employee finalizes the creation of the menu and the scenario continues with step 9.
       \end{description}
     \end{minipage}
     \\
@@ -42,6 +41,8 @@
   \end{tabular}
   \newline
 \end{center}
+
+\newpage
 
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
 \todo[inline]{add use case number in description}
@@ -74,37 +75,34 @@
   \newline
 \end{center}
 
-% \noindent \textbf{x. Use case: Specify allergens contained in an item of a menu}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Restaurant \\
-%     \hline
-%     Description  & A restaurant's employee is creating a menu. They have added an item to the menu and want to specify allergens contained in it. \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The restaurant employee clicks a button labeled "Add allergen". \textbf{A1}
-%         \item The application provides a predefined list of possible allergens.
-%         \item The restaurant employee selects an allergen from the list and clicks "Add".
-%         \item The restaurant employee repeats steps x to y until all allergens of the item are added.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The application adds allergens contained in the ingredient automatically based on the provided ingredient (see x. Use case: Add an item to a menu).
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
+\noindent \textbf{x. Use case: Create a stable menu}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Description  & A restaurant's management wants its restaurant to have a stable menu which will be valid every day of the week. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item 
+        \item
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] ...
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
 
 \begin{figure}[h]
   \centering
@@ -389,41 +387,6 @@
 %     % \begin{minipage}[t]{\linewidth}
 %     %   \begin{description}[nosep,after=\strut]
 %     %     \item [A1:] 
-%     %   \end{description}
-%     % \end{minipage}
-%     % \\
-%     % \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
-
-% \noindent \textbf{19. Use case: Create a stable menu}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Restaurant \\
-%     \hline
-%     Description  & A restaurant's management wants its restaurant to have a stable menu which will be valid every day. \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The restaurant employee logs in to the application.
-%         \item The restaurant employee clicks a button labeled "Create new menu". 
-%         \item The application asks the restaurant employee what kind of menu they would like to create.
-%         \item The restaurant employee chooses that they wish to create a stable menu.
-%         \item The restaurant employee specifies items of the menu.
-%         \item The restaurant employee clicks a "Save menu" button.
-%         \item The application saves the menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     % Alternatives &
-%     % \begin{minipage}[t]{\linewidth}
-%     %   \begin{description}[nosep,after=\strut]
-%     %     \item [A1:] ...
 %     %   \end{description}
 %     % \end{minipage}
 %     % \\
