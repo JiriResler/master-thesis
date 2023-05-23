@@ -50,8 +50,9 @@
 \usepackage{booktabs}       % improved horizontal lines in tables
 \usepackage{paralist}       % improved enumerate and itemize
 \usepackage{xcolor}         % typesetting in color
-\usepackage{enumitem}
+\usepackage{enumitem}       % description with \item
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pifont}         % tick, cross and triangle symbols
 
 %%% Basic information on the thesis
 
@@ -117,30 +118,23 @@ Abstract.
 
 %%% Each chapter is kept in a separate file
 \include{preface}
-
+\listoftodos
 \include{chapters/chap01-preliminaries}
 \include{chapters/chap02-analysis-1-user-requirements}
 \include{chapters/chap02-analysis-2-guest-use-case-scenarios}
 \include{chapters/chap02-analysis-3-restaurant-use-case-scenarios}
 \include{chapters/chap03-existing-solutions}
-\include{chapters/chap04-design}
-
+\include{chapters/chap04-design-1-used-technologies}
+\include{chapters/chap04-design-2-wireframes}
 \include{epilog}
-
 %%% Bibliography
 \include{bibliography}
-
-%%% Figures used in the thesis (consider if this is needed)
+%%% Figures used in the thesis
 \listoffigures
-
-%%% Tables used in the thesis (consider if this is needed)
-%%% In mathematical theses, it could be better to move the list of tables to the beginning of the thesis.
+%%% Tables used in the thesis 
 \listoftables
-
 %%% Abbreviations used in the thesis, if any, including their explanation
-%%% In mathematical theses, it could be better to move the list of abbreviations to the beginning of the thesis.
 \chapwithtoc{List of Abbreviations}
-
 %%% Attachments to the master thesis, if any. Each attachment must be
 %%% referred to at least once from the text of the thesis. Attachments
 %%% are numbered.
