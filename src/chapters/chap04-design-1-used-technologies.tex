@@ -14,15 +14,15 @@ There are various options out there for what technologies we can use to implemen
 This section contains an overview of available tools and which ones we chose and why.
 
 \subsection{User interface}
-Nowadays, there are many frameworks for building web applications.
+We need a UI so that a user can interact with the application.
 We need to be able to create an interactive user interface.
 We need to have state for logged in user.
 We need to fetch data from the internet.
 We need to integrate with Solid.
-The most popular are listed below with their pros and cons.
 
 \subsection*{Considered technologies}
-Angular, React, Vue
+Nowadays, there are many frameworks for building web applications.
+The most popular options are Angular, React and Vue.
 
 \subsubsection*{Angular}
 Angular is a platform and framework for building single-page client applications using HTML and TypeScript. 
@@ -48,19 +48,23 @@ Under the hood, Vue compiles the templates into highly-optimized JavaScript code
 Combined with the reactivity system, Vue can intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 
 \subsection*{Chosen technology}
-
+We decide to choose React for developing the UI of our application.
+One of the reasons for this decision is that Solid is written for React.
+There exists a Solid React SDK which can help us to work with some of the core Solid principles.
+Ract also allows us to work with components as functions.
 
 \subsection{nasadenie}
 %  Vite
-% alternatives: create react app, webpack
+% alternatives: create react app, webpack, Next.js
 
 \subsection{client-side routing}
 % react router if used
 
 \subsection{Programming language}
-As for programming languages, we considered two options. 
+We need to implement the application.
 
 \subsection*{Considered technologies}
+As for programming languages, we considered two options. 
 JS, TS
 
 \subsubsection*{JavaScript}
@@ -77,19 +81,31 @@ One of the big benefits is enabling IDEs to provide a richer environment for spo
 \subsection*{Chosen technology}
 
 
-\subsection{balickovaci nastroj}
-%  npm 
-% alternatives: yarn
+\subsection{Package manager}
+We need a tool to manage our application's dependencies.
+A package manager can seamlessly handle installing and uninstalling of packages which is another name for JavaScript libraries.
+
 \subsection*{Considered technologies}
+For package management in our application we consider two options: npm and yarn.
 
-\subsubsection*{}
+\subsubsection*{npm}
+npm is a package manager for the JavaScript programming language.
+npm is used to fetch any packages that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
+It consists of a command line client, also called npm, and an online database of packages, called the npm registry. 
+The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.
 
-\subsubsection*{}
+\subsubsection*{yarn}
+A successful and popular alternative package manager is Yarn. 
+Yarn resolves the dependencies using a different algorithm that can mean a faster user experience.
+More specifically, yarn can download packages in parallel to maximize network utilization.
 
 \subsection*{Chosen technology}
+Although Yarn is just as good as npm for handling packages, the latter is more widely used.
+For this reason we decide to use npm for our application. 
 
 \subsection{Responsive design}
 We need our application to be responsive to various device screens.
+We need a mobile-first approach
 
 \subsection*{Considered technologies}
 Bootstrap, MUI
