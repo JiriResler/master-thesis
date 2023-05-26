@@ -48,17 +48,10 @@ Under the hood, Vue compiles the templates into highly-optimized JavaScript code
 Combined with the reactivity system, Vue can intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 
 \subsection*{Chosen technology}
-We decide to choose React for developing the UI of our application.
+We decide to choose \textbf{React} for developing the UI of our application.
 One of the reasons for this decision is that Solid is written for React.
 There exists a Solid React SDK which can help us to work with some of the core Solid principles.
 Ract also allows us to work with components as functions.
-
-\subsection{nasadenie}
-%  Vite
-% alternatives: create react app, webpack, Next.js
-
-\subsection{client-side routing}
-% react router if used
 
 \subsection{Programming language}
 We need to implement the application.
@@ -79,7 +72,15 @@ The goal of TypeScript is to help catch mistakes early through its type system a
 One of the big benefits is enabling IDEs to provide a richer environment for spotting common errors as the programmer types their code.
 
 \subsection*{Chosen technology}
+The goal is to make as few bugs during development as possible and that is why we decide to go with \textbf{Typescript}.
+Defining types of variables makes the code more readable to other developers.
 
+\subsection{nasadenie}
+%  Vite
+% alternatives: create react app, Next.js
+
+\subsection{client-side routing}
+% react router if used
 
 \subsection{Package manager}
 We need a tool to manage our application's dependencies.
@@ -101,17 +102,31 @@ More specifically, yarn can download packages in parallel to maximize network ut
 
 \subsection*{Chosen technology}
 Although Yarn is just as good as npm for handling packages, the latter is more widely used.
-For this reason we decide to use npm for our application. 
+For this reason we decide to use \textbf{npm} for our application. 
 
 \subsection{Responsive design}
+Responsive web design or RWD is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability.
 We need our application to be responsive to various device screens.
-We need a mobile-first approach
+We want a mobile-first approach as most people use smartphones these days.
+The chosen tool should be well documented for ease of use.
 
 \subsection*{Considered technologies}
-Bootstrap, MUI
-\subsubsection*{Bootstrap}
+Two options were considered, which are Bootstrap, Material UI.
+Let us briefly introduce them.
 
-\subsubsection*{Material UI}
+\subsubsection*{Bootstrap}
+Made by myself and Jacob Thornton, Bootstrap is an open-source front-end toolkit created to help designers and developers quickly and efficiently build awesome stuff online. Our goal is to provide a refined, well-documented, and extensive library of flexible design components built with HTML, CSS, and JavaScript for others to build and innovate on.
+
+The most prominent components of Bootstrap are its layout components, as they affect an entire web page. The basic layout component is called "Container", as every other element in the page is placed in it.
+
+Once a container is in place, other Bootstrap layout components implement a CSS Flexbox layout through defining rows and columns.
+
+\subsubsection*{Material Design}
+Material Design is a design language which uses grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows.
+
+The main purpose of Material Design is the creation of a visual language that combines principles of good design with technical and scientific innovation. 
+
+Designers optimize users' experience with 3D effects, realistic lighting and animation features in immersive, platform-consistent GUIs.
 
 \subsection*{Chosen technology}
 
@@ -120,15 +135,10 @@ Bootstrap, MUI
 \subsection{Persistence}
 We need to store and later read data.
 % Solid pods
-\subsection*{Considered technologies}
 
-\subsubsection*{}
-
-\subsubsection*{}
-
-\subsection*{Chosen technology}
 
 \subsection{Testing}
+% napisat ze som si vybral tu a tu kniznicu 
 We need to test our application in order to prevent bugs during implementation.
 % https://legacy.reactjs.org/docs/testing-environments.html
 \subsection*{Considered technologies}
@@ -142,10 +152,7 @@ We need to test our application in order to prevent bugs during implementation.
 \subsection{Documentation}
 We need to capture how our application works for users and future developers.
 % (GitHub markdown)
-\subsection*{Considered technologies}
 
-\subsubsection*{}
 
-\subsubsection*{}
-
-\subsection*{Chosen technology}
+\subsection{Authentication}
+% inrupt solid-client
