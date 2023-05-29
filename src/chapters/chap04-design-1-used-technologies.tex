@@ -9,133 +9,156 @@ Our application is a single-page web application.
   \caption{Application's data flow diagram}
 \end{figure}
 
+\todo[inline]{add react router if used}
+% \subsection{client-side routing}
+
 \section{Technological stack}
 There are various options out there for what technologies we can use to implement our application.
 This section contains an overview of available tools and which ones we chose and why.
 
 \subsection{User interface}
-We need a UI so that a user can interact with the application.
-We need to be able to create an interactive user interface.
-We need to have state for logged in user.
-We need to fetch data from the internet.
-We need to integrate with Solid.
+  We need a UI so that a user can interact with the application.
+  We need to be able to create an interactive user interface.
+  We need to have state for logged in user.
+  We need to fetch data from the internet.
+  We need to integrate with Solid.
 
-\subsection*{Considered technologies}
-Nowadays, there are many frameworks for building web applications.
-The most popular options are Angular, React and Vue.
+  \subsection*{Considered technologies}
+  Nowadays, there are many frameworks for building web applications.
+  The most popular options are Angular, React and Vue.
 
-\subsubsection*{Angular}
-Angular is a platform and framework for building single-page client applications using HTML and TypeScript. 
-It implements its core and optional functionality as a set of TypeScript libraries. 
-The basic building blocks of the Angular framework are Angular components that are organized into \emph{NgModules}. 
-NgModules collect related code into functional sets; an Angular application is defined by a set of NgModules.
+  \subsubsection*{Angular}
+  Angular is a platform and framework for building single-page client applications using HTML and TypeScript. 
+  It implements its core and optional functionality as a set of TypeScript libraries. 
+  The basic building blocks of the Angular framework are Angular components that are organized into \emph{NgModules}. 
+  NgModules collect related code into functional sets; an Angular application is defined by a set of NgModules.
 
-\subsubsection*{React.js}
-React is a JavaScript library for rendering user interfaces.
-Applications written in React are built from modular and reusable pieces called components.
-React components receive data and return what should appear on the screen. 
-They can be passed new data in response to an interaction, like when the user types into an input. 
-React will then update the screen to match the new data.
-A notable feature is the use of a virtual Document Object Model, or Virtual DOM. 
-React creates an in-memory data-structure cache, computes the resulting differences on a re-render, and then updates the browser's displayed DOM efficiently. 
-This selective rendering provides a major performance boost.
+  \subsubsection*{React.js}
+  React is a JavaScript library for rendering user interfaces.
+  Applications written in React are built from modular and reusable pieces called components.
+  React components receive data and return what should appear on the screen. 
+  They can be passed new data in response to an interaction, like when the user types into an input. 
+  React will then update the screen to match the new data.
+  A notable feature is the use of a virtual Document Object Model, or Virtual DOM. 
+  React creates an in-memory data-structure cache, computes the resulting differences on a re-render, and then updates the browser's displayed DOM efficiently. 
+  This selective rendering provides a major performance boost.
 
-\subsubsection*{Vue.js}
-Vue is a JavaScript framework for building user interfaces. 
-It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model.
-Vue uses an HTML-based template syntax that allows programmers to declaratively bind the rendered DOM to the underlying component instance's data.
-Under the hood, Vue compiles the templates into highly-optimized JavaScript code. 
-Combined with the reactivity system, Vue can intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
+  \subsubsection*{Vue.js}
+  Vue is a JavaScript framework for building user interfaces. 
+  It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model.
+  Vue uses an HTML-based template syntax that allows programmers to declaratively bind the rendered DOM to the underlying component instance's data.
+  Under the hood, Vue compiles the templates into highly-optimized JavaScript code. 
+  Combined with the reactivity system, Vue can intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 
-\subsection*{Chosen technology}
-We decide to choose \textbf{React} for developing the UI of our application.
-One of the reasons for this decision is that Solid is written for React.
-There exists a Solid React SDK which can help us to work with some of the core Solid principles.
-Ract also allows us to work with components as functions.
+  \subsection*{Chosen technology}
+  We decide to choose \textbf{React} for developing the UI of our application.
+  One of the reasons for this decision is that Solid is written for React.
+  There exists a Solid React SDK which can help us to work with some of the core Solid principles.
+  Ract also allows us to work with components as functions.
+% end of \subsection
 
 \subsection{Programming language}
-We need to implement the application.
+  We need to implement the application.
 
-\subsection*{Considered technologies}
-As for programming languages, we considered two options. 
-JS, TS
+  \subsection*{Considered technologies}
+  As for programming languages, we considered two options. 
+  JS, TS
 
-\subsubsection*{JavaScript}
-JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. 
-It is most well-known as the scripting language for Web pages. 
-JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative---e.g. functional programming styles.
+  \subsubsection*{JavaScript}
+  JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. 
+  It is most well-known as the scripting language for Web pages. 
+  JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative---e.g. functional programming styles.
 
-\subsubsection*{TypeScript}
-TypeScript is a superset of JavaScript. 
-It provides features such as optional static typing, classes, interfaces, and generics. 
-The goal of TypeScript is to help catch mistakes early through its type system and make JavaScript development more efficient. 
-One of the big benefits is enabling IDEs to provide a richer environment for spotting common errors as the programmer types their code.
+  \subsubsection*{TypeScript}
+  TypeScript is a superset of JavaScript. 
+  It provides features such as optional static typing, classes, interfaces, and generics. 
+  The goal of TypeScript is to help catch mistakes early through its type system and make JavaScript development more efficient. 
+  One of the big benefits is enabling IDEs to provide a richer environment for spotting common errors as the programmer types their code.
 
-\subsection*{Chosen technology}
-The goal is to make as few bugs during development as possible and that is why we decide to go with \textbf{Typescript}.
-Defining types of variables makes the code more readable to other developers.
+  \subsection*{Chosen technology}
+  The goal is to make as few bugs during development as possible and that is why we decide to go with \textbf{Typescript}.
+  Defining types of variables makes the code more readable to other developers.
+% end of \subsection
+
+\subsection{Build tool}
+
+  \subsection*{Considered technologies}
+
+  \subsubsection*{Vite}
+  Vite (French: [vit], like "veet") is a local development server written by Evan You and used by default by the Vue project templates. It has support for TypeScript and JSX.
+
+  It monitors files as they're being edited and upon file save the web browser reloads the code being edited through a process called Hot Module Replacement (HMR) which works by just reloading the specific file being changed using ES6 modules (ESM) instead of recompiling the entire application.
+
+  Vite is a newer build tool that has gained popularity in recent years. It was created to address the limitations of existing build tools, particularly in the development phase. Vite is a build tool that is optimized for speed. It leverages the latest browser technologies, such as ES modules and native browser imports, to provide fast build times.
+
+  Vite is particularly useful for small to medium-sized projects that do not require complex configurations. It is built on top of the Rollup bundler, which is known for its fast build times. Vite also provides a development server that is optimized for performance. The server leverages HTTP/2 server push, which enables the server to send multiple responses for a single client request.
+
+  \subsubsection*{Create React App}
+  Create React App is built on Webpack and Babel and it is a popular tool that enables developers to quickly set up a React project. It is an officially supported tool by the React team, making it a reliable choice. It creates a basic React application with all the necessary configuration files, dependencies, and scripts. The tool provides a pre-configured environment that abstracts away much of the configuration that developers would typically have to handle manually. This means that the developer can focus on writing code rather than configuration files.
+
+  \subsection*{Chosen technology}
+
+% end of \subsection
+
 
 \subsection{nasadenie}
-%  Vite
-% alternatives: create react app, Next.js
+% GH Pages
 
-\subsection{client-side routing}
-% react router if used
 
 \subsection{Package manager}
-We need a tool to manage our application's dependencies.
-A package manager can seamlessly handle installing and uninstalling of packages which is another name for JavaScript libraries.
+  We need a tool to manage our application's dependencies.
+  A package manager can seamlessly handle installing and uninstalling of packages which is another name for JavaScript libraries.
 
-\subsection*{Considered technologies}
-For package management in our application we consider two options: npm and yarn.
+  \subsection*{Considered technologies}
+  For package management in our application we consider two options: npm and yarn.
 
-\subsubsection*{npm}
-npm is a package manager for the JavaScript programming language.
-npm is used to fetch any packages that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
-It consists of a command line client, also called npm, and an online database of packages, called the npm registry. 
-The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.
+  \subsubsection*{npm}
+  npm is a package manager for the JavaScript programming language.
+  npm is used to fetch any packages that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
+  It consists of a command line client, also called npm, and an online database of packages, called the npm registry. 
+  The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.
 
-\subsubsection*{yarn}
-A successful and popular alternative package manager is Yarn. 
-Yarn resolves the dependencies using a different algorithm that can mean a faster user experience.
-More specifically, yarn can download packages in parallel to maximize network utilization.
+  \subsubsection*{yarn}
+  A successful and popular alternative package manager is Yarn. 
+  Yarn resolves the dependencies using a different algorithm that can mean a faster user experience.
+  More specifically, yarn can download packages in parallel to maximize network utilization.
 
-\subsection*{Chosen technology}
-Although Yarn is just as good as npm for handling packages, the latter is more widely used.
-For this reason we decide to use \textbf{npm} for our application. 
+  \subsection*{Chosen technology}
+  Although Yarn is just as good as npm for handling packages, the latter is more widely used.
+  For this reason we decide to use \textbf{npm} for our application. 
+% end of \subsection
 
 \subsection{Responsive design}
-Responsive web design or RWD is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability.
-We need our application to be responsive to various device screens.
-We want a mobile-first approach as most people use smartphones these days.
-The chosen tool should be well documented for ease of use.
+  Responsive web design or RWD is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability.
+  We need our application to be responsive to various device screens.
+  We want a mobile-first approach as most people use smartphones these days.
+  The chosen tool should be well documented for ease of use.
 
-\subsection*{Considered technologies}
-Two options were considered, which are Bootstrap, Material UI.
-Let us briefly introduce them.
+  \subsection*{Considered technologies}
+  Two options were considered, which are Bootstrap, Material UI.
+  Let us briefly introduce them.
 
-\subsubsection*{Bootstrap}
-Made by myself and Jacob Thornton, Bootstrap is an open-source front-end toolkit created to help designers and developers quickly and efficiently build awesome stuff online. Our goal is to provide a refined, well-documented, and extensive library of flexible design components built with HTML, CSS, and JavaScript for others to build and innovate on.
+  \subsubsection*{Bootstrap}
+  Made by myself and Jacob Thornton, Bootstrap is an open-source front-end toolkit created to help designers and developers quickly and efficiently build awesome stuff online. Our goal is to provide a refined, well-documented, and extensive library of flexible design components built with HTML, CSS, and JavaScript for others to build and innovate on.
 
-The most prominent components of Bootstrap are its layout components, as they affect an entire web page. The basic layout component is called "Container", as every other element in the page is placed in it.
+  The most prominent components of Bootstrap are its layout components, as they affect an entire web page. The basic layout component is called "Container", as every other element in the page is placed in it.
 
-Once a container is in place, other Bootstrap layout components implement a CSS Flexbox layout through defining rows and columns.
+  Once a container is in place, other Bootstrap layout components implement a CSS Flexbox layout through defining rows and columns.
 
-\subsubsection*{Material Design}
-Material Design is a design language which uses grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows.
+  \subsubsection*{Material Design}
+  Material Design is a design language which uses grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows.
 
-The main purpose of Material Design is the creation of a visual language that combines principles of good design with technical and scientific innovation. 
+  The main purpose of Material Design is the creation of a visual language that combines principles of good design with technical and scientific innovation. 
 
-Designers optimize users' experience with 3D effects, realistic lighting and animation features in immersive, platform-consistent GUIs.
+  Designers optimize users' experience with 3D effects, realistic lighting and animation features in immersive, platform-consistent GUIs.
 
-\subsection*{Chosen technology}
+  \subsection*{Chosen technology}
 
-
+% end of \subsection
 
 \subsection{Persistence}
 We need to store and later read data.
 % Solid pods
-
 
 \subsection{Testing}
 % napisat ze som si vybral tu a tu kniznicu 
