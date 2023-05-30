@@ -13,6 +13,7 @@ Our application is a single-page web application.
 % \subsection{client-side routing}
 
 \section{Technological stack}
+\todo[inline]{add links to technologies - footnotes, link to documentation of the technology}
 There are various options out there for what technologies we can use to implement our application.
 This section contains an overview of available tools and which ones we chose and why.
 
@@ -100,10 +101,15 @@ This section contains an overview of available tools and which ones we chose and
 
 % end of \subsection
 
+\subsection{Deployment}
+\todo[inline]{add link to GH Pages doc}
+  For deployment, only \textbf{GitHub Pages} was considered.
 
-\subsection{nasadenie}
-% GH Pages
+  GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.
 
+  There are three types of GitHub Pages sites: project, user, and organization. Project sites are connected to a specific project hosted on GitHub, such as a JavaScript library or a recipe collection. User and organization sites are connected to a specific account on GitHub.com.
+
+% end of \subsection
 
 \subsection{Package manager}
   We need a tool to manage our application's dependencies.
@@ -157,25 +163,26 @@ This section contains an overview of available tools and which ones we chose and
 % end of \subsection
 
 \subsection{Persistence}
-We need to store and later read data.
-% Solid pods
-
-\subsection{Testing}
-% napisat ze som si vybral tu a tu kniznicu 
-We need to test our application in order to prevent bugs during implementation.
-% https://legacy.reactjs.org/docs/testing-environments.html
-\subsection*{Considered technologies}
-
-\subsubsection*{}
-
-\subsubsection*{}
-
-\subsection*{Chosen technology}
+Our application needs to store and later read data.
+We decide to use the \textbf{Solid} technology for this purpose. 
 
 \subsection{Documentation}
 We need to capture how our application works for users and future developers.
-% (GitHub markdown)
-
+Programmer documentation is available as several simple HTML pages created using \textbf{GitHub markdown}.
+User documentation is in a form of a webpage created with \textbf{Jekyll} and hosted on \textbf{GitHub Pages}.
 
 \subsection{Authentication}
-% inrupt solid-client
+For authentication purposes, the Inrupt's solid-client JavaScript library is used.
+We also use the Inrupt's React SDK which contains a Login component which uses the aforementioned library implicitly.
+
+\todo[inline]{add testing}
+% \subsection{Testing}
+% We need to test our application in order to prevent bugs during implementation.
+% % https://legacy.reactjs.org/docs/testing-environments.html
+% \subsection*{Considered technologies}
+
+% \subsubsection*{}
+
+% \subsubsection*{}
+
+% \subsection*{Chosen technology}
