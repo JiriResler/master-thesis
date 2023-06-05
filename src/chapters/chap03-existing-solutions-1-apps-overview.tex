@@ -11,41 +11,29 @@ Now we will briefly introduce currently available applications.
 % uvodne predstavenie, ako sa s nou pracuje, vyhody (co aplikacia nesplna popisat v comparison of apps), dalsie zaujimavosti
 
 \subsection*{Allergy Menu}
-  There are allergen icons in the menu item's description.
-  A guest can interact with the menu by choosing what allergens they want to avoid.
+  Allergy menu (link in footnote) allows a restaurant employee to maintain a mobile accessible and up-to-date menu that customers can tailor to their food preferences.
+  
+  A restaurant employee first creates a new menu and adds categories to it, e.g. "Starters" or "Desserts".
+  Dishes are then added to each category of the menu.
+  A dish contains allergen information as well as flags whether it is suitable for vegans and vegetarians.
+  The restaurant employee can also add calories to the dish.
+
+  When a restaurant employee wants to change something in a dish, they can create a copy of the dish which is hidden on the published menu.
+  After they finish changes, the dish can be marked as "live", making it appear on the menu with updated content. 
+
+  A dish can optionally contain internal notes, with the ability to upload photographs of products used within the dish.
+  The application sends and e-mail regularly to review a menu with all the allergy information.
+  An existing menu can be imported to the application in the CSV format.
+  Allergy Menu provides an API for food suppliers, allowing them to sync menu information directly into the application without manual intervention.
+  
+  A guest can interact with a published menu by choosing what allergens they want to avoid.
+  The application then filters out items of the menu to meet the guest's preferences.
   A guest can also select an option that they are either a vegan or vegetarian.
-  The application filters out items of a menu to meet the guest's preferences.
-  The application allows a restaurant employee create a menu and specify what allergens are contained in each item of the menu.
-
-  Android and iOS app
-
-  Information on the dishes, both public and internal information can be managed along with additional documentation, such as photographs of labelling, can ensure all allergy information is logged in one place.
-
-  Our menu is designed to feel like your business, so you just upload your logo within the my account area.
-
-  You can create custom categories for your menu to help users find dishes easily.
-
-  Dished can be easily duplicated and hidden on the live system when they are not active. Allowing you to keep your menu up to date easily.
-
-  Along with the usual allergen list, there are flags to allow the system to work for vegans and vegetarians.
-
-  You can also add internal notes, recipes and method about each dish, with the ability to upload photographs of products used within a dish with notes for each photo, allowing you to manage your information easily.
-
-  When creating your recipes, it also searches product information with allergen suggestions and ingredients lists to make inputting your information easier and accurate.
-
-  Print ingredient labels onto any label printer ( 54 mm x 101 mm label) or Avery labels (14 per sheet paper), quick and easily to ensure you meet Natasha's Law.
-
-  You can also download printed literature in the My Account area to create point of sale graphics for your menu with your unique reference and QR code, along with code to add a link from your website direct to the allergy menu.
-
-  The system will email you every month to review your menu with all the allergy information, you can then set if the menu is up to date, or edit from there if items have changed.
-
-  CSV import - Link up your CSV export with our system and then easily import your file as and when you need to.
-
-  API integration - Talk to your supplier about integrating with our API, allowing them to sync your information directly into Allergy Menu without manual intervention.
-
-  The six character restaurant code used by Allergy Menu to identify a restaurant. This is what the end user enters into the app.
-
-  API documentation
+  
+  A unique restaurant code is used to identify restaurants. 
+  This is what guests enter into the application when they want to browse a menu.
+  A guest can also find a restaurant which uses Allergy Menu on a map.
+  \todo[inline]{a restaurant can only have one menu published - mention in comparison}
 
   \begin{figure}[h]
     \centering
