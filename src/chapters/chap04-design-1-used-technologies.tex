@@ -2,6 +2,7 @@
 Now we will design how to implement what we have defined in the analysis chapter.
 Our application is a single-page web application.
 
+\todo[inline]{popisat architekturu slovne}
 \section{Architecture}
 \begin{figure}[h]
   \centering
@@ -17,7 +18,7 @@ Our application is a single-page web application.
 There are various options out there for what technologies we can use to implement our application.
 This section contains an overview of available tools and which ones we chose and why.
 
-\subsection{User interface}
+\subsection*{User interface}
   We need a UI so that a user can interact with the application.
   We need to be able to create an interactive user interface.
   We need to have state for logged in user.
@@ -53,7 +54,7 @@ This section contains an overview of available tools and which ones we chose and
   Ract also allows us to work with components as functions.
 % end of \subsection
 
-\subsection{Programming language}
+\subsection*{Programming language}
   We need to implement the application.
 
   As for programming languages, we considered two options. 
@@ -72,7 +73,7 @@ This section contains an overview of available tools and which ones we chose and
   Defining types of variables makes the code more readable to other developers.
 % end of \subsection
 
-\subsection{Build tool}
+\subsection*{Build tool}
   \todo[inline]{add introduction and name considered technologies}
 
   Vite (French: [vit], like "veet") is a local development server written by Evan You and used by default by the Vue project templates. It has support for TypeScript and JSX.
@@ -89,7 +90,7 @@ This section contains an overview of available tools and which ones we chose and
 
 % end of \subsection
 
-\subsection{Deployment}
+\subsection*{Deployment}
 \todo[inline]{add link to GH Pages doc}
   For deployment, only \textbf{GitHub Pages} was considered.
 
@@ -99,7 +100,7 @@ This section contains an overview of available tools and which ones we chose and
 
 % end of \subsection
 
-\subsection{Package manager}
+\subsection*{Package manager}
   We need a tool to manage our application's dependencies.
   A package manager can seamlessly handle installing and uninstalling of packages which is another name for JavaScript libraries.
 
@@ -118,7 +119,7 @@ This section contains an overview of available tools and which ones we chose and
   For this reason we decide to use \textbf{npm} for our application. 
 % end of \subsection
 
-\subsection{Responsive design}
+\subsection*{Responsive design}
   Responsive web design or RWD is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability.
   We need our application to be responsive to various device screens.
   We want a mobile-first approach as most people use smartphones these days.
@@ -142,27 +143,20 @@ This section contains an overview of available tools and which ones we chose and
   \todo[inline]{add chosen technology}
 % end of \subsection
 
-\subsection{Persistence}
+\subsection*{Persistence}
 Our application needs to store and later read data.
 We decide to use the \textbf{Solid} technology for this purpose. 
 
-\subsection{Documentation}
+\subsection*{Documentation}
 We need to capture how our application works for users and future developers.
 Programmer documentation is available as several simple HTML pages created using \textbf{GitHub markdown}.
 User documentation is in a form of a webpage created with \textbf{Jekyll} and hosted on \textbf{GitHub Pages}.
 
-\subsection{Authentication}
+\subsection*{Authentication}
 For authentication purposes, the Inrupt's solid-client JavaScript library is used.
 We also use the Inrupt's React SDK which contains a Login component which uses the aforementioned library implicitly.
 
 \todo[inline]{add testing}
-% \subsection{Testing}
+% \subsection*{Testing}
 % We need to test our application in order to prevent bugs during implementation.
 % % https://legacy.reactjs.org/docs/testing-environments.html
-% \subsection*{Considered technologies}
-
-% \subsubsection*{}
-
-% \subsubsection*{}
-
-% \subsection*{Chosen technology}
