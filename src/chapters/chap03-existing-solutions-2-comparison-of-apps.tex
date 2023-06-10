@@ -1,17 +1,20 @@
-\section{Comparison of the existing applications}
+We will now compare the applications.
+Table x contains guest application use cases.
+Table x contains restaurant application use cases.
+Use cases were made up.
 
-\subsection*{Measured use cases}
+% Guest application use cases
+G1 Display an interactive menu to the guest.
+G2 Create a dietary profile of the guest.
+G3 Hide items of a menu which the guest cannot eat.
+G4 Highlight items of a menu which the guest cannot eat.
+G5 Search for a restaurant.
+G6 Translate a menu.
+G7 Filters menu items based on whether they are vegan or vegetarian.
+G8 Update the list of the guest's favorite restaurants.
+G9 Let the user have control over their data.
+G10 Let the user use the application when they are not signed in.
 
-% - ci aplikacia poskytuje interaktivne menu pre hosta
-% - filter only by allergens or also by diets or whole allergies
-% - ability for guest to create profile
-% - ci je aplikacia na webe alebo stiahnutelna appka
-% - moznost pridat do menu QR code
-
-\todo[inline]{add a line break in use case 9 or restructure it, so it is shorter - maybe add an option to display icons instead of allergen names}
-\todo[inline]{rozdelit tabulku na dve - v jednej use casy pre hosta v druhej use casy pre restauraciu}
-\todo[inline]{Gx: Provide a guest with an interactive menu}
-\todo[inline]{Gx: Allow searching for a restaurant}
 \begin{center}
   \begin{tabular}{| c | l |}
     \hline
@@ -39,33 +42,50 @@
   \newline
 \end{center}
 
-\todo[inline]{Gx: Application provides pre-defined data (User has to create data)}
+% Restaurant application use cases
+R1 Add allergen information to a menu.
+R2 Set currency and weight units for a menu.
+R3 Save menu items for future use.
+R4 Set when a menu will be valid (active). 
+R5 Provide pre-defined ingredients and dishes.
+R6 Have multiple menus of a restaurant active at the same time.
+R7 Generate a QR code for a menu.
+R8 Provides templates for a new menu.
+R9 Style a menu with custom CSS specified by the user. 
+R10 Switch between allergen names and numbers.
+
 \begin{center}
   \begin{tabular}{| c | l |}
     \hline
-    R1 & Automatically add allergens to an item of a menu. \\
-    \hline
-    R2 & Allow a restaurant employee to choose whether to use allergen names or numbers in a menu. \\
-    \hline
-    R3 & Provide templates for creating a new menu. \\
-    \hline
-    R4 & Allow a restaurant employee to reuse a previously created menu item. \\
-    \hline
-    R5 & Allow a restaurant employee to control their restaurant's data. \\    
-    \hline
-    R6 & weights of meals \\
-    \hline 
-    R7 & možnosť automaticky vygenerovať menu \\
+    % R1 & Automatically add allergens to an item of a menu. \\
+    % \hline
+    % R2 & Allow a restaurant employee to choose whether to use allergen names or numbers in a menu. \\
+    % \hline
+    % R3 & Provide templates for creating a new menu. \\
+    % \hline
+    % R4 & Allow a restaurant employee to reuse a previously created menu item. \\
+    % \hline
+    % R5 & Allow a restaurant employee to control their restaurant's data. \\    
+    % \hline
+    % R6 & weights of meals \\
+    % \hline 
+    % R7 & možnosť automaticky vygenerovať menu \\
     \hline
   \end{tabular}
   \newline
 \end{center}
 
+Use case G1 is supported by ...
+
+
+
+
+
+
+Table x and x contain results of the comparison.
+
 \todo[inline]{vertically center contents of the table - may be usable for all tables in the thesis} % https://tex.stackexchange.com/questions/7208/how-to-vertically-center-the-text-of-the-cells/611601#611601
 \todo[inline]{make all columns have equal width}
-\subsection*{Results of the comparison}
-All applications provide their guests with interactive menus which can be suited to the guests' dietary needs.
-
 \begin{center}
   \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c|}
     \hline 
@@ -96,6 +116,3 @@ All applications provide their guests with interactive menus which can be suited
 \ding{56} means that an application does not support the use case \newline
 \ding{115} means that an application supports the use case only partially \newline
 - means that the use case is skipped as it is out of the application's scope \newline
-
-\todo[inline]{add Other applications worth mentioning section}
-% \section{Other applications worth mentioning}
