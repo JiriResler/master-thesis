@@ -4,77 +4,57 @@ Table x contains restaurant application use cases.
 Use cases were made up.
 
 % Guest application use cases
-G1 Display an interactive menu to the guest.
-G2 Create a dietary profile of the guest.
-G3 Hide items of a menu which the guest cannot eat.
-G4 Highlight items of a menu which the guest cannot eat.
-G5 Search for a restaurant.
-G6 Translate a menu.
-G7 Filters menu items based on whether they are vegan or vegetarian.
-G8 Update the list of the guest's favorite restaurants.
-G9 Let the guest specify where should their data be stored.
-G10 Display currently served meals by the guest's favorite restaurants.
-
 \begin{center}
   \begin{tabular}{| c | l |}
     \hline
-    G1 & Allow a guest to create a dietary profile. \\
+    G1 & Display a menu with allergen information. &  \\
     \hline
-    G2 & Display a personalized menu to a guest. \\
+    G2 & Visually distinguish items of a menu which the guest cannot eat. &  \\
     \hline
-    G3 & Allow a guest to filter out items of a menu which they cannot eat. \\
+    G3 & Create a dietary profile of the guest. &  \\
     \hline
-    G4 & Display a menu after a quest scans a QR code on a printed menu. \\
+    G4 & Search for a restaurant. \\
     \hline
-    G5 & Allow a guest to mark a restaurant as their favorite. \\
+    G5 & Translate a menu. &  \\
     \hline
-    G6 & Allow a guest to control their personal data. \\
+    G6 & Filters menu items based on whether they are vegan or vegetarian. &  \\
     \hline
-    G7 & Translate a menu to the language of the UI. \\
+    G7 & Update the list of the guest's favorite restaurants. &  \\
     \hline
-    G8 & Find restaurants near the guest based on their location. \\
-    \hline
-    G9 & Allow the guest to pay for a menu item. \\ % aplikácia umožňuje zaplatiť za účet v reštaurácii v rámci aplikácie
-    \hline
-    G10 & možnosť pracovať s aplikáciou neprihlásený \\
+    G8 & Let the guest specify where should their data be stored. & \\ 
     \hline
   \end{tabular}
   \newline
 \end{center}
 
 % Restaurant application use cases
-R1 Add allergen information to a menu.
-R2 Save menu items for future use.
-R3 Set when a menu will be valid. 
-R4 Provide pre-defined ingredients and dishes.
-R5 Have multiple menus of a restaurant active at the same time.
-R6 Generate a QR code for a menu.
-R7 Provide templates for a new menu. 
-R8 Switch between allergen names/icons and numbers.
-R9 Let the restaurant specify where should its data be stored.
-
 \begin{center}
   \begin{tabular}{| c | l |}
     \hline
-    % R1 & Automatically add allergens to an item of a menu. \\
-    % \hline
-    % R2 & Allow a restaurant employee to choose whether to use allergen names or numbers in a menu. \\
-    % \hline
-    % R3 & Provide templates for creating a new menu. \\
-    % \hline
-    % R4 & Allow a restaurant employee to reuse a previously created menu item. \\
-    % \hline
-    % R5 & Allow a restaurant employee to control their restaurant's data. \\    
-    % \hline
-    % R6 & weights of meals \\
-    % \hline 
-    % R7 & možnosť automaticky vygenerovať menu \\
+    R1 & Add allergen information to a menu. \\
+    \hline
+    R2 & Save a menu item for future use. \\
+    \hline
+    R3 & Set when a menu will be valid. \\
+    \hline
+    R4 & Provide pre-defined ingredients and dishes. \\
+    \hline
+    R5 & Have multiple menus of a restaurant active at the same time. \\    
+    \hline
+    R6 & Generate a QR code for a menu. \\
+    \hline 
+    R7 & Provide templates for a new menu. \\
+    \hline 
+    R8 & Switch between allergen names/icons and numbers. \\
+    \hline 
+    R9 & Let a restaurant employee specify where should data be stored. \\
     \hline
   \end{tabular}
   \newline
 \end{center}
 
-Use case G1 is supported by ...
+Use case G1 is supported by all the applications.
+Use case G2
 
 
 
@@ -91,17 +71,17 @@ Table x and x contain results of the comparison.
     \hline 
       & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 & G9 & G10 \\
     \hline
-    Menutech & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Menutech & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
-    Allergy Menu & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Allergy Menu & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
-    Menu Guide & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Menu Guide & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
-    BigZpoon Eagle & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    BigZpoon Eagle & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
-    Allergen Checker & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Allergen Checker & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
-    Choose Well & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} \\
+    Choose Well & \ding{52} & - & - & - & - & - & - & - & - & - \\
     \hline
   \end{tabular}
   \newline
@@ -113,17 +93,17 @@ Table x and x contain results of the comparison.
     \hline 
       & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 \\
     \hline
-    Menutech & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    Menutech & - & - & - & - & - & - & - & - & - \\
     \hline
-    Allergy Menu & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    Allergy Menu & - & - & - & - & - & - & - & - & - \\
     \hline
-    Menu Guide & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    Menu Guide & - & - & - & - & - & - & - & - & - \\
     \hline
-    BigZpoon Eagle & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    BigZpoon Eagle & - & - & - & - & - & - & - & - & - \\
     \hline
-    Allergen Checker & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    Allergen Checker & - & - & - & - & - & - & - & - & - \\
     \hline
-    Choose Well & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{56} & \ding{52} & - & - \\
+    Choose Well & - & - & - & - & - & - & - & - & - \\
     \hline
   \end{tabular}
   \newline
