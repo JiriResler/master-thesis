@@ -9,12 +9,11 @@ G2 Create a dietary profile of the guest.
 G3 Hide items of a menu which the guest cannot eat.
 G4 Highlight items of a menu which the guest cannot eat.
 G5 Search for a restaurant.
-G6 Translate a menu (to language of UI).
+G6 Translate a menu.
 G7 Filters menu items based on whether they are vegan or vegetarian.
 G8 Update the list of the guest's favorite restaurants.
-G9 Let the user have control over their data.
-G10 Let the guest specify where should their data be stored.
-G11 Display currently served meals by the guest's favorite restaurants.
+G9 Let the guest specify where should their data be stored.
+G10 Display currently served meals by the guest's favorite restaurants.
 
 \begin{center}
   \begin{tabular}{| c | l |}
@@ -45,15 +44,14 @@ G11 Display currently served meals by the guest's favorite restaurants.
 
 % Restaurant application use cases
 R1 Add allergen information to a menu.
-R2 Set currency and weight units for a menu.
-R3 Save menu items for future use.
-R4 Set when a menu will be valid (active). 
-R5 Provide pre-defined ingredients and dishes.
-R6 Have multiple menus of a restaurant active at the same time.
-R7 Generate a QR code for a menu.
-R8 Provides templates for a new menu. 
-R9 Switch between allergen names and numbers.
-R10 Let the restaurant specify where should its data be stored.
+R2 Save menu items for future use.
+R3 Set when a menu will be valid. 
+R4 Provide pre-defined ingredients and dishes.
+R5 Have multiple menus of a restaurant active at the same time.
+R6 Generate a QR code for a menu.
+R7 Provide templates for a new menu. 
+R8 Switch between allergen names/icons and numbers.
+R9 Let the restaurant specify where should its data be stored.
 
 \begin{center}
   \begin{tabular}{| c | l |}
@@ -87,33 +85,51 @@ Table x and x contain results of the comparison.
 
 \todo[inline]{vertically center contents of the table - may be usable for all tables in the thesis} % https://tex.stackexchange.com/questions/7208/how-to-vertically-center-the-text-of-the-cells/611601#611601
 \todo[inline]{make all columns have equal width}
+% Guest use cases
 \begin{center}
-  \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c|}
+  \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c |}
     \hline 
       & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 & G9 & G10 \\
     \hline
+    Menutech & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    \hline
+    Allergy Menu & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    \hline
+    Menu Guide & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    \hline
+    BigZpoon Eagle & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    \hline
+    Allergen Checker & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    \hline
     Choose Well & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} \\
     \hline
-    % App2 & \ding{52} & \ding{56} & - \\
-    % \hline
   \end{tabular}
   \newline
 \end{center}
 
+% Restaurant use cases
 \begin{center}
-  \begin{tabular}{| l | c | c | c | c | c | c | c |}
+  \begin{tabular}{| l | c | c | c | c | c | c | c | c | c |}
     \hline 
-      & R1 & R2 & R3 & R4 & R5 & R6 & R7 \\
+      & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 \\
     \hline
-    Choose Well & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{56} & \ding{52} \\
+    Menutech & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
     \hline
-    % App2 & \ding{52} & \ding{56} & - \\
-    % \hline
+    Allergy Menu & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    \hline
+    Menu Guide & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    \hline
+    BigZpoon Eagle & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    \hline
+    Allergen Checker & \ding{52} & \ding{56} & - & - & - & - & - & - & - \\
+    \hline
+    Choose Well & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{56} & \ding{52} & - & - \\
+    \hline
   \end{tabular}
   \newline
 \end{center}
 
 \ding{52} means that an application fully supports the use case \newline
 \ding{56} means that an application does not support the use case \newline
-\ding{115} means that an application supports the use case only partially \newline
+\ding{115} means that an application partially supports the use case \newline
 - means that the use case is skipped as it is out of the application's scope \newline
