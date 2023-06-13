@@ -1,3 +1,4 @@
+\section{Comparison of the applications}
 We will now compare the applications.
 Table x contains guest application use cases.
 Table x contains restaurant application use cases.
@@ -7,27 +8,35 @@ Use cases were made up.
 \begin{center}
   \begin{tabular}{| c | l |}
     \hline
-    G1 & Display a menu with allergen information. &  \\
+    G1 & Display a menu with allergen information. \\
     \hline
-    G2 & Highlight items of a menu which the guest cannot eat. &  \\
+    G2 & Highlight items of a menu which the guest cannot eat.  \\
     \hline
-    Gx & Hide items of a menu which the guest cannot eat. &  \\
+    G3 & Hide items of a menu which the guest cannot eat.  \\
     \hline
-    G3 & Create a dietary profile of the guest. &  \\
+    G4 & Save the guest's dietary preferences.  \\
     \hline
-    G4 & Search for a restaurant. \\
+    G5 & Translate a menu.  \\
     \hline
-    G5 & Translate a menu. &  \\
+    G6 & Distinguish whether a menu item is vegan or vegetarian.  \\
     \hline
-    G6 & Filters menu items based on whether they are vegan or vegetarian. &  \\
+    G7 & Update the list of the guest's favorite restaurants.  \\
     \hline
-    G7 & Update the list of the guest's favorite restaurants. &  \\
-    \hline
-    G8 & Let the guest specify where should their data be stored. & \\ 
+    G8 & Let the guest specify where should their data be stored. \\ 
     \hline
   \end{tabular}
   \newline
 \end{center}
+
+Use case G1 is supported by all the applications.
+Use case G2 is supported by Menu Guide, BigZpoon and Choose Well.
+Use case G3 is supported by Allergy Menu, Menu Guide and Choose Well.
+Use case G4 is supported by Menu Guide and Choose Well.
+Use case G5 is supported by Menutech and Choose Well.
+Use case G6 is supported by all applications except BigZpoon. 
+% G7 - not all applications save information about guests
+Use cases G7 and G8 are supported only by Choose Well.
+
 
 % Restaurant application use cases
 \begin{center}
@@ -37,30 +46,33 @@ Use cases were made up.
     \hline
     R2 & Save a menu item for future use. \\
     \hline
-    R3 & Set when a menu will be valid. \\
+    R3 & Configure when a menu will be valid. \\
     \hline
-    R4 & Provide pre-defined ingredients and dishes. \\
+    R4 & Provide pre-defined food ingredients. \\
     \hline
     R5 & Have multiple menus of a restaurant active at the same time. \\    
     \hline
     R6 & Generate a QR code for a menu. \\
     \hline 
-    R7 & Provide templates for a new menu. \\
+    R7 & Provide design templates for a new menu. \\
     \hline 
     R8 & Switch between allergen names/icons and numbers. \\
     \hline 
-    R9 & Let a restaurant employee specify where should data be stored. \\
+    R9 & Let the restaurant employee specify where should the restaurant's data be stored. \\
     \hline
   \end{tabular}
   \newline
 \end{center}
 
-Use case G1 is supported by all the applications.
-Use case G2
-
-
-
-
+Use case R1 is supported by all the applications.
+Use case R2 is supported by Menutech, Menu Guide and Choose Well.
+% R3 Allergen checker - time as text in menu
+Use case R3 is supported by Menutech, BigZpoon, Allergen Checker and Choose Well.
+Use case R4 is supported by BigZpoon, Allergen Checker and Choose Well.
+Use case R5 is supported by all except Allergy Menu.
+Use case R6 is supported by Menutech, Menu Guide and Choose Well.
+Use case R7 is supported by Menutech and Menu Guide.
+Use cases R8 and R9 are supported only by Choose Well.
 
 
 Table x and x contain results of the comparison.
@@ -71,19 +83,19 @@ Table x and x contain results of the comparison.
 \begin{center}
   \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c |}
     \hline 
-      & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 & G9 & G10 \\
+      & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 \\
     \hline
-    Menutech & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Menutech         & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{52} & \ding{52} & \ding{56} & \ding{56} \\
     \hline
-    Allergy Menu & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Allergy Menu     & \ding{52} & \ding{56} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{56} & \ding{56}  \\
     \hline
-    Menu Guide & \ding{52} & \ding{52} & - & - & - & - & - & - & - & - \\
+    Menu Guide       & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{56} & \ding{56}  \\
     \hline
-    BigZpoon Eagle & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    BigZpoon Eagle   & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{52} & \ding{56} & \ding{56}  \\
     \hline
-    Allergen Checker & \ding{52} & \ding{56} & - & - & - & - & - & - & - & - \\
+    Allergen Checker & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56}  \\
     \hline
-    Choose Well & \ding{52} & \ding{52} & - & - & - & - & - & - & - & - \\
+    Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} \\
     \hline
   \end{tabular}
   \newline
@@ -95,23 +107,22 @@ Table x and x contain results of the comparison.
     \hline 
       & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 \\
     \hline
-    Menutech & - & - & - & - & - & - & - & - & - \\
+    Menutech         & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} \\
     \hline
-    Allergy Menu & - & - & - & - & - & - & - & - & - \\
+    Allergy Menu     & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Menu Guide & - & - & - & - & - & - & - & - & - \\
+    Menu Guide       & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} \\
     \hline
-    BigZpoon Eagle & - & - & - & - & - & - & - & - & - \\
+    BigZpoon Eagle   & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Allergen Checker & - & - & - & - & - & - & - & - & - \\
+    Allergen Checker & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Choose Well & - & - & - & - & - & - & - & - & - \\
+    Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{52} \\
     \hline
   \end{tabular}
   \newline
 \end{center}
 
-yes: \ding{52} means that an application fully supports the use case \newline
-no: \ding{56} means that an application does NOT support the use case \newline
-partial: \ding{115} means that an application partially supports the use case \newline
-out of scope: - means that the use case is skipped as it is out of the application's scope \newline
+yes: \ding{52} means that an application supports the use case \newline
+no: \ding{56} means that an application does not support the use case \newline
+
