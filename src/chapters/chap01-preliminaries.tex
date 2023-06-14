@@ -2,126 +2,32 @@
 \setlength\epigraphrule{0pt}
 
 \chapter{Preliminaries}
-This chapter aims to explain the terms, which may be new to the reader, which are used in this thesis.
-We will discuss problems of today's state of the Web and what can be done to fix it.
+\epigraph{\textit{``The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past."}}{--- Sir Tim Berners-Lee}
+
+This chapter explains to the reader the terms which are used in this thesis.
+
 
 \todo[inline]{add references}
 \section{Semantic Web}
-\epigraph{\textit{``The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past."}}{--- Sir Tim Berners-Lee}
+According to the World Wide Web Consortium(link), the Semantic Web is an extension of the Web as we know it today.
+Currently, the Web consists of interconnected web pages and is called a Web of documents.
+This view is natural to humans, but computers do not understand what is on a web page based solely on its content. 
+A computer sees a text or an image, but does not know what it means in the language of humans.
+It would help if a web page, or any other resource on the internet, had a single source of truth about what it is and what it is connected to.
+This is achievable by implementing a Web of data where all data is interconnected.
+Data on the Web is assigned its meaning or semantics, thus the term Semantic Web.
 
-The first web browser was also an editor. The idea being that not only could everyone read content on the web, but they could also help create it. It was to be a collaborative space for everyone.
-
-However, when the first browser that popularized the web came along, called Mosaic, it included multimedia and editing was taken out. It was considered too difficult a problem. This change was the first curtailing of the web's promise and spawned an effort led by Tim and others to get the write functionality back. It was dubbed the "read-write web" and led to Richard McManus' seminal article published in 2003.
-
-The issue with writing data, as Wikipedia and others have learned, is that you need a degree of control over who can write what. That means you need to have permissions to dictate what individuals can do to the data. And to have permissions you need to have a system for identity - a way of uniquely authenticating that an individual is who they purport to be.
-
-Of course the social networks solved this problem within their own systems using their own specific identity and access control, but these were not standard, not interoperable, and gave you no choice in what applications you could use to access that data. You had to have your entire personal or professional life within one silo for it to work. And since the Web is ubiquitous, these silos exist across the data spectrum, from social and medical to financial and civil.
-
-When your data is siloed away from you:
-
-- You have hardly any visibility into what is being retained.
-- You have little control over how it is used, or who is using it.
-- You have little choice in which applications you can use to access it.
-- It is hard to use as a cohesive unit, specifically because it is siloed, scattered across proprietary vendors, interfaces, and data formats.
-All of these factors combine to make it very hard to access all of your own data, and put it to work on your behalf.
-
-The Semantic Web, sometimes known as Web 3.0 (not to be confused with Web3), is an extension of the World Wide Web through standards[1] set by the World Wide Web Consortium (W3C). The goal of the Semantic Web is to make Internet data machine-readable.
-
-To enable the encoding of semantics with the data, technologies such as Resource Description Framework (RDF)[2] and Web Ontology Language (OWL)[3] are used. These technologies are used to formally represent metadata. For example, ontology can describe concepts, relationships between entities, and categories of things. These embedded semantics offer significant advantages such as reasoning over data and operating with heterogeneous data sources.[4]
-
-These standards promote common data formats and exchange protocols on the Web, fundamentally the RDF. According to the W3C, "The Semantic Web provides a common framework that allows data to be shared and reused across application, enterprise, and community boundaries."[5] The Semantic Web is therefore regarded as an integrator across different content and information applications and systems.
-
-The term was coined by Tim Berners-Lee for a web of data (or data web)[6] that can be processed by machines[7]—that is, one in which much of the meaning is machine-readable. While its critics have questioned its feasibility, proponents argue that applications in library and information science, industry, biology and human sciences research have already proven the validity of the original concept.[8]
-
-Berners-Lee originally expressed his vision of the Semantic Web in 1999 as follows:
-
-I have a dream for the Web [in which computers] become capable of analyzing all the data on the Web – the content, links, and transactions between people and computers. A "Semantic Web", which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines. The "intelligent agents" people have touted for ages will finally materialize.[9]
-
-The 2001 Scientific American article by Berners-Lee, Hendler, and Lassila described an expected evolution of the existing Web to a Semantic Web.[10] In 2006, Berners-Lee and colleagues stated that: "This simple idea…remains largely unrealized".[11] In 2013, more than four million Web domains (out of roughly 250 million total) contained Semantic Web markup.
-
-\subsection*{Linked Data}
-In computing, linked data is structured data which is interlinked with other data so it becomes more useful through semantic queries. It builds upon standard Web technologies such as HTTP, RDF and URIs, but rather than using them to serve web pages only for human readers, it extends them to share information in a way that can be read automatically by computers. Part of the vision of linked data is for the Internet to become a global database.[1]
-
-Tim Berners-Lee, director of the World Wide Web Consortium (W3C), coined the term in a 2006 design note about the Semantic Web project.[2]
-
-Linked data may also be open data, in which case it is usually described as Linked Open Data.[3]
-
-In his 2006 "Linked Data" note, Tim Berners-Lee outlined four principles of linked data, paraphrased along the following lines:[2]
-
-Uniform Resource Identifiers (URIs) should be used to name and identify individual things.
-HTTP URIs should be used to allow these things to be looked up, interpreted, and subsequently "dereferenced".
-Useful information about what a name identifies should be provided through open standards such as RDF, SPARQL, etc.
-When publishing data on the Web, other things should be referred to using their HTTP URI-based names.
-Tim Berners-Lee later restated these principles at a 2009 TED conference, again paraphrased along the following lines:[4]
-
-All conceptual things should have a name starting with HTTP.
-Looking up an HTTP name should return useful data about the thing in question in a standard format.
-Anything else that that same thing has a relationship with through its data should also be given a name beginning with HTTP.
-
-Components:
-URIs
-HTTP
-Structured data using controlled vocabulary terms and dataset definitions expressed in Resource Description Framework serialization formats such as RDFa, RDF/XML, N3, Turtle, or JSON-LD
-Linked Data Platform
-
-\subsection*{RDF}
-The Resource Description Framework (RDF) is a World Wide Web Consortium (W3C) standard originally designed as a data model for metadata. It has come to be used as a general method for description and exchange of graph data. RDF provides a variety of syntax notations and data serialization formats, with Turtle (Terse RDF Triple Language) currently being the most widely used notation.
-
-RDF is a directed graph composed of triple statements. An RDF graph statement is represented by: 1) a node for the subject, 2) an arc that goes from a subject to an object for the predicate, and 3) a node for the object. Each of the three parts of the statement can be identified by a URI. An object can also be a literal value. This simple, flexible data model has a lot of expressive power to represent complex situations, relationships, and other things of interest, while also being appropriately abstract.
-
-RDF was adopted as a W3C recommendation in 1999. The RDF 1.0 specification was published in 2004, the RDF 1.1 specification in 2014. SPARQL is a standard query language for RDF graphs. RDFS, OWL and SHACL are ontology languages that are used to describe RDF data.
-
-\subsection*{SPARQL}
-SPARQL (pronounced "sparkle", a recursive acronym[2] for SPARQL Protocol and RDF Query Language) is an RDF query language—that is, a semantic query language for databases—able to retrieve and manipulate data stored in Resource Description Framework (RDF) format.[3][4] It was made a standard by the RDF Data Access Working Group (DAWG) of the World Wide Web Consortium, and is recognized as one of the key technologies of the semantic web. On 15 January 2008, SPARQL 1.0 was acknowledged by W3C as an official recommendation,[5][6] and SPARQL 1.1 in March, 2013.[7]
-
-SPARQL allows for a query to consist of triple patterns, conjunctions, disjunctions, and optional patterns.[8]
-
-Implementations for multiple programming languages exist.[9] There exist tools that allow one to connect and semi-automatically construct a SPARQL query for a SPARQL endpoint, for example ViziQuer.[10] In addition, tools exist to translate SPARQL queries to other query languages, for example to SQL[11] and to XQuery.[12]
-
-\subsection*{Ontology}
-In computer science and information science, an ontology encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains of discourse. More simply, an ontology is a way of showing the properties of a subject area and how they are related, by defining a set of concepts and categories that represent the subject.
-
-Every academic discipline or field creates ontologies to limit complexity and organize data into information and knowledge. Each uses ontological assumptions to frame explicit theories, research and applications. New ontologies may improve problem solving within that domain. Translating research papers within every field is a problem made easier when experts from different countries maintain a controlled vocabulary of jargon between each of their languages.[1]
-
-For instance, the definition and ontology of economics is a primary concern in Marxist economics,[2] but also in other subfields of economics.[3] An example of economics relying on information science occurs in cases where a simulation or model is intended to enable economic decisions, such as determining what capital assets are at risk and by how much (see risk management).
-
-What ontologies in both computer science and philosophy have in common is the attempt to represent entities, ideas and events, with all their interdependent properties and relations, according to a system of categories. In both fields, there is considerable work on problems of ontology engineering (e.g., Quine and Kripke in philosophy, Sowa and Guarino in computer science),[4] and debates concerning to what extent normative ontology is possible (e.g., foundationalism and coherentism in philosophy, BFO and Cyc in artificial intelligence).
-
-Applied ontology is considered a successor to prior work in philosophy, however many current efforts are more concerned with establishing controlled vocabularies of narrow domains than first principles, the existence of fixed essences or whether enduring objects (e.g., perdurantism and endurantism) may be ontologically more primary than processes. Artificial intelligence has retained the most attention regarding applied ontology in subfields like natural language processing within machine translation and knowledge representation, but ontology editors are being used often in a range of fields like education without the intent to contribute to AI.[5]
+\subsection*{Linked data}
+If data is to be connected, we need tools and specifications for how to implement it.
+We need a uniform data format and also a query language.
+For a data format, RDF is used.
+Data in this format is expressed in a form of triples.
+It can be viewed as a mathematical graph where data are nodes and links between them are edges of the graph.
+When data is stored as a graph, some queries are much easier to write and are more effective than in traditional SQL databases.
+A query language which is used is called SPARQL.
+Ontologies are a way of describing metadata about data.
 
 \section{The Solid project}
-Solid is a mid-course correction for the Web by its inventor, Sir Tim Berners-Lee. It realizes Tim's original vision for the Web as a medium for the secure, decentralized exchange of public and private data.
-
-Solid (Social Linked Data)[1] is a web decentralization project led by Sir Tim Berners-Lee, the inventor of the World Wide Web, originally developed collaboratively at the Massachusetts Institute of Technology (MIT). The project "aims to radically change the way Web applications work today, resulting in true data ownership as well as improved privacy"[2] by developing a platform for linked-data applications that are completely decentralized and fully under users' control rather than controlled by other entities. The ultimate goal of Solid is to allow users to have full control of their own data, including access control and storage location. To that end, Tim Berners-Lee formed a company called Inrupt to help build a commercial ecosystem to fuel Solid.
-
-Two decades after Berners-Lee invented the World Wide Web in 1989, he outlined the design issues of what later became the Solid project in drafts he wrote for the World Wide Web Consortium.[3][4] Berners-Lee became increasingly dismayed at seeing his invention being abused, such as when Russian hackers interfered with the 2016 US elections, when the Facebook-Cambridge Analytica data scandal became public, when Facebook in 2012 conducted psychological experiments on nearly 700,000 users in secret, and when Google and Amazon applied for patents on devices that listen for emotional changes in human voices.[5]
-
-Berners-Lee felt that the Internet was in need of repair and conceived the Solid project as a first step to fix it, as a way to give individual users full control over the usage of their data.[6] The Solid project is available to anyone to join and contribute, although Berners-Lee advises that people without coding skills should instead advocate publicly for changing the Internet.[7]
-
-In 2015, MIT received a gift from Mastercard to support the development of Solid. Berners-Lee's research team collaborated with the Qatar Computing Research Institute and Oxford University on Solid.[8]
-
-In 2018, Berners-Lee took a sabbatical from MIT to launch a commercial venture based on Solid, named Inrupt.[9][10] The company's mission is "to provide commercial energy and an ecosystem to help protect the integrity and quality of the new web built on Solid."[11]
-
-In 2018, a process of open standardization through the World Wide Web Consortium started for the Solid specifications.[12]
-
-In December 2021, Inrupt raised 30 million from Series A investments.[13]
-
-There are a number of technical challenges to be surmounted to accomplish decentralizing the web, according to Berners-Lee's vision.[14] Rather than using a centralized spoke-hub distribution paradigm, decentralized peer-to-peer networking is implemented in a manner that adds more control and performance features than traditional peer-to-peer networks such as BitTorrent. Other goals are for the system to be easy to use, fast, and allow for simple creation of applications by developers.[14]
-
-Solid's central focus is to enable the discovery and sharing of information in a way that preserves privacy. A user stores personal data in "pods" (personal online data stores) hosted wherever the user desires. Applications that are authenticated by Solid are allowed to request data if the user has given the application permission. A user may distribute personal information among several pods; for example, different pods might contain personal profile data, contact information, financial information, health, travel plans, or other information. The user could then join an authenticated social-networking application by giving it permission to access the appropriate information in a specific pod. The user retains complete ownership and control of data in the user's pods: what data each pod contains, where each pod is stored, and which applications have permission to use the data.[1]
-
-In more detail, Solid consists of the following components:[15]
-
-An organized collection of standards and data formats/vocabularies providing the same capabilities that centralized social media services offer, such as identity, authentication, login, permission lists, contact management, messaging, feed subscriptions, comments, discussions, and others.
-Specifications and design notes describing a REST API to extend existing standards, to guide developers building servers or applications.
-Servers that implement the Solid specification.
-A test suite for testing and validating Solid implementations.
-An ecosystem of social applications, identity providers, and helper libraries that run on the Solid platform.
-A community providing documentation, discussion, tutorials, and presentations.
-
-\subsection*{WebID}
-WebID is a method for internet services and members to know who they are communicating with. The WebID specifications define a set of editor's drafts to prepare the process of standardization for identity, identification and authentication on HTTP-based networks. WebID-based protocols (Solid OIDC, WebID-TLS, WebID-TLS+Delegation) offer a new way to log into internet services. Instead of using a password, for example, the member refers to another web address which can vouch for it. WebID is not a specific service or product.
-
-Technically speaking, a WebID is an HTTP URI that denotes ("refers to" or "names") an agent on an HTTP based network such as the Web or an enterprise intranet. In line with linked data principles, when a WebID is de-referenced ("looked up"), it resolves to a profile document (a WebID-Profile) that describes its referent (what it denotes). This profile document consists of RDF model based structured data, originally constructed primarily using terms from the FOAF vocabulary, but now often including terms from other vocabularies.
-
-Profile documents can be stored on the agent's own Web server, and access thereto may be partially or wholly constrained to specific agent identities via the use of access controls, to preserve the privacy of the profile document's subject.
+Solid makes it possible for end-users to have control over their data.
+It provides Pods, which act as personal data storage.
+A user can set what applications and who can see and manipulate with their data.
