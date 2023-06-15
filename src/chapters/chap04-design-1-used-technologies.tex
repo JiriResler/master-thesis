@@ -25,63 +25,18 @@ Figure x contains a depiction of our solution's architecture.
 
 \section{Technological stack}
 \todo[inline]{add links to technologies - footnotes, link to documentation of the technology}
-There are various options out there for what technologies we can use to implement our application.
-This section contains an overview of available tools and which ones we chose and why.
+This section contains an overview of considered tools for implementing the solution.
+We also note which ones we chose and why.
 
 \subsection*{User interface}
-  We need a UI so that a user can interact with the application.
-  We need to be able to create an interactive user interface.
-  We need to have state for logged in user.
-  We need to fetch data from the internet.
-  We need to integrate with Solid.
-
-  Nowadays, there are many frameworks for building web applications.
-  The most popular options are Angular, React and Vue.
-
-  Angular is a platform and framework for building single-page client applications using HTML and TypeScript. 
-  It implements its core and optional functionality as a set of TypeScript libraries. 
-  The basic building blocks of the Angular framework are Angular components that are organized into \emph{NgModules}. 
-  NgModules collect related code into functional sets; an Angular application is defined by a set of NgModules.
-
-  React is a JavaScript library for rendering user interfaces.
-  Applications written in React are built from modular and reusable pieces called components.
-  React components receive data and return what should appear on the screen. 
-  They can be passed new data in response to an interaction, like when the user types into an input. 
-  React will then update the screen to match the new data.
-  A notable feature is the use of a virtual Document Object Model, or Virtual DOM. 
-  React creates an in-memory data-structure cache, computes the resulting differences on a re-render, and then updates the browser's displayed DOM efficiently. 
-  This selective rendering provides a major performance boost.
-
-  Vue is a JavaScript framework for building user interfaces. 
-  It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model.
-  Vue uses an HTML-based template syntax that allows programmers to declaratively bind the rendered DOM to the underlying component instance's data.
-  Under the hood, Vue compiles the templates into highly-optimized JavaScript code. 
-  Combined with the reactivity system, Vue can intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
-
-  We decide to choose \textbf{React} for developing the UI of our application.
-  One of the reasons for this decision is that Solid is written for React.
-  There exists a Solid React SDK which can help us to work with some of the core Solid principles.
-  Ract also allows us to work with components as functions.
-% end of \subsection
+\todo[inline]{add link}
+We chose \textbf{React} for developing the UI of the solution's applications.
+This decision was made on the account that Solid is programmed for React.
+There even exists a Solid React SDK(link) with a Login button component which can be used for authentication of users.
 
 \subsection*{Programming language}
-  We need to implement the application.
-
-  As for programming languages, we considered two options. 
-  JS, TS
-
-  JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. 
-  It is most well-known as the scripting language for Web pages. 
-  JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative---e.g. functional programming styles.
-
-  TypeScript is a superset of JavaScript. 
-  It provides features such as optional static typing, classes, interfaces, and generics. 
-  The goal of TypeScript is to help catch mistakes early through its type system and make JavaScript development more efficient. 
-  One of the big benefits is enabling IDEs to provide a richer environment for spotting common errors as the programmer types their code.
-
-  The goal is to make as few bugs during development as possible and that is why we decide to go with \textbf{Typescript}.
-  Defining types of variables makes the code more readable to other developers.
-% end of \subsection
+As for a programming language, JavaScript and TypeScript were considered.
+Both languages are supported by React, and we chose \textbf{Typescript} because it adds type control to the programmer's code which makes it less error-prone.
 
 \subsection*{Build tool}
   We need to create the application.
