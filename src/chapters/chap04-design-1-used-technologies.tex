@@ -1,36 +1,29 @@
 \chapter{Design}
-Now we will focus on how to implement what we have specified in the analysis chapter.
-First, we will describe our application's architecture.
-Then, we are going to discuss what technologies were considered for implementing the application, and which of the technologies were chosen and why.
+In this chapter we focus on how to implement what we have specified in the analysis chapter.
+First, we describe our application's architecture.
+Then, we discuss what technologies were considered for implementing the application, and which of the technologies were chosen and why.
+We name our application "Choose well".
 
-\todo[inline]{popisat kazdu z aplikacii}
 \section{Architecture}
-Our solution for analysis is three independent applications. 
-Each of them is a single-page web application.
-
-Our application is a single-page web application because we want to mitigate work to the user's web browser.
-It actually consists of several smaller applications for better modularity.
-
+\todo[inline]{add footnote}
+We design our solution(footnote - from now on we will refer to the whole application as the solution as not to  confuse it with the applications it consists of) as multiple independent single-page applications for better modularity. 
 One application is the guest dietary profile editor.
-
-Another application is the restaurant menu creator.
-
-Last application is a menu viewer for restaurant guests.
-
-Data flows to pods.
-From the pods it is read.
-
-Figure x contains a depiction of our application's architecture.
+It allows a guest to set their dietary preferences like being allergic to something or being vegetarian.
+Another application is the restaurant menu maker.
+It serves for restaurant employees to specify their menu's contents.
+Last application is the personalized menu viewer for restaurant guests.
+It combines information gathered by the other applications to display personalized menus to guests. 
+\todo[inline]{add figure number}
+\todo[inline]{move bottom border a bit lower}
+Figure x contains a depiction of our solution's architecture.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\linewidth]{master-thesis/img/architecture_data_flow.pdf}
-  \caption{The application's architecture}
+  \caption{The solution's architecture}
 \end{figure}
 
 \section{Technological stack}
-\todo[inline]{add react router if used}
-% \subsection{client-side routing}
 \todo[inline]{add links to technologies - footnotes, link to documentation of the technology}
 There are various options out there for what technologies we can use to implement our application.
 This section contains an overview of available tools and which ones we chose and why.
