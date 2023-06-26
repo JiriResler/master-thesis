@@ -20,7 +20,8 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \subsection{Guest use cases}
 
-\textbf{1. Use case: Find a meal I can eat at a restaurant}
+\todo[inline]{change ids of use cases}
+\textbf{UC1: Find a meal I can eat at a restaurant}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -28,13 +29,15 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Description  & A guest comes to a restaurant and is deciding what to order. \\
     \hline
+    Precondition & The guest has created a profile. \\
+    \hline
+    Postcondition & The guest sees only the items of the menu which they can eat. \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest scans a QR code on a printed menu which takes them to the application.
-        \item The application loads and displays an online version of the printed menu.
-        \item The guest selects that they wish to filter out meals of the menu which do not correspond to their profile. \textbf{A1}
-        \item The application restructures the displayed menu.
+        \item The application displays a personalized menu based on the guest's profile. \textbf{A1}
       \end{enumerate}
     \end{minipage}
     \\
@@ -42,7 +45,7 @@ A scenario will contain its description only if the goal of a user is not clear 
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The guest selects that they wish to sort the menu by what menu items the guest can eat according to their~profile.
+        \item [A1:] The guest selects that they wish to see the full menu by clicking the button labeled as "Display full menu". The application shows a warning which says that the menu may contain food items which the guest is allergic to. The guest reads the warning and decides to proceed. The application displays a menu with no personalization.
       \end{description}
     \end{minipage}
     \\
