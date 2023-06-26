@@ -62,7 +62,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\noindent \textbf{2. Use case: Specify what allergies I have}
+\noindent \textbf{UC2: Use case: Specify what allergies I have}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -98,7 +98,7 @@ A scenario will contain its description only if the goal of a user is not clear 
   \newline
 \end{center}
 
-\noindent \textbf{3. Use case: Look up online what a restaurant offers today}
+\noindent \textbf{UC3: Use case: Look up online what a restaurant offers today}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -106,12 +106,18 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
     \hline
+    Precondition & The guest has added the restaurant to the list of their favorite restaurants. \\
+    \hline
+    Postcondition & The guest sees the restaurant's menu. \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest provides the IRI of the restaurant.
-        \item The application displays a detail of the restaurant. \textbf{A1}
-        \item The guest selects a menu.
+        \item The guest logs in to the application.
+        \item The application displays an overview of what the guest's favorite restaurants currently serve. \textbf{A1}
+        \item The guest clicks on the restaurant whose menu they wish to see. \textbf{A2}
+        \item The application lists all menus of the chosen restaurant. 
+        \item The guest selects one of the menus.
         \item The application displays the menu.
       \end{enumerate}
     \end{minipage}
@@ -120,7 +126,8 @@ A scenario will contain its description only if the goal of a user is not clear 
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut] 
-        \item [A1:] The specified IRI is not valid. The application informs the guest about this fact and the scenario starts over from step 1.
+        \item [A1:] The restaurants do not currently serve anything. The application displays a text with this information.
+        \item [A2:] The restaurant has no valid menu published at the moment. The application displays a text with this information close to the restaurant's name.
       \end{description}
     \end{minipage}
     \\
