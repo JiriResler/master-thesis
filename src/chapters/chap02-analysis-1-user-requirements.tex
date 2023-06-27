@@ -9,8 +9,6 @@ The reason behind this is that the EU enforces restaurants to inform their guest
 We would like for the application to be usable internationally, so it needs to have its user interface translated into different languages.
 For this purpose we will choose the English, Slovak and Czech languages with the possibility of adding more translations in the future.
 
-\todo[inline]{Remove all design requirements}
-
 \section{User roles}
 There are two types of users who will come in contact with the application.
 The first type is a \textbf{restaurant}, more specifically its employee who is responsible for creating menus.
@@ -34,6 +32,9 @@ Also, we will substitute the user role restaurant for \emph{restaurant employee}
 \todo[inline]{make a footnote a link a reader can follow}
 This list of requirements is inspired by interviewing a restaurant\footnote{\url{pizzabudca.sk}  \label{fnlabel}} employee and also two former restaurant\footnote{\url{sokolzabreh.cz/hospudka}  \label{fnlabel}} owners.
 
+\todo[inline]{Remove all design requirements}
+\todo[inline]{Check numbering of requirements - also references in reqs}
+\todo[inline]{Add text between headings}
 \subsection{Functional requirements}
 \subsubsection{Guest user role requirements}
 A guest is expected to be logged in to the application if not stated otherwise in a requirement.
@@ -46,10 +47,11 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 1.4:] The application shall enable a restaurant guest to view a menu of the restaurant which is personalized based on the guest's profile.
 
     \emph{Rationale:} A personalized menu highlights or hides items of a menu, so that a guest can quickly choose what they want to order. 
-    \item [Req. 1.5:] The application shall be able to sort meals in a menu by whether a viewing guest can eat them according to their profile.
-    \item [Req. 1.6:] The application shall be able to hide meals of a menu which, according to their profile, a viewing guest cannot eat.
-    \item [Req. 1.7:] A guest shall be able to view a restaurant's menu by specifying the menu's IRI.
-    \item [Req. 1.8:] A guest should be able to view a menu by scanning a QR code on a printed menu.
+    highlight items which they cannot eat and also highlight allergen or diet
+    \item [Req. 1.5:] The application shall be able to sort meals in a menu by whether a guest can eat them.
+    \item [Req. 1.6:] The application shall be able to hide meals of a menu which a guest cannot eat.
+    \item [Req. 1.7:] A guest should be able to view a restaurant's menu by specifying the menu's IRI.
+    \item [Req. 1.8:] A guest shall be able to view a menu by scanning a QR code on a printed menu.
 
     \emph{Rationale:} The QR code will link to the URL of the application and will provide it with the IRI of the menu just like in the requirement 1.7.
     \item [Req. 1.9:] A guest should be able to specify the IRI of a restaurant and browse its menus.
@@ -61,7 +63,7 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 1.11:] A guest shall be able to see an overview of currently served meals by their favorite restaurants.
     \item [Req. 1.12:] A guest should be able to filter menu items based on what diet they are part of.
 
-    \emph{Rationale:} no matter what is in their profile
+    \emph{Rationale:} in addition to their profile
     \item [Req. 1.13:] A non-authenticated guest should have access to the application's functionalities stated in requirements 1.7, 1.8, 1.9 and 1.12. 
     
     \emph{Rationale:} None of these features require a guest to be logged in. The application should be also useful for people without a profile.
@@ -80,13 +82,10 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 2.3:] A restaurant employee should be able to create a list of beverages.
 
     \emph{Rationale:} Some restaurants have a separate menu for meals and for drinks.
-    \todo[inline]{decide whether my app will implement design of menus - another app can do it - style, print, generate QR code}
-    \item [Req. 2.4:] A restaurant employee should be able to print a menu.
+    \item [Req. 2.4:] A restaurant employee should be able to print a QR code for a menu.
 
-    \emph{Rationale:} A printed menu can be put on tables.
-    \item [Req. 2.5:] A printed menu should optionally contain a QR code which will link a guest to the application.
-
-    \emph{Rationale:} The QR code will provide the application with the IRI of the menu.
+    \emph{Rationale:} The QR code can be added to a paper menu, or it can be placed on tables instead of the paper menu
+   
     \item [Req. 2.6:] The application shall enable a restaurant employee to edit a previously created menu.
     \item [Req. 2.7:] The application shall enable a restaurant employee to delete a previously created menu.
     \item [Req. 2.8:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
@@ -108,11 +107,8 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 2.16:] A restaurant employee should be able to specify what currency to use in a menu.
     \item [Req. 2.17:] A restaurant employee should be able to specify what weight units to use in a menu.
     \item [Req. 2.18:] A restaurant employee should be able to specify what volume units to use for liquid items in a menu.
-    \item [Req. 2.19:] A restaurant employee should be able to specify what font to use in a menu.
-    % menu design is out of scope of our application
-    % \item [Req. 2.20:] The application should offer at least three empty menus as templates for a restaurant employee to choose from when creating a menu.
-
-    % \emph{Rationale:} These templates can differ in what categories they have, what font they use or what currency and weight units they use.
+    \item [Req. x]: The application should provide an example menu for new users.
+    Rat: The new user can easily see what they can make using the application
     \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
 
     \emph{Rationale:} Allergens can be listed within an item's description.
@@ -138,11 +134,14 @@ A guest is expected to be logged in to the application if not stated otherwise i
 
     \emph{Rationale:} This requirement extends the requirement 2.21.
     \item [Req. 3.3:] The application should have responsive user interface for mobile devices and desktops.
+    \todo[inline]{add browser versions}
     \item [Req. 3.4:] The application should be compatible with the latest versions of all of the commonly used browsers, namely Google Chrome of version x.y, Mozilla Firefox of version x.y, Microsoft Edge of version x.y, Opera of version x.y and Safari of version x.y.
+    \todo[inline]{describe each screen in design chapter}
     \item [Req. 3.5:] The application shall have a user tutorial explaining its functionality for each screen defined in the design chapter.
     \item [Req. 3.6:] The application should have an English, Czech and Slovak translations.
 
     \emph{Rationale:} We would like for the application to be used internationally within the European Union.
+   \todo[inline]{shrink reqs 3. and 3.8 into one req}
     \item [Req. 3.7:] Users of the application shall have control over their data.
 
     \emph{Rationale:} A user of the application shall know where their data is stored and what can the application do with it.
