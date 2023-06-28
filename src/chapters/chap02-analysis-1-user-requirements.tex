@@ -69,7 +69,6 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \emph{Rationale:} None of these features require a guest to be logged in or have a dietary profile.
 \end{description}
 
-\todo[inline]{Add a requirement about allergen icons - to use in an interactive menu instead of numbers or labels}
 \subsubsection{Restaurant user role requirements}
 \begin{description}
     \item [Req. 2.1:] A restaurant employee shall be able to create a menu for a specific day.
@@ -98,7 +97,7 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 2.12:] A meal in a menu should contain an ID, label, price, weight or volume, ingredients and allergens.
     \item [Req. 2.13:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
 
-    \emph{Rationale:} The weight in the requirement 2.11 is the weight of a whole meal, i.e. all ingredients' weights combined.
+    \emph{Rationale:} The weight in the requirement 2.12 is the weight of the whole meal, i.e. all ingredients' weights summed up.
     \item [Req. 2.14:] A menu should optionally contain a restaurant's name, address, telephone number and opening hours.
     \item [Req. 2.15:] A restaurant employee should be able to use a previously created menu as the starting point for creating a new menu.
 
@@ -106,29 +105,28 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 2.16:] A restaurant employee should be able to specify what currency to use in a menu.
     \item [Req. 2.17:] A restaurant employee should be able to specify what weight units to use in a menu.
     \item [Req. 2.18:] A restaurant employee should be able to specify what volume units to use for liquid items in a menu.
-    \item [Req. x]: The application should provide an example menu for new users.
-    Rat: The new user can easily see what they can make using the application
-    \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
+    \item [Req. x]: The application should provide an example of a menu.
 
-    \emph{Rationale:} Allergens can be listed within an item's description.
+    \emph{Rationale:} A user who is new to the application can easily see what they can make using the application.
+    \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
     \item [Req. 2.22:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
 
-    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement 2.20.
-    \todo[inline]{add use icons requirement}
-    \item [Req. 2.23:] A restaurant employee should be able to set what currency, weight and volume units to use by default in a menu.
+    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement 2.21.
+    \item [Req. 2.21:] A restaurant employee should be able to set that a menu shall use allergen icons for displaying allergen information.
+    \item [Req. 2.23:] A restaurant employee should be able to set what currency, weight and volume units to use as default in a menu.
   
     \emph{Rationale:} A restaurant might use the same units in all of its menus. The purpose of this requirement is to save restaurant employees from doing repetitive work when creating menus.
-    \item [Req. 2.24:] A restaurant employee should be able to share a menu on the restaurant's Facebook, Twitter and Instagram accounts.
+    \item [Req. 2.24:] A restaurant employee should be able to share a menu through the restaurant's Facebook, Twitter and Instagram accounts.
   \end{description}
 
 \newpage
 
 \subsection{Non-functional requirements}
 \begin{description}
-    \item [Req. 3.1:] Each item of a menu must have its allergens specified.
+    \item [Req. 3.1:] Each item of a menu must have its allergens specified if it contains any.
     
     \emph{Rationale:} In the EU, there are laws\footnote{\url{http://data.europa.eu/eli/reg/2011/1169/2018-01-01}  \label{fnlabel}} which mandate restaurants to list allergens contained in the foods they serve.
-    \item [Req. 3.2:] A menu which uses numbers for displaying allergen information must contain a legend explaining which allergen each number represents.
+    \item [Req. 3.2:] A menu which uses numbers for displaying allergen information must contain a legend explaining what allergen each number represents.
 
     \emph{Rationale:} This requirement extends the requirement 2.21.
     \item [Req. 3.3:] The application should have responsive user interface for mobile devices and desktops.
@@ -136,16 +134,12 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [Req. 3.4:] The application should be compatible with the latest versions of all of the commonly used browsers, namely Google Chrome of version x.y, Mozilla Firefox of version x.y, Microsoft Edge of version x.y, Opera of version x.y and Safari of version x.y.
     \todo[inline]{describe each screen in design chapter}
     \item [Req. 3.5:] The application shall have a user tutorial explaining its functionality for each screen defined in the design chapter.
-    \item [Req. 3.6:] The application should have an English, Czech and Slovak translations.
+    \item [Req. 3.6:] The application should have English, Czech and Slovak translations of the user interface.
 
     \emph{Rationale:} We would like for the application to be used internationally within the European Union.
-   \todo[inline]{shrink reqs 3. and 3.8 into one req}
-    \item [Req. 3.7:] Users of the application shall have control over their data.
-
-    \emph{Rationale:} A user of the application shall know where their data is stored and what can the application do with it.
     \item [Req. 3.8:] A user of the application shall be able to specify where should the application store their data.
 
-    \emph{Rationale:} The user should have control over their data.
+    \emph{Rationale:} A user should have control over their data.
 \end{description}
 
 \vspace*{\fill}
