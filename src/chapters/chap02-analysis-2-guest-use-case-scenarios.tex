@@ -1,4 +1,5 @@
 \todo[inline]{Add use case coverage of requirements}
+\todo[inline]{Update figures}
 \section{Use case scenarios}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
@@ -7,6 +8,7 @@ All use cases will be structurally described by independent use case scenarios.
 A scenario will contain its description only if the goal of a user is not clear from a use case's name.
 
 \todo[inline]{Update name of a use case Warn my guests...}
+\todo[inline]{add Save my profile UC - covers req. 1.4}
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{master-thesis/img/use-cases/use_cases}
@@ -22,6 +24,9 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \todo[inline]{change ids of use cases}
 \textbf{UC1: Find a meal I can eat at a restaurant}
+\todo[inline]{add a branch where the menu gets translated}
+\todo[inline]{add a path where the guest is not authenticated}
+Covers req. 1.5 - 1.10, 1.15, 1.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -63,6 +68,8 @@ A scenario will contain its description only if the goal of a user is not clear 
 \newpage
 
 \noindent \textbf{UC2: Specify what allergies I have}
+\todo[inline]{add a path where the guest is not authenticated and specifies their allergies when viewing a menu}
+Covers req. 1.1, 1.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -99,6 +106,9 @@ A scenario will contain its description only if the goal of a user is not clear 
 \end{center}
 
 \noindent \textbf{UC3: Look up online what a restaurant offers today}
+\todo[inline]{add a path where the guest is not authenticated}
+Covers req. 1.11, 1.12, 1.16
+\todo[inline]{change main path to find a restaurant by its name - clicking a link on a webpage as alternative}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -110,7 +120,9 @@ A scenario will contain its description only if the goal of a user is not clear 
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest visits the restaurant's webpage and clicks on a link which takes them to the application. \textbf{A1 A2}
-        \item The application displays a menu.           
+        \item The application displays the restaurant's detail which contains a list of its menus.
+        \item The guest selects a menu.
+        \item The application displays the menu.           
       \end{enumerate}
     \end{minipage}
     \\
@@ -118,8 +130,8 @@ A scenario will contain its description only if the goal of a user is not clear 
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut] 
-        \item [A1:] The guest selects a restaurant in the overview screen from UC4. The application lists all menus of the chosen restaurant. The guest selects one of the menus. The application displays the menu.
-        \item [A2:] The guest specifies the IRI of the restaurant. The application lists all menus of the chosen restaurant. The guest selects one of the menus. The application displays the menu.
+        \item [A1:] The guest selects a restaurant in the overview screen from UC4.
+        \item [A2:] The guest specifies the IRI of the restaurant. 
       \end{description}
     \end{minipage}
     \\
@@ -140,6 +152,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \todo[inline]{change name (also in figure) to "Find currently served meals by my favorite restaurants which I can eat"}
 \noindent \textbf{UC4: Find currently served meals by my favorite restaurants which correspond to my profile}
+Covers req. 1.14
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -176,6 +189,8 @@ A scenario will contain its description only if the goal of a user is not clear 
 \newpage
 
 \noindent \textbf{UC5: Specify what diets I am on}
+\todo[inline]{add a path where the guest is not authenticated and specifies their diets when viewing a menu}
+Covers req. 1.2, 1.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -237,6 +252,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 \newpage
 
 \noindent \textbf{UC7: Specify what food and beverages I like and dislike}
+Covers req. 1.3
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -277,6 +293,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \todo[inline]{check in other use cases whether I used ',' between A1 and A2}
 \noindent \textbf{UC8: Manage a list of my favorite restaurants}
+Covers req. 1.13
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
