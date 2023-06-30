@@ -27,7 +27,7 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Actor        & Guest \\
     \hline
-    Description  & A guest comes to a restaurant and wants to choose what to order. \\
+    Description  & A guest comes to a restaurant and is deciding what to order. \\
     \hline
     Covers & R1.5-R1.9, R1.16 \\
     \hline
@@ -108,26 +108,22 @@ A scenario will contain its description only if the goal of a user is not clear 
 \end{center}
 
 \noindent \textbf{UC3: Look up online what a restaurant offers today}
-\todo[inline]{add a path where the guest is not authenticated}
-\todo[inline]{add a branch where the menu gets translated}
-Covers R1.10-R1.12, R1.15, R1.16
-\todo[inline]{change main path to find a restaurant by its name - clicking a link on a webpage as alternative}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Guest \\
     \hline
-    Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
+    Description  & A guest wants to know what the restaurant serves at the moment. \\
     \hline
-    Covers & Rx.x \\
+    Covers        & R1.10-R1.12, R1.15, R1.16 \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest visits the restaurant's webpage and clicks on a link which takes them to the application. \textbf{A1 A2 A3}
+        \item The guest finds the restaurant by its name. \textbf{A1 A2 A3 A4}
         \item The application displays the restaurant's detail which contains a list of its menus.
         \item The guest selects a menu.
-        \item The application displays the menu.           
+        \item The application displays the menu. \textbf{A5}         
       \end{enumerate}
     \end{minipage}
     \\
@@ -136,8 +132,10 @@ Covers R1.10-R1.12, R1.15, R1.16
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut] 
         \item [A1:] The guest selects a restaurant in the overview screen from UC4.
-        \item [A2:] The guest specifies the IRI of the restaurant. 
+        \item [A2:] The guest visits the restaurant's webpage and clicks on a link which takes them to the application.
         \item [A3:] The guest scans a QR code on a printed menu which takes them to the application.
+        \item [A4:] The guest specifies the IRI of the restaurant. 
+        \item [A5:] The application first translates the menu into the current language of the user interface. 
       \end{description}
     \end{minipage}
     \\
