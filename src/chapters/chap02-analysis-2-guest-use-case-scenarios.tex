@@ -1,14 +1,14 @@
-\todo[inline]{Add use case coverage of requirements}
 \todo[inline]{Update figures}
+\todo[inline]{Check UC names if they are the same as in figures}
+\todo[inline]{check ids of use cases}
+\todo[inline]{add Save my profile UC - covers R1.4}
+\todo[inline]{Add top padding for scenario tables} 
 \section{Use case scenarios}
 Now we are going to depict goals of users which the application will make achievable.
 Figure 2.1 contains a use case diagram of the application.
 A use case styled with a bold border groups together more use cases and will be further expanded.
 All use cases will be structurally described by independent use case scenarios.
 A scenario will contain its description only if the goal of a user is not clear from a use case's name.
-
-\todo[inline]{Update name of a use case Warn my guests...}
-\todo[inline]{add Save my profile UC - covers req. 1.4}
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{master-thesis/img/use-cases/use_cases}
@@ -17,32 +17,33 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-% Add top padding for scenario tables
 \def\arraystretch{1.5}
 
 \subsection{Guest use cases}
-
-\todo[inline]{change ids of use cases}
-\textbf{UC1: Find a meal I can eat at a restaurant}
-\todo[inline]{add a branch where the menu gets translated}
-\todo[inline]{add a path where the guest is not authenticated}
-Covers req. 1.5 - 1.10, 1.15, 1.16
+\todo[inline]{change name in figure}
+\textbf{UC1: Decide what to order}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Guest \\
     \hline
-    Description  & A guest comes to a restaurant and is deciding what to order. \\
+    Description  & A guest comes to a restaurant and wants to choose what to order. \\
     \hline
-    Precondition & The guest has created a profile. \\
+    Covers & R1.5-R1.9, R1.16 \\
     \hline
-    Postcondition & The guest sees only the items of the menu which they can eat. \\
+    Precondition & The guest has opened a restaurant's menu using the application. \\
+    \hline
+    Postcondition & The guest is viewing a personalized menu. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest scans a QR code on a printed menu which takes them to the application.
-        \item The application displays a personalized menu based on the guest's profile. \textbf{A1}
+        \item The guest logs in to the application. \textbf{A1}
+        \item The application loads the guest's profile.
+        \item The application applies the guest's preferences to the menu.
+        \item The application displays the menu enriched with visual clues so that the guest can see what they can and cannot eat.
+        \item The guest selects to divide the menu to items they can and items they cannot eat. \textbf{A2 A3}
+        \item The application restructures the menu.
       \end{enumerate}
     \end{minipage}
     \\
@@ -50,7 +51,9 @@ Covers req. 1.5 - 1.10, 1.15, 1.16
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The guest selects that they wish to see the full menu by clicking the button labeled as "Display full menu". The application shows a warning which says that the menu may contain food items which the guest is allergic to. The guest reads the warning and decides to proceed. The application displays a menu with no personalization.
+        \item [A1:] The guest does not log in. The guest selects what they are allergic to and what diets they follow using controls in the menu. The scenario continues with step 3.
+        \item [A2:] The guest selects to sort the menu by whether they can eat an item.
+        \item [A3:] The guest selects to filter out items which they cannot eat.
       \end{description}
     \end{minipage}
     \\
@@ -69,11 +72,13 @@ Covers req. 1.5 - 1.10, 1.15, 1.16
 
 \noindent \textbf{UC2: Specify what allergies I have}
 \todo[inline]{add a path where the guest is not authenticated and specifies their allergies when viewing a menu}
-Covers req. 1.1, 1.16
+Covers R1.1, 1.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor       & Guest \\
+    \hline
+    Covers & Rx.x \\
     \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
@@ -107,7 +112,8 @@ Covers req. 1.1, 1.16
 
 \noindent \textbf{UC3: Look up online what a restaurant offers today}
 \todo[inline]{add a path where the guest is not authenticated}
-Covers req. 1.11, 1.12, 1.16
+\todo[inline]{add a branch where the menu gets translated}
+Covers R1.10-R1.12, R1.15, R1.16
 \todo[inline]{change main path to find a restaurant by its name - clicking a link on a webpage as alternative}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -116,10 +122,12 @@ Covers req. 1.11, 1.12, 1.16
     \hline
     Description  & A guest is at home or on their way to a restaurant and wants to know what the restaurant serves at the moment. \\
     \hline
+    Covers & Rx.x \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest visits the restaurant's webpage and clicks on a link which takes them to the application. \textbf{A1 A2}
+        \item The guest visits the restaurant's webpage and clicks on a link which takes them to the application. \textbf{A1 A2 A3}
         \item The application displays the restaurant's detail which contains a list of its menus.
         \item The guest selects a menu.
         \item The application displays the menu.           
@@ -132,6 +140,7 @@ Covers req. 1.11, 1.12, 1.16
       \begin{description}[nosep,after=\strut] 
         \item [A1:] The guest selects a restaurant in the overview screen from UC4.
         \item [A2:] The guest specifies the IRI of the restaurant. 
+        \item [A3:] The guest scans a QR code on a printed menu which takes them to the application.
       \end{description}
     \end{minipage}
     \\
@@ -152,13 +161,15 @@ Covers req. 1.11, 1.12, 1.16
 
 \todo[inline]{change name (also in figure) to "Find currently served meals by my favorite restaurants which I can eat"}
 \noindent \textbf{UC4: Find currently served meals by my favorite restaurants which correspond to my profile}
-Covers req. 1.14
+Covers R1.14
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Guest \\
     \hline
     Description  & A guest wants to know what do their favorite restaurants currently have to offer. \\
+    \hline
+    Covers & Rx.x \\
     \hline
     Precondition & The guest is logged in to the application. \\
     \hline
@@ -190,11 +201,13 @@ Covers req. 1.14
 
 \noindent \textbf{UC5: Specify what diets I am on}
 \todo[inline]{add a path where the guest is not authenticated and specifies their diets when viewing a menu}
-Covers req. 1.2, 1.16
+Covers R1.2, 1.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor       & Guest \\
+    \hline
+    Covers & Rx.x \\
     \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
@@ -234,6 +247,8 @@ Covers req. 1.2, 1.16
     \hline
     Description  & A guest wants to specify where should the application store and read their data. \\
     \hline
+    Covers & Rx.x \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
@@ -252,11 +267,13 @@ Covers req. 1.2, 1.16
 \newpage
 
 \noindent \textbf{UC7: Specify what food and beverages I like and dislike}
-Covers req. 1.3
+Covers R1.3
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor    & Guest \\
+    \hline
+    Covers & Rx.x \\
     \hline
     Scenario &
     \begin{minipage}[t]{\linewidth}
@@ -293,11 +310,13 @@ Covers req. 1.3
 
 \todo[inline]{check in other use cases whether I used ',' between A1 and A2}
 \noindent \textbf{UC8: Manage a list of my favorite restaurants}
-Covers req. 1.13
+Covers R1.13
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor    & Guest \\
+    \hline
+    Covers & Rx.x \\
     \hline
     Precondition & The guest is logged in to the application. \\
     \hline
