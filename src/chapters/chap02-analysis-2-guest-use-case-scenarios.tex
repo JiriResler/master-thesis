@@ -192,25 +192,24 @@ A scenario will contain its description only if the goal of a user is not clear 
 \newpage
 
 \noindent \textbf{UC5: Specify what diets I am on}
-Covers R1.2, R1.4
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor       & Guest \\
     \hline
-    Covers & Rx.x \\
+    Covers & R1.2, R1.4 \\
     \hline
     Scenario    &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile and navigates to a section for managing diets.
+        \item The guest opens their profile.
         \item The application displays a screen with a list of previously specified diets by the guest. \textbf{A1}
-        \item The guest presses a button labeled as "Add diet".
+        \item The guest presses a button for adding a new diet to the list.
         \item The application displays a search bar.
         \item The guest starts typing the name of a diet into the search bar.
         \item The application suggests diets which contain the given input in their name.
-        \item The guest selects the desired diet and presses an "Add" button. \textbf{A2}
-        \item The application adds the specified diet to the guest's profile. \textbf{A3}
+        \item The guest selects the desired diet. \textbf{A2}
+        \item The application adds the diet to the guest's profile. \textbf{A3}
         \item The guest repeats steps 3 to 8 until they have specified all of the diets they are on.
       \end{enumerate}
     \end{minipage}
