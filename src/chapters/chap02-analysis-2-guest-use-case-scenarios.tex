@@ -316,14 +316,14 @@ A scenario will contain its description only if the goal of a user is not clear 
 \newpage
 
 \todo[inline]{check in other use cases whether I used ',' between A1 and A2}
+\todo[inline]{search field is already next to the list, the guest types the name and clicks "Add" to the list}
 \noindent \textbf{UC8: Manage a list of my favorite restaurants}
-Covers R1.13
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor    & Guest \\
     \hline
-    Covers & Rx.x \\
+    Covers & R1.13 \\
     \hline
     Precondition & The guest is logged in to the application. \\
     \hline
@@ -332,14 +332,16 @@ Covers R1.13
     Scenario &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        
         \item The application displays a list of the guest's favorite restaurants. \textbf{A1 A2}  
-        \item The guest presses the button for adding a new restaurant to the list.
+        \item The guest presses the button for adding a restaurant to the list. \textbf{A3}
         \item The application displays a text input field.
-        \item The guest starts typing the name of the restaurant. \textbf{A3}  
+        \item The guest starts typing the name of the restaurant. \textbf{A4}  
         \item The application suggests restaurants which contain the specified text in their name to the user. 
-        \item The guest clicks on a restaurant's name. \textbf{A4}
-        \item The application adds the selected restaurant to the list. \textbf{A5}
+        \item The guest clicks on a restaurant's name. \textbf{A5}
+        \item The application adds the selected restaurant to the list.
+        \item The guest repeats steps 2 to 7 until they are satisfied with the content of the list.
+        \item The guest presses a button for saving their profile.
+        \item The application saves the guest's profile.
       \end{enumerate}
     \end{minipage}
     \\
@@ -350,10 +352,10 @@ Covers R1.13
         \item [A1:] The guest is viewing a restaurant's detail. The guest presses the button for marking the restaurant as their favorite. The application adds the restaurant to the guest's profile. \textbf{A1.b}
         \item [A1.b:] The restaurant is already contained in the guest's profile and pressing the button removes the restaurant from it.
         \item [A2:] The list is empty because the guest has not added any restaurants yet. The application displays a text with this information.
-        \item [A3:] The guest specifies the restaurant's IRI. \textbf{A3.b}   
-        \item [A3.b:] The IRI which the guest specified is not valid. The application informs the guest about this fact and the scenario continues with step 4.
-        \item [A4:] The application did not find the desired restaurant because it does not use our application. The application displays a text saying that it was not able to find any restaurants by the specified name. The scenario ends.
-        \item [A5:] The guest's profile already contains the restaurant by the specified name. The guest is informed about this fact and their profile is not altered.
+        \item [A3:] The guest presses a button for removing a restaurant. The application removes the restaurant from the list.
+        \item [A4:] The guest specifies the restaurant's IRI. \textbf{A3.b}   
+        \item [A4.b:] The IRI which the guest specified is not valid. The application informs the guest about this fact and the scenario continues with step 4.
+        \item [A5:] The application did not find the desired restaurant because it does not use our application. The application displays a text saying that it was not able to find any restaurants by the specified name. The scenario ends.
       \end{description}
     \end{minipage}
     \\
