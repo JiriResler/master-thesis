@@ -265,27 +265,36 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\noindent \textbf{UC7: Specify what food and beverages I like and dislike}
-Covers R1.3, R1.4
+\todo[inline]{Decide whether to use "A guest" or "The guest" in all descriptions}
+\todo[inline]{Change "the application displays a screen with a list" to "the application displays a list" in other reqs}
+\todo[inline]{Update name in figure}
+\todo[inline]{Change scenario so that the applicaton saves the profile after all of the foods and ingredients are specified - not after every food specified - also in UC about specifying diets}
+\todo[inline]{there is a search bar next to the list of foods which the guest likes. The guest starts typing into the searchbar, chooses a food and clicks a button for adding it to the list}
+\todo[inline]{the guest does not create a public issue (this is subject of design) - the application provides information about how to request adding a food or ingredient to the application}
+\noindent \textbf{UC7: Specify what foods I like and dislike}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor    & Guest \\
     \hline
-    Covers & Rx.x \\
+    Description & A guest wants to specify their taste preferences so that they are taken into account when the guest is viewing a restaurant's menu. \\
+    \hline
+    Covers & R1.3, R1.4 \\
     \hline
     Scenario &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest opens their profile and navigates to a section for managing food preferences.
-        \item The application displays a screen with two lists, one containing the foods which the guest likes and the other containing the foods which the guest dislikes. \textbf{A1}
-        \item The guest presses a button labeled as "Add food" at the end of the list of foods which they like. \textbf{A2}
+        \item The guest opens their profile.
+        \item The application displays two lists, one containing the foods and ingredients which the guest likes and the other containing the foods and ingredients which the guest dislikes. \textbf{A1}
+        \item The guest presses a button for adding an item to the list of the foods and ingredients which they like. \textbf{A2}
         \item The application displays a search bar.
-        \item The guest starts typing the name of a food into the search bar.
-        \item The application suggests foods which contain the given input text in their name.
-        \item The guest selects the desired food and presses an "Add" button. \textbf{A3}
-        \item The application adds the specified food to the guest's profile. \textbf{A4}
+        \item The guest starts typing the name of a food or ingredient into the search bar.
+        \item The application suggests foods and ingredients which contain the given text in their name.
+        \item The guest selects the desired food or ingredient and presses a button for adding it to the list. \textbf{A3}
+        \item The applicaton updates the list.
         \item The guest repeats steps 3 to 8 until they have specified all of their food preferences.
+        \item The guest presses a button for saving their profile.
+        \item The application saves the guest's profile. 
       \end{enumerate}
     \end{minipage}
     \\
@@ -294,9 +303,8 @@ Covers R1.3, R1.4
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
         \item [A1:] Either one or both of the lists are empty because the guest has not specified any of their preferences yet. The application displays a text which informs the guest about this fact.
-        \item [A2:] The guest presses a button labeled as "Add food" at the end of the list of foods which they dislike.
+        \item [A2:] The guest presses a button for adding an item to the list of the foods and ingredients which they dislike.
         \item [A3:] The application does not recognize the food which the guest is trying to specify. The guest creates a public issue in the application's repository with a request to add the desired food to the application.
-        \item [A4:] The guest's profile already contains the specified food. The guest is informed about this fact and their profile is not altered.
       \end{description}
     \end{minipage}
     \\
