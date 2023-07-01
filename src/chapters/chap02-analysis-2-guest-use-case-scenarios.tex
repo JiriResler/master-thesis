@@ -113,14 +113,14 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Actor        & Guest \\
     \hline
-    Description  & A guest wants to know what the restaurant serves at the moment. \\
+    Description  & A guest wants to know what a restaurant serves at the moment. \\
     \hline
     Covers        & R1.10-R1.12, R1.15, R1.16 \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The guest finds the restaurant by its name. \textbf{A1 A2 A3 A4}
+        \item The guest searches for the restaurant by its name. \textbf{A1 A2 A3 A4}
         \item The application displays the restaurant's detail which contains a list of its menus.
         \item The guest selects a menu.
         \item The application displays the menu. \textbf{A5}         
@@ -131,7 +131,7 @@ A scenario will contain its description only if the goal of a user is not clear 
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut] 
-        \item [A1:] The guest selects a restaurant in the overview screen from UC4.
+        \item [A1:] The guest selects the restaurant in the overview screen from UC4.
         \item [A2:] The guest visits the restaurant's webpage and clicks on a link which takes them to the application.
         \item [A3:] The guest scans a QR code on a printed menu which takes them to the application.
         \item [A4:] The guest specifies the IRI of the restaurant. 
@@ -146,34 +146,31 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\todo[inline]{Make the figure bigger - increase height, make bubbles bigger}
-
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.62\linewidth]{master-thesis/img/use-cases/use_cases_guest_menu_viewer}
   \caption{Guest menu viewing use cases}
 \end{figure}
 
-\todo[inline]{change name (also in figure) to "Find currently served meals by my favorite restaurants which I can eat"}
-\noindent \textbf{UC4: Find currently served meals by my favorite restaurants which correspond to my profile}
-Covers R1.14
+\todo[inline]{change name in figure}
+\noindent \textbf{UC4: See currently served meals by my favorite restaurants which I can eat}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Guest \\
     \hline
-    Description  & A guest wants to know what do their favorite restaurants currently have to offer. \\
+    Description  & A guest wants to know what do their favorite restaurants currently offer. \\
     \hline
-    Covers & Rx.x \\
+    Covers & R1.14 \\
     \hline
     Precondition & The guest is logged in to the application. \\
     \hline
-    Postcondition & The guest sees a list of their favorite restaurants with selected items from their menus. \\
+    Postcondition & The guest sees an overview of what the guest's favorite restaurants currently serve. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application displays an overview of what the guest's favorite restaurants currently serve. \textbf{A1}\textbf{A2} \textbf{A3}
+        \item The application displays a list of the guest's favorite restaurants with selected items from their menus. \textbf{A1}\textbf{A2} \textbf{A3}
       \end{enumerate}
     \end{minipage}
     \\
@@ -181,9 +178,9 @@ Covers R1.14
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurants do not currently serve anything. The application displays a text with this information.
-        \item [A2:] The overview is empty because the guest has not added any of their favorite restaurants yet. The application displays instructions on how to add a restaurant to the list.
-        \item [A2:] A restaurant has no valid menu published at the moment. The application displays a text with this information close to the restaurant's name.
+        \item [A1:] The overview is empty because the restaurants do not currently serve anything. The application displays a text with this information.
+        \item [A2:] The overview is empty because the guest has not added any favorite restaurants yet. The application displays instructions on how to add a restaurant to the list.
+        \item [A2:] One of the favorite restaurants has no valid menu published at the moment. The application displays a text with this information close to the restaurant's name.
       \end{description}
     \end{minipage}
     \\
