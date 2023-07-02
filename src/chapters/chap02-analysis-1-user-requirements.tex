@@ -37,6 +37,9 @@ This list of requirements is inspired by interviewing a restaurant\footnote{\url
 \subsubsection{Guest user role requirements}
 A guest is expected to be logged in to the application if not stated otherwise in a requirement.
 
+\todo[inline]{add sorting of menu items - by name, diet, price, personalized order based on what the guest likes and dislikes}
+\todo[inline]{add button to see original menu - with a warning that it will not highlight allergens}
+\todo[inline]{button for changing currency of menu - the application recalculates prices}
 \begin{description}
     \item [R1.1:] The application shall enable a restaurant guest to specify what allergies they have.
     \item [R1.2:] The application shall enable a restaurant guest to specify what diets they are on.
@@ -88,34 +91,31 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [R2.7:] A restaurant employee should be able to set a daily menu to repeat periodically for a certain day of the week.
 
     \emph{Rationale:} A daily menu can be the same for a certain day of the week.
-    \item [R2.8:] A restaurant employee should be able to specify categories and subcategories of a menu.
+    \todo[inline]{a category can be a resource - it can have extra information}
+    \item [R2.8:] A restaurant employee should be able to create categories and subcategories of a menu.
 
     \emph{Rationale:} A menu typically consists of categories like soups, appetizers, desserts etc. These categories can have subcategories, for instance a category "Drinks" can have subcategories "Wine" and "Non-alcoholic".
-    \item [R2.9:] If a menu consists of categories then each menu item should be in exactly one category.
-    \item [R2.10:] A category in a menu should not be empty.   
-    \item [R2.11:] A meal in a menu should contain an ID, label, price, weight or volume, ingredients and allergens.
-    \item [R2.12:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
+    \item [R2.9:] A category in a menu should not be empty.   
+    \item [R2.10:] A menu item should have an ID, label, price, weight or volume, ingredients and allergens.
+    \item [R2.11:] Allergens of a menu item should be derived from the ingredients provided by the restaurant employee.
+
+    \emph{Rationale:} A restaurant employee should be able to focus on creating the menu and not on specifying allergens.
+    \item [R2.12:] A restaurant employee should be able to review and correct a menu item's allergens.
+
+    \emph{Rationale:} Data about ingredients and their allergens can be outdated or vary based on the manufacturer of the ingredient.
+    \item [R2.13:] A restaurant employee should be able to specify weights of ingredients contained in a meal.
 
     \emph{Rationale:} The weight in the requirement 2.11 is the weight of the whole meal, i.e. all ingredients' weights summed up.
-    \item [R2.13:] A menu should optionally contain a restaurant's name, address, telephone number and opening hours.
     \item [R2.14:] A restaurant employee should be able to use a previously created menu as the starting point for creating a new menu.
 
     \emph{Rationale:} A restaurant employee might want to create a new menu which differs only in some items of an existing menu.
-    \item [R2.15:] A restaurant employee should be able to specify what currency to use in a menu.
-    \item [R2.16:] A restaurant employee should be able to specify what weight units to use in a menu.
-    \item [R2.17:] A restaurant employee should be able to specify what volume units to use for liquid items in a menu.
-    \item [R2.18:] The application should provide an example of a menu.
+    \item [R2.15:] A restaurant employee should be able to use a currency of their choosing in a menu.
 
-    \emph{Rationale:} A user who is new to the application can easily see what they can make using the application.
-    \item [R2.19:] A restaurant employee should be able to set that a menu shall use allergen labels for displaying allergen information.
-    \item [R2.20:] A restaurant employee should be able to set that a menu shall use numbers for displaying allergen information.
+    \emph{Rationale:} Different menus can use different currencies based on what country the restaurant resides in.
+    \item [R2.16:] A restaurant employee should be able to use weight and volume units of their choosing in a menu.
 
-    \emph{Rationale:} A menu item can contain numbers which represent allergens. This is more concise than using labels from the requirement 2.19.
-    \item [R2.21:] A restaurant employee should be able to set that a menu shall use allergen icons for displaying allergen information.
-    \item [R2.22:] A restaurant employee should be able to set what currency, weight and volume units to use as default when creating a new menu.
-  
-    \emph{Rationale:} A restaurant might use the same units in all of its menus. The purpose of this requirement is to save restaurant employees from doing repetitive work when creating menus.
-    \item [R2.23:] A restaurant employee should be able to share a menu through the restaurant's Facebook, Twitter and Instagram accounts.
+    \emph{Rationale:} Different menus can use different weight or volume units based on the region of the restaurant.
+    \item [R2.17:] A restaurant employee should be able to share a menu through the restaurant's Facebook, Twitter and Instagram accounts.
   \end{description}
 
 \newpage
@@ -139,6 +139,9 @@ A guest is expected to be logged in to the application if not stated otherwise i
     \item [R3.7:] A user of the application shall be able to specify where should the application store their data.
 
     \emph{Rationale:} A user should have control over their data.
+    \item [R3.8:] The application should provide a working example of a menu.
+
+    \emph{Rationale:} A user who is new to the application can easily see what it is capable of.
 \end{description}
 
 \vspace*{\fill}

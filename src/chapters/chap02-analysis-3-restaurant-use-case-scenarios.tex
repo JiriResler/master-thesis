@@ -1,6 +1,8 @@
 \subsection{Restaurant use cases}
+\todo[inline]{check if all covered reqs are actually covered by the use cases}
 
 \noindent \textbf{x. Use case: Create a new menu}
+Covers: R2.8, R2.9, R2.10, R2.12, R2.13, R2.14, R2.15, R2.16
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -47,6 +49,8 @@
 \newpage
 
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
+Extends: Create a new menu
+Covers: R2.11
 \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -80,6 +84,7 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create a stable menu}
+Covers: R2.2
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -111,40 +116,8 @@
   \newline
 \end{center}
 
-\noindent \textbf{x. Use case: Create a stable menu in a foreign language}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Description  & A restaurant's management wants its restaurant to have a stable offer menu written in a foreign language. \\
-    \hline
-    Extends       &  x: Create a new menu \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1}
-        \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
-        \item The restaurant employee specifies that the menu shall be valid all day.
-        \item The restaurant employee later adds categories and menu items in the desired language.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee selects the option that the menu will be a stable menu. The application inserts the information about what days of the week shall the menu be valid and when automatically. The restaurant employee continues with step 4.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
 \noindent \textbf{x. Use case: Create a list of beverages}
+Covers: R2.3
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -178,6 +151,7 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create a daily menu for tomorrow}
+Covers: R2.1
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -199,12 +173,11 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create daily menus for the next week}
+Covers: R2.1
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
-    \hline
-    Extends       &  x: Create a new menu \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
@@ -229,6 +202,7 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create a daily menu which will repeat each Tuesday}
+Covers: R2.7
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -251,6 +225,7 @@
 \end{center}
 
 \noindent \textbf{x. Share a menu on social media}
+Covers: R2.17
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -271,6 +246,7 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Change an ingredient of a meal in an existing menu}
+Covers: R2.5
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -291,7 +267,30 @@
   \newline
 \end{center}
 
-\noindent \textbf{x. Use case: Put a menu on tables}
+\noindent \textbf{x. Delete a menu}
+Covers: R2.6
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The restaurant employee clicks a button for sharing the menu.
+        \item The application generates a URL which points to the menu.
+        \item The restaurant employee shares the URL on the restaurant's social media. \textbf{A1}
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\todo[inline]{change name in figure}
+\noindent \textbf{x. Use case: Print a QR code for a menu}
+Covers: R2.4
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -313,6 +312,7 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Have control over my data}
+Covers: 3.7
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -352,82 +352,3 @@
   \includegraphics[width=0.62\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_create_daily_menu}
   \caption{Restaurant daily menu creation use cases}
 \end{figure}
-
-
-
-% \noindent \textbf{9. Use case: Allow my guests to view a menu by scanning a QR code}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} |}
-%     \hline
-%     Actor        & Restaurant \\
-%     \hline
-%     Description  & A restaurant's management would like to provide a menu with a QR code which will take the restaurant's guests to the application. \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The restaurant employee creates a menu as in use case x, ensuring that a checkbox labeled "Add a QR code" is checked. \textbf{A1}
-%         \item The application generates a QR code which will link a guest to the application.
-%         \item The restaurant employee prints the menu and puts in on tables as in use case x.
-%         \item A guest scans the QR code on the printed menu.
-%         \item The application displays the menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The restaurant employee selects a menu from previously created menus.
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
-
-% \noindent \textbf{13. Use case: Reuse an existing daily menu for today.}
-
-% \begin{center}
-%   \begin{tabular}{| l | p{10.75cm} | }
-%     \hline
-%     Actor        & Restaurant \\
-%     \hline
-%     Description  &  \\
-%     \hline
-%     Scenario     &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-%         \item The restaurant employee logs in to the application.
-%         \item The restaurant employee clicks a button labeled "Create new menu". \textbf{A1}
-%         \item The application asks the restaurant employee what kind of menu they would like to create.
-%         \item The restaurant employee selects that they wish to create a daily menu.
-%         \item The application asks the restaurant employee whether they want to use an existing menu as a template.
-%         \item The restaurant employee confirms by clicking a "Yes" button.
-%         \item The application displays a list of menus as possible templates.
-%         \item The restaurant employee chooses a menu from the list.
-%         \item The application loads the chosen menu.
-%         \item The restaurant employee changes the date of validity of the menu.
-%         \item The restaurant employee clicks a "Save menu" button.
-%         \item The application asks the restaurant employee whether they would like to overwrite the existing menu.
-%         \item The restaurant employee denies by clicking a "No, create a new menu" button. \textbf{A2}
-%         \item The application saves the menu.
-%       \end{enumerate}
-%     \end{minipage}
-%     \\
-%     \hline
-%     Alternatives &
-%     \begin{minipage}[t]{\linewidth}
-%       \begin{description}[nosep,after=\strut]
-%         \item [A1:] The restaurant employee clicks an "Edit" button next to a menu which they want to reuse. The restaurant employee edits a date field which controls for which day the menu is valid. The restaurant employee then clicks a "Save menu" button and the application saves the menu.
-%         \item [A2:] The restaurant employee confirms by clicking a "Yes" button and the application overwrites the old menu with the new one.
-%       \end{description}
-%     \end{minipage}
-%     \\
-%     \hline
-%   \end{tabular}
-%   \newline
-% \end{center}
-
