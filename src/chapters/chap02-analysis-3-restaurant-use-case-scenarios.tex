@@ -312,21 +312,26 @@ Covers: R2.4
 \end{center}
 
 \noindent \textbf{x. Use case: Have control over my data}
-Covers: 3.7
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Description  & A restaurant employee wants to specify where should the application store and read the restaurant's data. \\
+    Description  & A restaurant employee wants to specify where should the application store their restaurant's data. \\
+    \hline
+    Covers & R3.7 \\
+    \hline
+    Precondition  & The guest is logged in to the application. \\
+    \hline
+    Postcondition & The application uses the storage space chosen by the restaurant employee for storing and accessing their restaurant's data. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The restaurant employee navigates to a page for managing data storage options.
-        \item The application provides a list of places where it can store data.
+        \item The application provides a list of options where it can store the restaurant's data.
         \item The restaurant employee selects one of the options.
-        \item The application starts using the selected place for storing and reading the restaurant's data.
+        \item The application starts using the selected place for storing and accessing the restaurant's data.
       \end{enumerate}
     \end{minipage}
     \\
