@@ -11,7 +11,7 @@
     \hline
     Description   & A restaurant employee wants to create a new menu. \\
     \hline
-    Covers        & R2.8-R2.10, R2.12-R2.16  \\
+    Covers        & R2.8, R2.9, R2.12, R2.14  \\
     \hline
     Precondition  & A restaurant employee is logged in to the application. \\
     \hline
@@ -46,9 +46,48 @@
 
 \newpage
 
+\noindent \textbf{x. Use case: Add a food item to a menu} 
+\todo[inline]{add use case number in extension point}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor         & Restaurant \\
+    \hline
+    Description   & A restaurant employee is creating a menu and wants to add a food item to it. \\
+    \hline
+    Covers        & R2.10, R2.13, R2.15, R2.16 \\
+    \hline
+    Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
+    \hline
+    Postcondition & A food item is added to a menu which is beaing created. \\
+    \hline
+    Scenario      &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The restaurant employee specifies the name, price, weight or volume and description of the menu item. 
+        \item The restaurant employee specifies the menu item's ingredients.
+        \item The application adds allergens to the menu item. \textbf{Extension point - UCx}
+        \item The restaurant employee presses the button for adding the item to the menu. 
+        \item The application adds the item to the menu. \textbf{A1}
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The restaurant employee did not specify the name of the menu item. The application prompts the restaurant employee to add this information. The application does not add the item to the menu until the name of the item is specified.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
 Extends: Add a food item to the menu
-Covers: R2.11
+Covers: R2.11, R2.12
 \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -79,45 +118,6 @@ Covers: R2.11
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
         \item [A1:] The restaurant employee specifies that allergen labels shall be used in the menu. The scenario continues with step 3.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{x. Use case: Add a food item to a menu} 
-Covers: 
-\todo[inline]{add use case number in extends column}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Description        &  \\
-    \hline
-    Covers &  \\
-    \hline
-    Extends       &   \\
-    \hline
-    Precondition  &  \\
-    \hline
-    Postcondition &  \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item  \textbf{A1}
-        \item 
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] 
       \end{description}
     \end{minipage}
     \\
