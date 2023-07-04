@@ -86,39 +86,27 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
-Extends: Add a food item to the menu
-Covers: R2.11, R2.12
 \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
-    Actor        & Restaurant \\
+    Actor         & Restaurant \\
     \hline
-    Description        & A restaurant employee wants to add information about allergens contained in a menu's items. \\
+    Description   & A restaurant employee wants to have accurate allergen information in a menu. \\
     \hline
-    Covers &  \\
+    Covers        & R2.11, R2.12 \\
     \hline
-    Extends       &  x: Create a new menu \\
+    Extends       & Add a food item to the menu  \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee has added ingredients to a menu item. \\
     \hline
-    Postcondition &  \\
+    Postcondition & A menu item contains information about its allergens. \\
     \hline
-    Scenario     &
+    Scenario      &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies that numbers shall be used to indicate allergens contained in menu items. \textbf{A1}
-        \item The application inserts a predefined allergen table at the end of the menu.
-        \item The application later automatically inserts allergens to menu items based on their ingredients.
+        \item The application inserts allergens to the menu item based on its ingredients.
       \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee specifies that allergen labels shall be used in the menu. The scenario continues with step 3.
-      \end{description}
     \end{minipage}
     \\
     \hline
