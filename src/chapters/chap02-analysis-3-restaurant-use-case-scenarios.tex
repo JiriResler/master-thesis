@@ -115,37 +115,28 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create a stable menu}
-Covers: R2.2
+\todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Description  & A restaurant's management wants its restaurant to have a stable menu which will be valid every day of the week. \\
+    Description  & A restaurant employee wants to set that a menu will be valid every day of the week. \\
     \hline
-    Covers &  \\
+    Covers & R2.2 \\
     \hline
     Extends       &  x: Create a new menu \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The menu's date of validity is configured so that it is valid every day of the week. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1} Ax - date is not valid 
-        \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
-        \item The restaurant employee specifies that the menu shall be valid all day.
+        \item The restaurant employee checks the option that the menu is a stable menu.
+        \item The application sets that the menu will be valid for every day of the week.
       \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee selects the option that the menu will be a stable offer menu. The application inserts the information about what days of the week shall the menu be valid and when automatically.
-      \end{description}
     \end{minipage}
     \\
     \hline
