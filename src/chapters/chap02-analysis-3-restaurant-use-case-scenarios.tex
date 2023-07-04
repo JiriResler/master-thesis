@@ -1,29 +1,32 @@
 \subsection{Restaurant use cases}
-\todo[inline]{check if all covered reqs are actually covered by the use cases}
+\todo[inline]{check if covered reqs are actually covered by use cases}
+\todo[inline]{check if order of left column is the same in all use cases}
 
 \noindent \textbf{x. Use case: Create a new menu}
-Covers: R2.8, R2.9, R2.10, R2.12, R2.13, R2.14, R2.15, R2.16
+\todo[inline]{add names of use cases to extension point}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
-    Actor        & Restaurant \\
+    Actor         & Restaurant \\
     \hline
-    Scenario     &
+    Description   & A restaurant employee wants to create a new menu. \\
+    \hline
+    Covers        & R2.8-R2.10, R2.12-R2.16  \\
+    \hline
+    Precondition  & A restaurant employee is logged in to the application. \\
+    \hline
+    Postcondition & A new menu is created and saved. \\
+    \hline
+    Scenario      &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee presses a button for creating a new menu.
-        \item The application displays a screen with an empty menu. \textbf{A1} \textbf{A2} 
-        \item The restaurant employee specifies meta-information about the menu. \textbf{A3}
-        \item The restaurant employee specifies the restaurant's contact information. \textbf{A4} \textbf{A5} 
-        \todo[inline]{Extension point - all menu options}
-        \item The restaurant employee specifies when shall the menu be valid. (Extension point)
-        \todo[inline]{Extension point - Warn my guests about allergens in the foods I serve}
-        \item The restaurant employee specifies how shall the menu display allergen information. (Extension point) 
-        \item The restaurant employee adds categories to the~menu.~\textbf{A6}
-        \item The restaurant employee adds individual food items to the menu.
-        \item The restaurant employee presses a button for saving the menu.
-        \todo[inline]{Extension point - publish, print}
-        \item The application saves the menu. \textbf{A7} (Extension point)
+        \item The application displays a screen with an empty menu. \textbf{A1}
+        \item The restaurant employee specifies the name of the new menu.
+        \item The restaurant employee specifies when will the menu be valid. \textbf{Extension point - UCx}
+        \item The restaurant employee specifies categories of the menu. \textbf{A2}
+        \item The restaurant employee adds food items to the categories of the menu.
+        \item The restaurant employee presses the button for saving the menu.
+        \item The application saves the menu.
       \end{enumerate}
     \end{minipage}
     \\
@@ -31,13 +34,8 @@ Covers: R2.8, R2.9, R2.10, R2.12, R2.13, R2.14, R2.15, R2.16
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee selects that they wish to use a template. The application displays a menu with some predefined content.
-        \item [A2:] The restaurant employee selects that they wish to create the menu based on an existing menu. The application displays a menu with the contents of the base menu.
-        \item [A3:] Meta-information is loaded from the restaurant's profile and inserted to the menu by the application.
-        \item [A4:] The restaurant employee does not wish to include the restaurant's contact information in the menu and skips this process. 
-        \item [A5:] The application inserts the restaurant's contact information automatically based on the restaurant's profile.
-        \item [A6:] The restaurant employee skips the creation of categories.
-        \item [A7:] The restaurant employee forgets to specify one of the menu's meta-information options. The application warns the restaurant employee about this fact. The restaurant employee finalizes the creation of the menu and the scenario continues with step 9.
+        \item [A1:] The restaurant employee chooses to use an existing menu as the starting point for creating the new menu. The application inserts contents of the existing menu to the menu which is being created.
+        \item [A2:] The restaurant employee does not add any categories to the menu. The application creates a menu without categories.
       \end{description}
     \end{minipage}
     \\
@@ -49,7 +47,7 @@ Covers: R2.8, R2.9, R2.10, R2.12, R2.13, R2.14, R2.15, R2.16
 \newpage
 
 \noindent \textbf{x. Use case: Warn my guests about allergens in the foods I serve}
-Extends: Create a new menu
+Extends: Add a food item to the menu
 Covers: R2.11
 \todo[inline]{add use case number in extends column}
 \begin{center}
@@ -59,7 +57,13 @@ Covers: R2.11
     \hline
     Description        & A restaurant employee wants to add information about allergens contained in a menu's items. \\
     \hline
+    Covers &  \\
+    \hline
     Extends       &  x: Create a new menu \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
@@ -83,6 +87,45 @@ Covers: R2.11
   \newline
 \end{center}
 
+\noindent \textbf{x. Use case: Add a food item to a menu} 
+Covers: 
+\todo[inline]{add use case number in extends column}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Description        &  \\
+    \hline
+    Covers &  \\
+    \hline
+    Extends       &   \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item  \textbf{A1}
+        \item 
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] 
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
 \noindent \textbf{x. Use case: Create a stable menu}
 Covers: R2.2
 \begin{center}
@@ -92,12 +135,18 @@ Covers: R2.2
     \hline
     Description  & A restaurant's management wants its restaurant to have a stable menu which will be valid every day of the week. \\
     \hline
+    Covers &  \\
+    \hline
     Extends       &  x: Create a new menu \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1} 
+        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1} Ax - date is not valid 
         \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
         \item The restaurant employee specifies that the menu shall be valid all day.
       \end{enumerate}
@@ -125,12 +174,18 @@ Covers: R2.3
     \hline
     Description  &  \\
     \hline
+    Covers &  \\
+    \hline
     Extends       &  x: Create a new menu \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1}
+        \item The restaurant employee selects that the menu shall be valid every day of the week. \textbf{A1} Ax - date is not valid 
         \item The restaurant employee chooses an option that the menu shall repeat periodically for the selected days.
         \item The restaurant employee specifies that the menu shall be valid all day.
         \item The restaurant employee later adds beverages as items of the menu.
@@ -157,12 +212,18 @@ Covers: R2.1
     \hline
     Actor        & Restaurant \\
     \hline
+    Covers &  \\
+    \hline
     Extends       &  x: Create a new menu \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies the day for which will the menu be valid.
+        \item The restaurant employee specifies the day for which will the menu be valid. Ax - date is not valid 
         \item The restaurant employee specifies the time range for when will the menu be served.
       \end{enumerate}
     \end{minipage}
@@ -179,10 +240,16 @@ Covers: R2.1
     \hline
     Actor        & Restaurant \\
     \hline
+    Covers &  \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies the day for which will the menu be valid.
+        \item The restaurant employee specifies the day for which will the menu be valid. Ax - date is not valid 
         \item The restaurant employee continues the process of creating the menu.
         \item When the menu is finished, creates the restaurant employee another menu. \textbf{A1}
       \end{enumerate}
@@ -208,12 +275,18 @@ Covers: R2.7
     \hline
     Actor        & Restaurant \\
     \hline
+    Covers &  \\
+    \hline
     Extends       &  x: Create a new menu \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies that the menu will be valid on Tuesday.
+        \item The restaurant employee specifies that the menu will be valid on Tuesday. Ax - date is not valid 
         \item The restaurant employee checks the option that the menu will repeat periodically.
         \item The restaurant employee specifies the time range for when will the menu be served.
       \end{enumerate}
@@ -230,6 +303,12 @@ Covers: R2.17
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
+    \hline
+    Covers &  \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
@@ -252,6 +331,12 @@ Covers: R2.5
     \hline
     Actor        & Restaurant \\
     \hline
+    Covers &  \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
+    \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
@@ -273,6 +358,12 @@ Covers: R2.6
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
+    \hline
+    Covers &  \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
@@ -297,6 +388,12 @@ Covers: R2.4
     Actor        & Restaurant \\
     \hline
     Description  & A restaurant employee wishes to print a menu and place it on tables. \\
+    \hline
+    Covers &  \\
+    \hline
+    Precondition  &  \\
+    \hline
+    Postcondition &  \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
