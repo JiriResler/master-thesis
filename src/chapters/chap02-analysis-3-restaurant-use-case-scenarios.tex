@@ -213,14 +213,15 @@
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition & The menu's date and time of validity is configured so that it will be valid periodically for a certain day of the week. \\
+    Postcondition & Several menus are created which will be valid at different days. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies the day for which will the menu be valid.
+        \item The restaurant employee selects the day for which the menu will be valid.
+        \item The restaurant employee specifies the time period for which the menu will be served.
         \item The restaurant employee continues the process of creating the menu.
-        \item When the menu is finished, creates the restaurant employee another menu. \textbf{A1}
+        \item The restaurant employee creates another menu and repeats step 1. \textbf{A1}
       \end{enumerate}
     \end{minipage}
     \\
@@ -249,9 +250,9 @@ Covers: R2.7
     \hline
     Extends       &  x: Create a new menu \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The menu's date and time of validity is configured so that it will be valid periodically for a certain day of the week. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
