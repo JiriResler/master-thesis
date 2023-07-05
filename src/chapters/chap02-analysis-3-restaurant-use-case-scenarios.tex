@@ -306,17 +306,33 @@
     \hline
     Actor        & Restaurant \\
     \hline
-    Covers      & R2.18  \\
+    Description     & A restaurant employee wishes to hide a menu from the public. \\
     \hline
-    Precondition  &  \\
+    Covers      & R2.18, R2.19  \\
     \hline
-    Postcondition &  \\
+    Precondition  & The restaurant employee has created a menu. \\
+    \hline
+    Postcondition & The menu is not visible to guests. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item 
+        \item The application displays an overview of the restaurant's menus.
+        \item The restaurant employee selects a menu.
+        \item The application displays the detail of the menu.
+        \item The restaurant employee presses the button for deactivating the menu. \textbf{A1} 
+        \item The application asks the restaurant employee to confirm that they want to deactivate the menu.
+        \item The restaurant employee chooses to proceed.
+        \item The application deactivates the menu. 
       \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The menu is already deactivated. Pressing the button reactivates the menu.
+      \end{description}
     \end{minipage}
     \\
     \hline
