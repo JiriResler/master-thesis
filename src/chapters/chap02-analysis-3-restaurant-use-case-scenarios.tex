@@ -268,25 +268,31 @@
 \end{center}
 
 \noindent \textbf{x. Share a menu on social media}
-Covers: R2.17
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Covers &  \\
+    Covers        & R2.17 \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee has created a menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The menu is shared on a social media site. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee clicks a button for sharing the menu.
-        \item The application generates a URL which points to the menu.
-        \item The restaurant employee shares the URL on the restaurant's social media. \textbf{A1}
+        \item The restaurant employee presses the button for sharing the menu. \textbf{A1}
+        \item The application opens a dialog window for sharing the menu on the desired social media site.
       \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The restaurant employee shares the URL of the menu on the desired social media site. The scenario ends.
+      \end{description}
     \end{minipage}
     \\
     \hline
