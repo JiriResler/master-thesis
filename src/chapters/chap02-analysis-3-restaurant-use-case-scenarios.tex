@@ -187,7 +187,7 @@
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition & The daily menu's date and time of validity is configured so that it will be valid for a certain day and hour span. \\
+    Postcondition & The menu's date and time of validity is configured so that it will be valid for a certain day and hour span. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
@@ -204,22 +204,21 @@
 
 \noindent \textbf{x. Use case: Create daily menus for the next week}
 \todo[inline]{add use case number in extends column}
-Covers: R2.1
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Covers &  \\
+    Covers        & R2.1 \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The menu's date and time of validity is configured so that it will be valid periodically for a certain day of the week. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies the day for which will the menu be valid. Ax - date is not valid 
+        \item The restaurant employee specifies the day for which will the menu be valid.
         \item The restaurant employee continues the process of creating the menu.
         \item When the menu is finished, creates the restaurant employee another menu. \textbf{A1}
       \end{enumerate}
