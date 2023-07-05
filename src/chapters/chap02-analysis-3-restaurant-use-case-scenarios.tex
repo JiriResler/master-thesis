@@ -407,25 +407,25 @@
 
 \todo[inline]{change name in figure}
 \noindent \textbf{x. Use case: Print a QR code for a menu}
-Covers: R2.4
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Description  & A restaurant employee wishes to print a menu and place it on tables. \\
+    Description  & A restaurant employee wishes to print a QR code for a menu. \\
     \hline
-    Covers &  \\
+    Covers        & R2.4 \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee has created the menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & A QR code which links to the menu is printed. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee clicks the "Print" button associated with an existing menu.
-        \item The application enables the restaurant employee to print the menu.
+        \item The application displays the detail of the menu.
+        \item The restaurant employee clicks the button for generating a QR code for the menu.
+        \item The application enables the restaurant employee to print the QR code.
       \end{enumerate}
     \end{minipage}
     \\
