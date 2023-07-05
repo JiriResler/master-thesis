@@ -21,7 +21,7 @@
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The application displays a screen with an empty menu. \textbf{A1}
-        \item The restaurant employee specifies the name of the new menu.
+        \item The restaurant employee specifies the name of the menu.
         \item The restaurant employee specifies when will the menu be valid. \textbf{Extension point - UCx}
         \item The restaurant employee specifies categories of the menu. \textbf{A2}
         \item The restaurant employee adds food items to the categories of the menu.
@@ -175,25 +175,25 @@
 \end{center}
 
 \noindent \textbf{x. Use case: Create a daily menu for tomorrow}
-Covers: R2.1
+\todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Covers &  \\
+    Covers        & R2.1 \\
     \hline
     Extends       &  x: Create a new menu \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The daily menu's date and time of validity is configured so that it will be valid for a certain day and hour span. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee specifies the day for which will the menu be valid. Ax - date is not valid 
-        \item The restaurant employee specifies the time range for when will the menu be served.
+        \item The restaurant employee selects the day for which the menu will be valid.
+        \item The restaurant employee specifies the time range for which the menu will be served that day.
       \end{enumerate}
     \end{minipage}
     \\
@@ -203,6 +203,7 @@ Covers: R2.1
 \end{center}
 
 \noindent \textbf{x. Use case: Create daily menus for the next week}
+\todo[inline]{add use case number in extends column}
 Covers: R2.1
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -238,6 +239,7 @@ Covers: R2.1
 \end{center}
 
 \noindent \textbf{x. Use case: Create a daily menu which will repeat each Tuesday}
+\todo[inline]{add use case number in extends column}
 Covers: R2.7
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
