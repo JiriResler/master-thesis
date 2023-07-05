@@ -378,24 +378,25 @@
 \end{center}
 
 \noindent \textbf{x. Delete a menu}
-Covers: R2.6
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
-    Covers &  \\
+    Covers        & R2.6 \\
     \hline
-    Precondition  &  \\
+    Precondition  & The restaurant employee has created a menu. \\
     \hline
-    Postcondition &  \\
+    Postcondition & The menu is removed. \\
     \hline
     Scenario     &
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee clicks a button for sharing the menu.
-        \item The application generates a URL which points to the menu.
-        \item The restaurant employee shares the URL on the restaurant's social media. \textbf{A1}
+        \item The application displays the detail of the menu.
+        \item The restaurant employee clicks the button for deleting the menu.
+        \item The application asks the user whether they are sure to delete the menu as it cannot be undone.
+        \item The restaurant employee chooses to proceed.
+        \item The application deletes the menu.
       \end{enumerate}
     \end{minipage}
     \\
