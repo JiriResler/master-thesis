@@ -1,10 +1,7 @@
 \section{Comparison of the applications}
-We will now compare the applications.
-Table x contains guest application use cases.
-Table x contains restaurant application use cases.
-Use cases were made up.
-
-\todo[inline]{The application provides an overview of currently served meals}
+First, we are going to specify use cases which an application such as ours should support.
+Table x contains those use cases in which a guest uses the application.
+Table x then contains those use cases in which a restaurant employee uses the application.
 
 % Guest application use cases
 \begin{center}
@@ -30,15 +27,6 @@ Use cases were made up.
   \newline
 \end{center}
 
-Use case G1 is supported by all the applications.
-Use case G2 is supported by Menu Guide, BigZpoon and Choose Well.
-Use case G3 is supported by Allergy Menu, Menu Guide and Choose Well.
-Use case G4 is supported by Menu Guide and Choose Well.
-Use case G5 is supported by Menutech and Choose Well.
-Use case G6 is supported by all applications except BigZpoon. 
-% G7 - not all applications save information about guests
-Use cases G7 and G8 are supported only by Choose Well.
-
 % Restaurant application use cases
 \begin{center}
   \begin{tabular}{| c | l |}
@@ -57,31 +45,21 @@ Use cases G7 and G8 are supported only by Choose Well.
     \hline 
     R7 & Provide design templates for a new menu. \\
     \hline 
-    R8 & Switch between allergen names/icons and numbers. \\
-    \hline 
-    R9 & Let the restaurant employee specify where to store data. \\
+    R8 & Let the restaurant employee specify where to store data. \\
     \hline
   \end{tabular}
   \newline
 \end{center}
 
-Use case R1 is supported by all the applications.
-Use case R2 is supported by Menutech, Menu Guide and Choose Well.
-% R3 Allergen checker - time as text in menu
-Use case R3 is supported by Menutech, BigZpoon, Allergen Checker and Choose Well.
-Use case R4 is supported by BigZpoon, Allergen Checker and Choose Well.
-Use case R5 is supported by all except Allergy Menu.
-Use case R6 is supported by Menutech, Menu Guide and Choose Well.
-Use case R7 is supported by Menutech and Menu Guide.
-Use cases R8 and R9 are supported only by Choose Well.
-
 Table x and x contain results of the comparison.
+Value \ding{52} means that an application supports the given use case.
+Value \ding{56} means that an application does not support the given use case. 
 
 \todo[inline]{vertically center contents of the table - may be usable for all tables in the thesis} % https://tex.stackexchange.com/questions/7208/how-to-vertically-center-the-text-of-the-cells/611601#611601
 \todo[inline]{make all columns have equal width}
 % Guest use cases
 \begin{center}
-  \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c |}
+  \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
     \hline 
       & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 \\
     \hline
@@ -103,26 +81,22 @@ Table x and x contain results of the comparison.
 
 % Restaurant use cases
 \begin{center}
-  \begin{tabular}{| l | c | c | c | c | c | c | c | c | c |}
+  \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
     \hline 
-      & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 \\
+      & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 \\
     \hline
-    Menutech         & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} \\
+    Menutech         & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} \\
     \hline
-    Allergy Menu     & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
+    Allergy Menu     & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Menu Guide       & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} \\
+    Menu Guide       & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} \\
     \hline
-    BigZpoon Eagle   & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
+    BigZpoon Eagle   & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Allergen Checker & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} & \ding{56} \\
+    Allergen Checker & \ding{52} & \ding{56} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{56} & \ding{56} \\
     \hline
-    Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} & \ding{52} \\
+    Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} \\
     \hline
   \end{tabular}
   \newline
 \end{center}
-
-yes: \ding{52} means that an application supports the use case \newline
-no: \ding{56} means that an application does not support the use case \newline
-
