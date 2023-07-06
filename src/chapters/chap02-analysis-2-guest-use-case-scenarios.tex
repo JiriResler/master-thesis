@@ -25,7 +25,7 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Description  & A guest comes to a restaurant and is deciding what to order. \\
     \hline
-    Covers & R1.5-R1.9, R1.16 \\
+    Covers & R1.5-R1.9, R1.16, R1.17 \\
     \hline
     Precondition & The guest has opened a restaurant's menu using the application. \\
     \hline
@@ -35,10 +35,8 @@ A scenario will contain its description only if the goal of a user is not clear 
     \begin{minipage}[t]{\linewidth}
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The guest logs in to the application. \textbf{A1}
-        \item The application loads the guest's profile.
-        \item The application applies the guest's preferences to the menu.
-        \item The application displays the menu enriched with visual clues so that the guest can see what they can and cannot eat.
-        \item The guest selects to divide the menu to items they can and items they cannot eat. \textbf{A2 A3}
+        \item The application displays the menu enriched with visual clues so that the guest can see which items they can and cannot eat.
+        \item The guest selects to divide the menu to the items they can and items they cannot eat. \textbf{A2 A3 A4 A5}
         \item The application restructures the menu.
       \end{enumerate}
     \end{minipage}
@@ -47,9 +45,11 @@ A scenario will contain its description only if the goal of a user is not clear 
     Alternatives &
     \begin{minipage}[t]{\linewidth}
       \begin{description}[nosep,after=\strut]
-        \item [A1:] The guest does not log in. The guest selects what they are allergic to and what diets they follow using controls in the menu. The scenario continues with step 3.
+        \item [A1:] The guest does not log in. The guest selects what they are allergic to and what diets they follow using the controls on the screen. The scenario continues with step 2.
         \item [A2:] The guest selects to sort the menu by whether they can eat an item.
         \item [A3:] The guest selects to filter out items which they cannot eat.
+        \item [A4:] The guest selects to view the original version of the menu. The application displays a warning which says that the menu will not contain any hints about which items the guest should avoid. The guest chooses to proceed. The application displays the original menu with no personalization.
+        \item [A4:] The guest does no action and the menu is not restructured.
       \end{description}
     \end{minipage}
     \\
@@ -111,7 +111,7 @@ A scenario will contain its description only if the goal of a user is not clear 
     \hline
     Description  & A guest wants to know what a restaurant serves at the moment. \\
     \hline
-    Covers        & R1.10-R1.12, R1.15, R1.16 \\
+    Covers        & R1.10-R1.12, R1.15, R1.17 \\
     \hline
     Precondition  & The guest has access to the internet. \\
     \hline
