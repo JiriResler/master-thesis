@@ -5,11 +5,10 @@
 This chapter explains to the reader terms which are used in this thesis.
 We introduce concepts on which we build our application.
 
-\todo[inline]{add references}
 \section{Semantic Web}
 \epigraph{\textit{``The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past."}}{--- Sir Tim Berners-Lee}
 
-According to the World Wide Web Consortium(link) the Semantic Web is an extension of the Web as we know it today.
+According to the World Wide Web Consortium\footnote{\url{https://www.w3.org/2002/03/semweb/}  \label{fnlabel}} the Semantic Web is an extension of the Web as we know it today.
 Currently, the Web consists of interconnected web pages and is called a Web of documents.
 This view is natural to humans, but computers do not understand what is on a web page based solely on its content. 
 A computer sees a text or an image, but does not know what it means in the language of humans.
@@ -22,13 +21,13 @@ If data is to be connected, we need tools and specifications for how to implemen
 We need a uniform data format and also a query language.
 For a data format, RDF is used.
 Data in this format is expressed in a form of triples.
-It can be viewed as a mathematical graph where data are nodes and links between them are edges of the graph.
-When data is stored as a graph, some queries are much easier to write and are more effective than in traditional SQL databases.
+Linked data can be viewed as a mathematical graph where unique resources are the nodes of the graph and links between these resources are the graph's edges.
+When data is stored as a mathematical graph, some queries are much easier to write and are more effective than in traditional SQL databases.
 A query language which is used is called SPARQL.
 Ontologies are a way of describing metadata about data.
 
-
 \section{The Solid project}
 Solid makes it possible for end-users to have control over their data.
-It provides Pods, which act as personal data storage.
-A user can set what applications and who can see and manipulate with their data.
+It provides Solid Pods which act as personal data storage units.
+A user can choose a Pod provider of their liking, or they can host their own Solid server.
+A user can also configure what applications and people can see and manipulate with their data.
