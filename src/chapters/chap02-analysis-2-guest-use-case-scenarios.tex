@@ -188,6 +188,7 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
+\todo[inline]{After exams - shrink the scenario to fewer steps - leave the full version as a test case}
 \noindent \textbf{UC5: Specify what diets I am on}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -208,10 +209,12 @@ A scenario will contain its description only if the goal of a user is not clear 
         \item The guest presses a button for adding a new diet to the list.
         \item The application displays a search bar.
         \item The guest starts typing the name of a diet into the search bar.
-        \item The application suggests diets which contain the given input in their name.
+        \item The application suggests diets which contain the given text in their name.
         \item The guest selects the desired diet. \textbf{A2}
-        \item The application adds the diet to the guest's profile. \textbf{A3}
-        \item The guest repeats steps 3 to 8 until they have specified all of the diets they are on.
+        \item The application adds the diet to the list on the screen. \textbf{A3}
+        \item The guest repeats steps 3 to 8 until they have specified all of the diets which they are on.
+        \item The guest presses the button for saving their profile.
+        \item The application saves the guest's profile.
       \end{enumerate}
     \end{minipage}
     \\
@@ -221,7 +224,7 @@ A scenario will contain its description only if the goal of a user is not clear 
       \begin{description}[nosep,after=\strut]
         \item [A1:] The list is empty because the guest has not specified any diets yet. The application displays a text containing this information.
         \item [A2:] The application does not recognize the diet which the guest is trying to specify. The guest creates a public issue in the application's repository with a request to add the desired diet to the application.
-        \item [A3:] The diet the guest has specified is already contained in the guest's profile. The application informs the guest about this fact and their profile is not altered.
+        \item [A3:] The diet the guest has specified is already in the list. The application informs the guest about this fact and the list is not modified.
       \end{description}
     \end{minipage}
     \\
@@ -230,7 +233,6 @@ A scenario will contain its description only if the goal of a user is not clear 
   \newline
 \end{center}
 
-\todo[inline]{add covering of nonfunctional req.}
 \noindent \textbf{UC6: Have control over my data}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
@@ -270,10 +272,8 @@ A scenario will contain its description only if the goal of a user is not clear 
 
 \newpage
 
-\todo[inline]{Decide whether to use "A guest" or "The guest" in all descriptions}
-\todo[inline]{Change "the application displays a screen with a list" to "the application displays a list" in other reqs}
-\todo[inline]{Update name in figure}
-\todo[inline]{Change scenario so that the applicaton saves the profile after all of the foods and ingredients are specified - not after every food specified - also in UC about specifying diets}
+\todo[inline]{Later - Decide whether to use "A guest" or "The guest" in all descriptions}
+\todo[inline]{Later - Change "the application displays a screen with a list" to "the application displays a list" in other reqs}
 \todo[inline]{there is a search bar next to the list of foods which the guest likes. The guest starts typing into the searchbar, chooses a food and clicks a button for adding it to the list}
 \todo[inline]{the guest does not create a public issue (this is subject of design) - the application provides information about how to request adding a food or ingredient to the application}
 \noindent \textbf{UC7: Specify what foods I like and dislike}
