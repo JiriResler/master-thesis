@@ -1,34 +1,34 @@
 \section{Comparison of the applications}
 First, we are going to specify use cases which an application such as ours should support.
-Table x contains those use cases in which a guest uses the application.
-Table x then contains those use cases in which a restaurant employee uses the application.
+\autoref{comparison-guest-use-cases} contains those use cases in which a guest uses the application.
+\autoref{comparison-restaurant-use-cases} then contains those use cases in which a restaurant employee uses the application.
 
 % Guest application use cases
-\begin{center}
-  \begin{tabular}{| c | l |}
-    \hline
-    G1 & Display a menu with allergen information. \\
-    \hline
-    G2 & Highlight items of a menu which the guest cannot eat.  \\
-    \hline
-    G3 & Hide items of a menu which the guest cannot eat.  \\
-    \hline
-    G4 & Save the guest's dietary preferences.  \\
-    \hline
-    G5 & Translate a menu.  \\
-    \hline
-    G6 & Distinguish whether a menu item is vegan or vegetarian.  \\
-    \hline
-    G7 & Update the list of the guest's favorite restaurants.  \\
-    \hline
-    G8 & Let the guest specify where should their data be stored. \\ 
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
+\begin{table}[h]\centering
+    \begin{tabular}{| c | l |}
+      \hline
+      G1 & Display a menu with allergen information. \\
+      \hline
+      G2 & Highlight items of a menu which the guest cannot eat.  \\
+      \hline
+      G3 & Hide items of a menu which the guest cannot eat.  \\
+      \hline
+      G4 & Save the guest's dietary preferences.  \\
+      \hline
+      G5 & Translate a menu.  \\
+      \hline
+      G6 & Distinguish whether a menu item is vegan or vegetarian.  \\
+      \hline
+      G7 & Update the list of the guest's favorite restaurants.  \\
+      \hline
+      G8 & Let the guest specify where should their data be stored. \\ 
+      \hline
+    \end{tabular}
+    \caption{Application guest use cases}\label{comparison-guest-use-cases}
+\end{table}
 
 % Restaurant application use cases
-\begin{center}
+\begin{table}[h]\centering
   \begin{tabular}{| c | l |}
     \hline
     R1 & Add allergen information to a menu. \\
@@ -48,17 +48,15 @@ Table x then contains those use cases in which a restaurant employee uses the ap
     R8 & Let the restaurant employee specify where to store data. \\
     \hline
   \end{tabular}
-  \newline
-\end{center}
+  \caption{Application restaurant use cases}\label{comparison-restaurant-use-cases}
+\end{table}
 
-Table x and x contain results of the comparison.
+\autoref{comparison-guest-use-cases-result} and \autoref{comparison-restaurant-use-cases-result} contain results of the comparison.
 Value \ding{52} means that an application supports the given use case.
 Value \ding{56} means that an application does not support the given use case. 
 
-% \todo[inline]{After exams - vertically center contents of the table - may be usable for all tables in the thesis} % https://tex.stackexchange.com/questions/7208/how-to-vertically-center-the-text-of-the-cells/611601#611601
-% \todo[inline]{After exams - make all columns have equal width}
 % Guest use cases
-\begin{center}
+\begin{table}[h]\centering
   \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
     \hline 
       & G1 & G2 & G3 & G4 & G5 & G6 & G7 & G8 \\
@@ -76,11 +74,11 @@ Value \ding{56} means that an application does not support the given use case.
     Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} \\
     \hline
   \end{tabular}
-  \newline
-\end{center}
+  \caption{Comparison of applications regarding use cases with guest}\label{comparison-guest-use-cases-result}
+\end{table}
 
 % Restaurant use cases
-\begin{center}
+\begin{table}[h]\centering
   \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
     \hline 
       & R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 \\
@@ -98,5 +96,5 @@ Value \ding{56} means that an application does not support the given use case.
     Choose Well      & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{52} & \ding{56} & \ding{52} \\
     \hline
   \end{tabular}
-  \newline
-\end{center}
+  \caption{Comparison of applications regarding use cases with restaurant}\label{comparison-restaurant-use-cases-result}
+\end{table}
