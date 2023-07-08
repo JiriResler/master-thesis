@@ -2,6 +2,198 @@
 % \todo[inline]{After exams - check if covered reqs are actually covered by use cases}
 % \todo[inline]{After exams - check if order of left column is the same in all use cases}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.55\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_publish_menu}
+  \caption{Restaurant offer use cases}
+\end{figure}
+
+\noindent \textbf{x. Share a menu on social media}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Covers        & R2.17 \\
+    \hline
+    Precondition  & The restaurant employee has created a menu. \\
+    \hline
+    Postcondition & The menu is shared on a social media site. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The restaurant employee presses the button for sharing the menu. \textbf{A1}
+        \item The application opens a dialog window for sharing the menu on the desired social media site.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The restaurant employee shares the URL of the menu on the desired social media site. The scenario ends.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\newpage
+
+\noindent \textbf{x. Use case: Print a QR code for a menu}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Description  & A restaurant employee wishes to print a QR code for a menu. \\
+    \hline
+    Covers        & R2.4 \\
+    \hline
+    Precondition  & The restaurant employee has created the menu. \\
+    \hline
+    Postcondition & A QR code which links to the menu is printed. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The application displays the detail of the menu.
+        \item The restaurant employee clicks the button for generating a QR code for the menu.
+        \item The application enables the restaurant employee to print the QR code.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.65\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_manage_menus}
+  \caption{Restaurant menu management use cases}
+\end{figure}
+
+\newpage
+
+\noindent \textbf{x. Use case: Change an ingredient of a meal in an existing menu}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Covers & R2.5 \\
+    \hline
+    Precondition  & The restaurant employee has created a menu. \\
+    \hline
+    Postcondition & The menu is updated. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The application displays the detail of the menu.
+        \item The restaurant employee clicks the button for editing the menu.
+        \item The application displays an editable version of the menu.
+        \item The restaurant employee adds an ingredient to a food item in the menu. \textbf{A1} 
+        \item The restaurant employee clicks a button for saving the menu.
+        \item The application saves the updated version of the menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The restaurant employee removes an ingredient from the food item.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\noindent \textbf{x. Deactivate a menu}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Description     & A restaurant employee wishes to hide a menu from the public. \\
+    \hline
+    Covers      & R2.18, R2.19  \\
+    \hline
+    Precondition  & The restaurant employee has created a menu. \\
+    \hline
+    Postcondition & The menu is not visible to guests. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The application displays the overview of the restaurant's menus.
+        \item The restaurant employee selects a menu.
+        \item The application displays the detail of the menu.
+        \item The restaurant employee presses the button for deactivating the menu. \textbf{A1} 
+        \item The application asks the restaurant employee to confirm that they want to deactivate the menu.
+        \item The restaurant employee chooses to proceed.
+        \item The application deactivates the menu. 
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+    Alternatives  &
+    \begin{minipage}[t]{\linewidth}
+      \begin{description}[nosep,after=\strut]
+        \item [A1:] The menu is already deactivated. Pressing the button reactivates the menu.
+      \end{description}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\newpage
+
+\noindent \textbf{x. Delete a menu}
+\begin{center}
+  \begin{tabular}{| l | p{10.75cm} | }
+    \hline
+    Actor        & Restaurant \\
+    \hline
+    Covers        & R2.6 \\
+    \hline
+    Precondition  & The restaurant employee has created a menu. \\
+    \hline
+    Postcondition & The menu is removed. \\
+    \hline
+    Scenario     &
+    \begin{minipage}[t]{\linewidth}
+      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
+        \item The application displays the detail of the menu.
+        \item The restaurant employee clicks the button for deleting the menu.
+        \item The application asks the user whether they are sure to delete the menu as it cannot be undone.
+        \item The restaurant employee chooses to proceed.
+        \item The application deletes the menu.
+      \end{enumerate}
+    \end{minipage}
+    \\
+    \hline
+  \end{tabular}
+  \newline
+\end{center}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_create_menu}
+  \caption{Restaurant menu creation use cases}
+\end{figure}
+
+\newpage
+
 \noindent \textbf{x. Use case: Create a new menu}
 % \todo[inline]{Later - add names of use cases to extension point}
 \begin{center}
@@ -114,6 +306,8 @@
   \newline
 \end{center}
 
+\newpage
+
 \noindent \textbf{x. Use case: Create a stable menu}
 % \todo[inline]{add use case number in extends column}
 \begin{center}
@@ -174,6 +368,14 @@
   \newline
 \end{center}
 
+\newpage
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.55\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_create_daily_menu}
+  \caption{Restaurant daily menu creation use cases}
+\end{figure}
+
 \noindent \textbf{x. Use case: Create a daily menu for tomorrow}
 % \todo[inline]{add use case number in extends column}
 \begin{center}
@@ -201,6 +403,8 @@
   \end{tabular}
   \newline
 \end{center}
+
+\newpage
 
 \noindent \textbf{x. Use case: Create daily menus for the next week}
 % \todo[inline]{add use case number in extends column}
@@ -267,171 +471,7 @@
   \newline
 \end{center}
 
-\noindent \textbf{x. Share a menu on social media}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Covers        & R2.17 \\
-    \hline
-    Precondition  & The restaurant employee has created a menu. \\
-    \hline
-    Postcondition & The menu is shared on a social media site. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The restaurant employee presses the button for sharing the menu. \textbf{A1}
-        \item The application opens a dialog window for sharing the menu on the desired social media site.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives  &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee shares the URL of the menu on the desired social media site. The scenario ends.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{x. Deactivate a menu}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Description     & A restaurant employee wishes to hide a menu from the public. \\
-    \hline
-    Covers      & R2.18, R2.19  \\
-    \hline
-    Precondition  & The restaurant employee has created a menu. \\
-    \hline
-    Postcondition & The menu is not visible to guests. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application displays the overview of the restaurant's menus.
-        \item The restaurant employee selects a menu.
-        \item The application displays the detail of the menu.
-        \item The restaurant employee presses the button for deactivating the menu. \textbf{A1} 
-        \item The application asks the restaurant employee to confirm that they want to deactivate the menu.
-        \item The restaurant employee chooses to proceed.
-        \item The application deactivates the menu. 
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives  &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The menu is already deactivated. Pressing the button reactivates the menu.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{x. Use case: Change an ingredient of a meal in an existing menu}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Covers & R2.5 \\
-    \hline
-    Precondition  & The restaurant employee has created a menu. \\
-    \hline
-    Postcondition & The menu is updated. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application displays the detail of the menu.
-        \item The restaurant employee clicks the button for editing the menu.
-        \item The application displays an editable version of the menu.
-        \item The restaurant employee adds an ingredient to a food item in the menu. \textbf{A1} 
-        \item The restaurant employee clicks a button for saving the menu.
-        \item The application saves the updated version of the menu.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-    Alternatives  &
-    \begin{minipage}[t]{\linewidth}
-      \begin{description}[nosep,after=\strut]
-        \item [A1:] The restaurant employee removes an ingredient from the food item.
-      \end{description}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{x. Delete a menu}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Covers        & R2.6 \\
-    \hline
-    Precondition  & The restaurant employee has created a menu. \\
-    \hline
-    Postcondition & The menu is removed. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application displays the detail of the menu.
-        \item The restaurant employee clicks the button for deleting the menu.
-        \item The application asks the user whether they are sure to delete the menu as it cannot be undone.
-        \item The restaurant employee chooses to proceed.
-        \item The application deletes the menu.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
-
-\noindent \textbf{x. Use case: Print a QR code for a menu}
-\begin{center}
-  \begin{tabular}{| l | p{10.75cm} | }
-    \hline
-    Actor        & Restaurant \\
-    \hline
-    Description  & A restaurant employee wishes to print a QR code for a menu. \\
-    \hline
-    Covers        & R2.4 \\
-    \hline
-    Precondition  & The restaurant employee has created the menu. \\
-    \hline
-    Postcondition & A QR code which links to the menu is printed. \\
-    \hline
-    Scenario     &
-    \begin{minipage}[t]{\linewidth}
-      \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
-        \item The application displays the detail of the menu.
-        \item The restaurant employee clicks the button for generating a QR code for the menu.
-        \item The application enables the restaurant employee to print the QR code.
-      \end{enumerate}
-    \end{minipage}
-    \\
-    \hline
-  \end{tabular}
-  \newline
-\end{center}
+\newpage
 
 \noindent \textbf{x. Use case: Have control over my data}
 \begin{center}
@@ -461,21 +501,3 @@
   \end{tabular}
   \newline
 \end{center}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_publish_menu}
-  \caption{Restaurant offer use cases}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_create_menu}
-  \caption{Restaurant menu creation use cases}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.62\linewidth]{master-thesis/img/use-cases/use_cases_restaurant_create_daily_menu}
-  \caption{Restaurant daily menu creation use cases}
-\end{figure}
