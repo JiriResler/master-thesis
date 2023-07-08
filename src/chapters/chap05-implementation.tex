@@ -1,2 +1,6 @@
 \chapter{Implementation}
-login.inrupt.com - profile is defaultly not publicly accessible - you need to configure rights to read the dataset in pod browser - shouldn't be profile public by default?
+This chapter contains notes on what was experienced during development of our solution.
+
+\section*{Solid profile visibility}
+Each holder of a WebId should have a public profile file.
+While working with the Pod provider https://login.inrupt.com, a problem was encountered that a profile could not be read unless the owner of the Pod configured the profile file to be visible to everyone.
