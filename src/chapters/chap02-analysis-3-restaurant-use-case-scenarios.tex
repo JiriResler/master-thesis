@@ -195,7 +195,6 @@
 \newpage
 
 \noindent \textbf{UC14: Create a new menu}
-% \todo[inline]{Later - add names of use cases to extension point}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -214,7 +213,7 @@
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The application displays a screen with an empty menu. \textbf{A1}
         \item The restaurant employee specifies the name of the menu.
-        \item The restaurant employee specifies when will the menu be valid. \textbf{Extension point - UCx}
+        \item The restaurant employee specifies when will the menu be valid. \textbf{Extension point for UC17-UC21}
         \item The restaurant employee specifies categories of the menu. \textbf{A2}
         \item The restaurant employee adds food items to the categories of the menu.
         \item The restaurant employee presses the button for saving the menu.
@@ -239,7 +238,6 @@
 \newpage
 
 \noindent \textbf{UC15: Add a food item to a menu} 
-% \todo[inline]{Later - add use case number in extension point}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -258,7 +256,7 @@
       \begin{enumerate}[leftmargin=*,nosep,before=\vspace{-0.575\baselineskip},after=\strut]
         \item The restaurant employee specifies the name, price, weight or volume and description of the menu item. 
         \item The restaurant employee specifies the menu item's ingredients.
-        \item The application adds allergens to the menu item. \textbf{Extension point - UCx}
+        \item The application adds allergens to the menu item. \textbf{Extension point for UC16}
         \item The restaurant employee presses the button for adding the item to the menu. 
         \item The application adds the item to the menu. \textbf{A1}
       \end{enumerate}
@@ -278,7 +276,6 @@
 \end{center}
 
 \noindent \textbf{UC16: Warn my guests about allergens in the foods I serve}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -288,7 +285,7 @@
     \hline
     Covers        & R2.11, R2.12, R3.1 \\
     \hline
-    Extends       & Add a food item to the menu  \\
+    Extends       & UC15  \\
     \hline
     Precondition  & The restaurant employee has added ingredients to a menu item. \\
     \hline
@@ -309,7 +306,6 @@
 \newpage
 
 \noindent \textbf{UC17: Create a stable menu}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -319,7 +315,7 @@
     \hline
     Covers & R2.2 \\
     \hline
-    Extends       &  x: Create a new menu \\
+    Extends       &  UC14 \\
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
@@ -339,7 +335,6 @@
 \end{center}
 
 \noindent \textbf{UC18: Create a list of beverages}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -349,7 +344,7 @@
     \hline
     Covers & R2.3 \\
     \hline
-    Extends       &  x: Create a new menu \\
+    Extends       &  UC14 \\
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
@@ -377,7 +372,6 @@
 \end{figure}
 
 \noindent \textbf{UC19: Create a daily menu for tomorrow}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -385,7 +379,7 @@
     \hline
     Covers        & R2.1 \\
     \hline
-    Extends       &  x: Create a new menu \\
+    Extends       &  UC14 \\
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
@@ -407,13 +401,14 @@
 \newpage
 
 \noindent \textbf{UC20: Create daily menus for the next week}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
     Actor        & Restaurant \\
     \hline
     Covers        & R2.1 \\
+    \hline
+    Extends   & UC14 \\
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
@@ -443,7 +438,6 @@
 \end{center}
 
 \noindent \textbf{UC21: Create a daily menu which will repeat each Tuesday}
-% \todo[inline]{add use case number in extends column}
 \begin{center}
   \begin{tabular}{| l | p{10.75cm} | }
     \hline
@@ -451,7 +445,7 @@
     \hline
     Covers        & R2.7 \\
     \hline
-    Extends       &  x: Create a new menu \\
+    Extends   & UC14 \\
     \hline
     Precondition  & The restaurant employee is logged in to the application and has started the process of creation of a new menu. \\
     \hline
