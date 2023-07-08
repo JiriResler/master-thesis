@@ -5,7 +5,7 @@ Then, we discuss what technologies were considered for implementing the applicat
 We name our application "Choose well".
 
 \section{Architecture}
-We design our solution\footnote{From now on we will be referring to our application as the solution as not to  confuse it with the actual applications which it consists of.  \label{fnlabel}} as multiple independent single-page web applications.
+We design our solution\footnote{From now on we will be referring to our application as a solution as not to  confuse it with the actual applications which it consists of.  \label{fnlabel}} as multiple independent single-page web applications.
 This decision is made to achieve better modularity. 
 One of the applications is the guest dietary profile editor.
 It allows a guest to set their dietary preferences like being allergic to something or being vegetarian.
@@ -13,13 +13,12 @@ Another application is the restaurant menu maker.
 It serves for restaurant employees to specify their menu's contents.
 Last application is the personalized menu viewer for restaurant guests.
 It combines information gathered by the other applications to display personalized menus to guests. 
-% \todo[inline]{Later - add figure number}
-Figure x contains a depiction of our solution's architecture.
+\autoref{architecture} contains a depiction of our solution's architecture.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.75\linewidth]{master-thesis/img/architecture_data_flow.pdf}
-  \caption{The solution's architecture}
+  \caption{Our solution's architecture} \label{architecture}
 \end{figure}
 
 \section{Technological stack}
@@ -65,5 +64,5 @@ The programmer documentation is written in markdown and is stored in the applica
 The user documentation has a form of a webpage\footnote{\url{https://jiriresler.github.io/choose-well-website/index.html}  \label{fnlabel}} which is hosted on \textbf{GitHub Pages}.
 
 \subsection*{Authentication}
-The Inrupt's \textbf{solid-client}\footnote{\url{https://docs.inrupt.com/developer-tools/api/javascript/solid-client} \label{fnlabel}} JavaScript library for can be used for authentication of users.
+The Inrupt's \textbf{solid-client-authn-browser}\footnote{\url{https://docs.inrupt.com/developer-tools/javascript/client-libraries/reference/solid-client-authn/} \label{fnlabel}} JavaScript library for can be used for authentication of users.
 We use the Inrupt's Solid React SDK\footnote{\url{https://docs.inrupt.com/developer-tools/javascript/react-sdk} \label{fnlabel}} which contains a Login component which uses the aforementioned library implicitly.
